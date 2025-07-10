@@ -7,7 +7,6 @@ import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
 import Services from '../components/Services';
 import TrendingDestinations from '../components/TrendingDestinations';
-
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 

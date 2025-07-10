@@ -41,7 +41,15 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('tendances-moment');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+            >
               {t('hero.cta_primary')}
             </button>
             <button className="border-2 border-white/80 text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-lg">

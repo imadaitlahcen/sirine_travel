@@ -23,45 +23,45 @@ export default function OmraHajjPage() {
     setIsVisible(true);
   }, []);
 
-  // Gallery images - 8 photos pour la galerie
+  // Gallery images - 8 photos haute qualité pour la galerie
   const galleryImages = [
     {
-      src: '/images/photo1.jpg',
+      src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.kaaba'),
       description: t('services:omra_hajj.gallery.descriptions.kaaba')
     },
     {
-      src: '/images/photo2.jpg',
+      src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.prophet_mosque'),
       description: t('services:omra_hajj.gallery.descriptions.prophet_mosque')
     },
     {
-      src: '/images/photo3.jpg',
+      src: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.arafat'),
       description: t('services:omra_hajj.gallery.descriptions.arafat')
     },
     {
-      src: '/images/photo4.jpg',
+      src: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.tawaf'),
       description: t('services:omra_hajj.gallery.descriptions.tawaf')
     },
     {
-      src: '/images/photo5.jpg',
+      src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.medina'),
       description: t('services:omra_hajj.gallery.descriptions.medina')
     },
     {
-      src: '/images/photo6.jpg',
+      src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.grand_mosque_prayer'),
       description: t('services:omra_hajj.gallery.descriptions.grand_mosque_prayer')
     },
     {
-      src: '/images/photo7.jpg',
+      src: 'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.pilgrims_prayer'),
       description: t('services:omra_hajj.gallery.descriptions.pilgrims_prayer')
     },
     {
-      src: '/images/photo8.jpg',
+      src: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=90',
       title: t('services:omra_hajj.gallery.images.spiritual_journey'),
       description: t('services:omra_hajj.gallery.descriptions.spiritual_journey')
     }

@@ -17,22 +17,22 @@ export default function HotelsLuxeHeader() {
   ];
 
   return (
-    <header className="bg-black sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+    <header className="bg-black fixed top-0 left-0 right-0 z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <h1 className="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">
+              <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">
                 {tCommon('site_name')}
               </h1>
-              <span className="ml-3 text-sm text-gray-400 font-medium">Hôtels Luxe</span>
+              <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-gray-400 font-medium">Hôtels Luxe</span>
             </Link>
           </div>
 
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link href="/" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.home')}
             </Link>
             
@@ -42,7 +42,7 @@ export default function HotelsLuxeHeader() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2 flex items-center">
+              <button className="text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300 px-2 py-1 rounded border-b-2 border-purple-400 flex items-center">
                 {t('menu.services')}
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -55,7 +55,11 @@ export default function HotelsLuxeHeader() {
                     <Link
                       key={href}
                       href={href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium"
+                      className={`block px-4 py-3 font-medium transition-colors duration-200 ${
+                        href === '/services/hotels-luxe' 
+                          ? 'text-purple-600 bg-purple-50 border-l-4 border-purple-600' 
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                      }`}
                     >
                       {label}
                     </Link>
@@ -64,44 +68,36 @@ export default function HotelsLuxeHeader() {
               )}
             </div>
             
-            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2">
+            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.destinations')}
             </a>
-            <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2">
+            <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
-            <a href="/#contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2">
+            <a href="/#contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.contact')}
             </a>
           </nav>
 
-          {/* Contact, Language Selector & Menu Mobile */}
-          <div className="flex items-center space-x-4">
+          {/* Language Selector & Menu Mobile */}
+          <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
             {/* Language Selector */}
             <LanguageSelector />
-            {/* Téléphone */}
-            <a
-              href="tel:+212XXXXXXXXX"
-              className="hidden lg:flex items-center space-x-2 text-white hover:text-gray-300 transition-colors duration-300"
-            >
-              <span className="text-lg">📞</span>
-              <span className="font-medium">+212 XX XX XX XX</span>
-            </a>
             
             {/* WhatsApp spécialisé Hôtels */}
             <a
               href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20des%20infos%20sur%20vos%20hôtels%20de%20luxe"
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300 flex items-center space-x-2 font-medium"
+              className="bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 font-medium flex-shrink-0 text-sm"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="text-lg">🏨</span>
+              <span className="text-base">🏨</span>
               <span className="hidden sm:inline">Hôtels</span>
             </a>
 
             {/* Menu Mobile */}
             <button
-              className="md:hidden text-white hover:text-gray-300 transition-colors duration-300"
+              className="lg:hidden text-white hover:text-gray-300 transition-colors duration-300 p-2 rounded"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,11 +109,11 @@ export default function HotelsLuxeHeader() {
 
         {/* Menu Mobile */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-800">
-            <nav className="py-4 space-y-2">
+          <div className="lg:hidden border-t border-gray-800">
+            <nav className="px-4 py-3 space-y-2">
               <Link
                 href="/"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 px-3 py-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.home')}
@@ -126,7 +122,7 @@ export default function HotelsLuxeHeader() {
               {/* Services Mobile Submenu */}
               <div>
                 <button 
-                  className="w-full text-left text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2 flex items-center justify-between"
+                  className="w-full text-left text-white hover:text-gray-300 font-medium transition-colors duration-300 px-3 py-2 rounded flex items-center justify-between"
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                 >
                   {t('menu.services')}
@@ -141,7 +137,7 @@ export default function HotelsLuxeHeader() {
                       <Link
                         key={href}
                         href={href}
-                        className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 py-2 text-sm"
+                        className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 px-3 py-2 rounded text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {label}
@@ -153,21 +149,21 @@ export default function HotelsLuxeHeader() {
               
               <a
                 href="/#destinations"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 px-3 py-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.destinations')}
               </a>
               <a
                 href="/#about"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 px-3 py-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.about')}
               </a>
               <a
                 href="/#contact"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-2"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 px-3 py-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.contact')}

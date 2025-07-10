@@ -1,18 +1,18 @@
 {
   "business_travel": {
-    "title": "Voyages d'Affaires",
+    "title": "Voyage National",
     "subtitle": "Solutions Corporate",
     "description": "Des solutions haut de gamme pour optimiser vos déplacements professionnels",
     "hero": {
       "tagline": "🎯 Solutions Corporate",
-      "title": "Voyages d'Affaires",
+      "title": "Voyage National",
       "description": "Des solutions haut de gamme pour optimiser vos déplacements professionnels",
       "cta_primary": "Découvrir nos solutions",
       "cta_secondary": "Audit gratuit"
     },
     "advantages": {
       "title": "Pourquoi Choisir Sirine Travel ?",
-      "subtitle": "Optimisez vos voyages d'affaires avec notre expertise et nos outils innovants",
+      "subtitle": "Optimisez vos voyages nationaux avec notre expertise et nos outils innovants",
       "items": [
         {
           "title": "Économies Garanties",
@@ -41,8 +41,8 @@
           "features": ["Flexibilité totale", "Surclassements gratuits", "Lounges VIP", "Bagages prioritaires"]
         },
         {
-          "title": "Hôtels d'Affaires",
-          "description": "Sélection d'hôtels adaptés aux voyageurs d'affaires",
+          "title": "Hôtels Nationaux",
+          "description": "Sélection d'hôtels adaptés aux voyageurs nationaux",
           "features": ["WiFi haut débit", "Centres d'affaires", "Salles de réunion", "Service 24h/24"]
         },
         {
@@ -52,7 +52,7 @@
         },
         {
           "title": "Gestion & Reporting",
-          "description": "Outils de suivi et d'optimisation de vos voyages d'affaires",
+          "description": "Outils de suivi et d'optimisation de vos voyages nationaux",
           "features": ["Tableau de bord", "Rapports détaillés", "Contrôle des coûts", "Politique voyage"]
         }
       ]

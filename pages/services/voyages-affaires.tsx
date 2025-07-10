@@ -91,7 +91,7 @@ export default function VoyagesAffairesPage() {
       <Head>
         <title>{t('services:business_travel.title')} - {t('site_name')} | {t('services:business_travel.subtitle')}</title>
         <meta name="description" content={t('services:business_travel.description')} />
-        <meta name="keywords" content="voyage affaires, corporate travel, gestion voyage entreprise, vol business, hôtel affaires, TMC" />
+        <meta name="keywords" content="voyage national, travel national, gestion voyage national, vol national, hôtel national, TMC" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -245,7 +245,7 @@ export default function VoyagesAffairesPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold font-serif text-white mb-6">VAOYAGE en Chiffres</h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                La confiance de nos clients corporate
+                La confiance de nos clients nationaux
               </p>
             </div>
             
@@ -271,7 +271,7 @@ export default function VoyagesAffairesPage() {
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-12 shadow-xl">
               <div className="text-6xl mb-6">💼</div>
               <blockquote className="text-2xl text-gray-700 font-serif italic mb-8">
-                "VAOYAGE a révolutionné la gestion de nos voyages d'affaires. Nous avons réduit nos coûts de 30% tout en améliorant le confort de nos collaborateurs. Leur équipe est réactive et professionnelle."
+                "VAOYAGE a révolutionné la gestion de nos voyages nationaux. Nous avons réduit nos coûts de 30% tout en améliorant le confort de nos collaborateurs. Leur équipe est réactive et professionnelle."
               </blockquote>
               <div className="text-lg font-semibold text-gray-900">Directeur Général</div>
               <div className="text-blue-600">Groupe industriel international</div>
@@ -282,7 +282,7 @@ export default function VoyagesAffairesPage() {
         {/* Contact Section */}
         <section id="contact" className="py-24 bg-gradient-to-br from-slate-900 to-blue-900">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold font-serif text-white mb-6">Optimisez Vos Voyages d'Affaires</h2>
+            <h2 className="text-4xl font-bold font-serif text-white mb-6">Optimisez Vos Voyages Nationaux</h2>
             <p className="text-xl text-blue-100 mb-8">
               Demandez un audit gratuit de vos dépenses voyage actuelles
             </p>

@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import PageTransition from '../components/PageTransition';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,7 +28,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <Component {...pageProps} />
+      <PageTransition>
+        <Component {...pageProps} />
+      </PageTransition>
     </div>
   );
 }

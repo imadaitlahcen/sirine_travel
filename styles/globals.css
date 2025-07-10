@@ -1,5 +1,51 @@
 @import "tailwindcss";
 
+/* Page Transition Animations */
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+/* Custom Loading Animations */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.page-enter {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.page-exit {
+  animation: fadeOutDown 0.4s ease-in;
+}
+
+/* Custom backdrop blur for loading overlay */
+.loading-backdrop {
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+}
+
+/* Enhanced focus styles for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Fixed navbar compensation */
+body {
+  padding-top: 64px; /* Height of fixed navbar (h-16 = 4rem = 64px) */
+  overflow-x: hidden; /* Prevent layout shift during transitions */
+}
+
 /* Animations personnalisées pour la page Omra */
 @keyframes fadeInUp {
   from {

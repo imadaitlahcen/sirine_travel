@@ -2,7 +2,7 @@
 
 ## Résumé des changements
 
-Le site a été redesigné pour ressembler au style d'Atlas Voyages avec les modifications suivantes :
+Le site a été redesigné pour ressembler au style de Serine Travel avec les modifications suivantes :
 
 ### 1. Header (Navigation)
 - **Navbar classique noire** : Remplacé l'ancien header avec un design noir classique

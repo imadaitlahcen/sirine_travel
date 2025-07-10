@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function BaliPage() {
-  const { t } = useTranslation('common');
 
   return (
     <>
@@ -54,7 +53,7 @@ export default function BaliPage() {
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Bali vous transporte dans un monde où spiritualité et nature 
                 s'harmonisent parfaitement. Cette île indonésienne, surnommée 
-                "l'Île des Dieux", offre un mélange envoûtant de temples anciens, 
+                &ldquo;l&rsquo;Île des Dieux&rdquo;, offre un mélange envoûtant de temples anciens, 
                 de rizières verdoyantes et de plages paradisiaques.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -225,7 +224,7 @@ export default function BaliPage() {
             Prêt pour votre Voyage Spirituel à Bali ?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Laissez-vous guider vers la sérénité de l'île des dieux
+            Laissez-vous guider vers la sérénité de l&rsquo;île des dieux
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">

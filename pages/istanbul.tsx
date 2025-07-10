@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function IstanbulPage() {
-  const { t } = useTranslation('common');
 
   return (
     <>
@@ -52,14 +51,14 @@ export default function IstanbulPage() {
                 Istanbul, Pont entre Deux Mondes
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Istanbul vous fascine par sa position unique entre l'Europe et l'Asie, 
+                Istanbul vous fascine par sa position unique entre l&rsquo;Europe et l&rsquo;Asie, 
                 où se mélangent harmonieusement traditions ottomanes et modernité cosmopolite. 
                 Cette métropole vibrante offre une expérience urbaine incomparable.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Explorez ses bazars colorés, ses mosquées majestueuses, sa gastronomie 
                 raffinée et sa vie nocturne animée. Istanbul is the new cool - découvrez 
-                pourquoi cette ville captive tous les voyageurs en quête d'authenticité 
+                pourquoi cette ville captive tous les voyageurs en quête d&rsquo;authenticité 
                 et de sophistication.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -102,7 +101,7 @@ export default function IstanbulPage() {
               {
                 name: 'Sainte-Sophie',
                 image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Chef-d\'œuvre architectural byzantin et ottoman'
+                description: 'Chef-d&rsquo;œuvre architectural byzantin et ottoman'
               },
               {
                 name: 'Grand Bazar',
@@ -166,7 +165,7 @@ export default function IstanbulPage() {
             Prêt pour votre Escapade à Istanbul ?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Laissez-vous séduire par la magie d'Istanbul avec nos circuits sur mesure
+            Laissez-vous séduire par la magie d&rsquo;Istanbul avec nos circuits sur mesure
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">

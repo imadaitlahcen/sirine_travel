@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function GrecePage() {
-  const { t } = useTranslation('common');
 
   return (
     <>
@@ -60,7 +59,7 @@ export default function GrecePage() {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Savourez la gastronomie méditerranéenne authentique, explorez 
                 des villages pittoresques aux maisons blanches et bleues, et 
-                laissez-vous envoûter par l'hospitalité légendaire des Grecs. 
+                laissez-vous envoûter par l&rsquo;hospitalité légendaire des Grecs. 
                 La Grèce est une invitation au voyage dans le temps et à la détente.
               </p>
               <div className="grid grid-cols-2 gap-6">

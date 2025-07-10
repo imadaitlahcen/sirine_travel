@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MaldivesPage() {
-  const { t } = useTranslation('common');
 
   return (
     <>
@@ -113,7 +112,7 @@ export default function MaldivesPage() {
               {
                 name: 'Spa & Wellness',
                 image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Soins relaxants face à l\'océan Indien'
+                description: 'Soins relaxants face à l&rsquo;océan Indien'
               }
             ].map((resort, index) => (
               <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -148,7 +147,7 @@ export default function MaldivesPage() {
               { icon: '🤿', title: 'Plongée & Snorkeling', desc: 'Explorez les récifs coralliens exceptionnels' },
               { icon: '🏝️', title: 'Excursions Îles', desc: 'Découverte des atolls et bancs de sable' },
               { icon: '🐠', title: 'Vie Marine', desc: 'Observation des raies manta et requins-baleines' },
-              { icon: '🌅', title: 'Couchers de Soleil', desc: 'Moments magiques sur l\'océan Indien' }
+              { icon: '🌅', title: 'Couchers de Soleil', desc: 'Moments magiques sur l&rsquo;océan Indien' }
             ].map((activity, index) => (
               <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
                 <div className="text-4xl mb-4">{activity.icon}</div>

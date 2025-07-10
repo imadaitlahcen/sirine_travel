@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ItaliePage() {
-  const { t } = useTranslation('common');
 
   return (
     <>
@@ -30,7 +29,7 @@ export default function ItaliePage() {
             Italie
           </h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Dolce Vita Italienne - Voyage au Cœur de l'Art, de la Cuisine et de l'Histoire
+            Dolce Vita Italienne - Voyage au Cœur de l&rsquo;Art, de la Cuisine et de l&rsquo;Histoire
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
@@ -49,16 +48,16 @@ export default function ItaliePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-                Découvrez la Beauté de l'Italie
+                Découvrez la Beauté de l&rsquo;Italie
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                L'Italie vous invite à un voyage extraordinaire à travers ses villes d'art, 
+                L&rsquo;Italie vous invite à un voyage extraordinaire à travers ses villes d&rsquo;art, 
                 ses paysages à couper le souffle et sa gastronomie légendaire. De Rome la 
                 Éternelle à Venise la Sérénissime, en passant par Florence et la Toscane, 
                 chaque région révèle ses trésors uniques.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Laissez-vous séduire par l'art de vivre italien, entre patrimoine historique 
+                Laissez-vous séduire par l&rsquo;art de vivre italien, entre patrimoine historique 
                 exceptionnel, cuisine raffinée et hospitalité chaleureuse. Nos circuits sur 
                 mesure vous permettront de vivre une expérience authentique et inoubliable.
               </p>
@@ -107,7 +106,7 @@ export default function ItaliePage() {
               {
                 name: 'Florence',
                 image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Berceau de la Renaissance et de l\'art italien'
+                description: 'Berceau de la Renaissance et de l&rsquo;art italien'
               },
               {
                 name: 'Venise',

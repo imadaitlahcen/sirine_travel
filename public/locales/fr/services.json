@@ -1,0 +1,526 @@
+{
+  "business_travel": {
+    "title": "Voyages d'Affaires",
+    "subtitle": "Solutions Corporate",
+    "description": "Des solutions haut de gamme pour optimiser vos déplacements professionnels",
+    "hero": {
+      "tagline": "🎯 Solutions Corporate",
+      "title": "Voyages d'Affaires",
+      "description": "Des solutions haut de gamme pour optimiser vos déplacements professionnels",
+      "cta_primary": "Découvrir nos solutions",
+      "cta_secondary": "Audit gratuit"
+    },
+    "advantages": {
+      "title": "Pourquoi Choisir Sirine Travel ?",
+      "subtitle": "Optimisez vos voyages d'affaires avec notre expertise et nos outils innovants",
+      "items": [
+        {
+          "title": "Économies Garanties",
+          "description": "Réduction moyenne de 15-25% sur vos coûts de voyage grâce à nos négociations"
+        },
+        {
+          "title": "Gain de Temps",
+          "description": "Délégation complète de la gestion voyage à nos experts dédiés"
+        },
+        {
+          "title": "Assistance 24/7",
+          "description": "Support d'urgence disponible partout dans le monde, 24h/24"
+        },
+        {
+          "title": "Optimisation Continue",
+          "description": "Analyse et optimisation régulière de votre politique voyage"
+        }
+      ]
+    },
+    "services": {
+      "title": "Nos Services Corporate",
+      "items": [
+        {
+          "title": "Vols Business & Première",
+          "description": "Réservations sur toutes les compagnies avec les meilleurs tarifs corporate",
+          "features": ["Flexibilité totale", "Surclassements gratuits", "Lounges VIP", "Bagages prioritaires"]
+        },
+        {
+          "title": "Hôtels d'Affaires",
+          "description": "Sélection d'hôtels adaptés aux voyageurs d'affaires",
+          "features": ["WiFi haut débit", "Centres d'affaires", "Salles de réunion", "Service 24h/24"]
+        },
+        {
+          "title": "Transferts & Location",
+          "description": "Solutions de transport adaptées à vos besoins professionnels",
+          "features": ["Chauffeurs privés", "Véhicules premium", "Ponctualité garantie", "Facturation centralisée"]
+        },
+        {
+          "title": "Gestion & Reporting",
+          "description": "Outils de suivi et d'optimisation de vos voyages d'affaires",
+          "features": ["Tableau de bord", "Rapports détaillés", "Contrôle des coûts", "Politique voyage"]
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Nos Solutions sur Mesure",
+      "subtitle": "Choisissez la solution adaptée à la taille et aux besoins de votre entreprise",
+      "items": [
+        {
+          "name": "PME Starter",
+          "description": "Solution adaptée aux petites et moyennes entreprises",
+          "ideal": "5-50 voyageurs",
+          "features": [
+            "Plateforme de réservation en ligne",
+            "Gestionnaire de compte dédié",
+            "Rapports mensuels",
+            "Support email et téléphone",
+            "Facturation centralisée"
+          ]
+        },
+        {
+          "name": "Corporate Plus",
+          "description": "Solution complète pour les grandes entreprises",
+          "ideal": "50+ voyageurs",
+          "popular": true,
+          "features": [
+            "Plateforme personnalisée",
+            "Équipe dédiée 24/7",
+            "Rapports en temps réel",
+            "Intégration ERP/SAP",
+            "Politique voyage sur-mesure",
+            "Négociations fournisseurs"
+          ]
+        },
+        {
+          "name": "Executive VIP",
+          "description": "Service premium pour dirigeants et VIP",
+          "ideal": "Dirigeants & VIP",
+          "features": [
+            "Conciergerie personnelle",
+            "Vols privés et jets",
+            "Hôtels de prestige",
+            "Sécurité renforcée",
+            "Assistance protocole",
+            "Discrétion absolue"
+          ]
+        }
+      ]
+    }
+  },
+  "custom_travel": {
+    "title": "Voyages Sur-Mesure",
+    "subtitle": "Circuits Exclusifs de Luxe",
+    "description": "Des circuits exclusifs conçus selon vos envies et votre style de voyage",
+    "hero": {
+      "tagline": "✈️ Expériences Uniques",
+      "title": "Voyages Sur-Mesure",
+      "description": "Des circuits exclusifs conçus selon vos envies et votre style de voyage",
+      "cta_primary": "Découvrir nos destinations",
+      "cta_secondary": "Créer mon voyage"
+    },
+    "process": {
+      "title": "Comment Nous Créons Votre Voyage",
+      "steps": [
+        {
+          "title": "Consultation",
+          "description": "Entretien personnalisé pour comprendre vos envies et préférences"
+        },
+        {
+          "title": "Conception",
+          "description": "Création d'un itinéraire unique adapté à vos goûts et budget"
+        },
+        {
+          "title": "Validation",
+          "description": "Ajustements et finalisation de votre voyage sur-mesure"
+        },
+        {
+          "title": "Accompagnement",
+          "description": "Support 24/7 et conciergerie pendant tout votre séjour"
+        }
+      ]
+    },
+    "services": {
+      "title": "Nos Services Exclusifs",
+      "items": [
+        {
+          "title": "Conception Personnalisée",
+          "description": "Chaque voyage est unique, conçu selon vos passions et vos rêves"
+        },
+        {
+          "title": "Expériences Exclusives",
+          "description": "Accès privilégié à des lieux et expériences fermés au grand public"
+        },
+        {
+          "title": "Conciergerie Privée",
+          "description": "Un conseiller dédié disponible 24h/24 pendant votre voyage"
+        },
+        {
+          "title": "Transport Premium",
+          "description": "Vols privés, transferts VIP et véhicules de luxe avec chauffeur"
+        }
+      ]
+    },
+    "destinations": {
+      "title": "Destinations d'Exception",
+      "subtitle": "Découvrez quelques-unes de nos destinations les plus prisées",
+      "items": [
+        {
+          "name": "Japon Authentique",
+          "duration": "12 jours",
+          "highlights": ["Tokyo moderne", "Kyoto traditionnel", "Mont Fuji", "Ryokans de luxe"]
+        },
+        {
+          "name": "Safari Tanzanie",
+          "duration": "10 jours",
+          "highlights": ["Serengeti", "Cratère Ngorongoro", "Lodges premium", "Migration animale"]
+        },
+        {
+          "name": "Îles Maldives",
+          "duration": "8 jours",
+          "highlights": ["Villas sur pilotis", "Plongée privée", "Spa de luxe", "Cuisine gastronomique"]
+        },
+        {
+          "name": "Patagonie Sauvage",
+          "duration": "14 jours",
+          "highlights": ["Torres del Paine", "Glaciers", "Estancias de luxe", "Trekking privé"]
+        }
+      ],
+      "cta": "Personnaliser"
+    }
+  },
+  "omra_hajj": {
+    "title": "Omra & Hajj",
+    "subtitle": "Pèlerinage de Luxe",
+    "description": "Découvrez nos forfaits Omra et Hajj premium. Voyages spirituels tout inclus avec hôtels 5 étoiles, guides expérimentés et service VIP.",
+    "hero": {
+      "tagline": "🕌 Voyage Spirituel",
+      "title": "Omra & Hajj",
+      "description": "Vivez une expérience spirituelle inoubliable avec nos forfaits premium tout inclus",
+      "cta_primary": "Voir nos forfaits",
+      "cta_secondary": "Demander un devis"
+    },
+    "why_choose": {
+      "title": "Pourquoi Choisir Sirine Travel ?",
+      "features": [
+        {
+          "title": "Vols Directs",
+          "description": "Vols directs et confortables vers Jeddah avec les meilleures compagnies aériennes"
+        },
+        {
+          "title": "Hôtels Premium",
+          "description": "Hébergement dans les meilleurs hôtels 5 étoiles à proximité des lieux saints"
+        },
+        {
+          "title": "Guides Expérimentés",
+          "description": "Accompagnement par des guides spirituels qualifiés et expérimentés"
+        },
+        {
+          "title": "Tout Inclus",
+          "description": "Visa, transferts, repas et excursions inclus dans nos forfaits"
+        },
+        {
+          "title": "Transferts VIP",
+          "description": "Transferts privés et climatisés entre l'aéroport, l'hôtel et les lieux saints"
+        },
+        {
+          "title": "Support 24/7",
+          "description": "Assistance et support disponibles 24h/24 pendant tout votre séjour"
+        }
+      ]
+    },
+    "packages": {
+      "title": "Nos Forfaits Omra",
+      "subtitle": "Choisissez le forfait qui correspond à vos besoins et votre budget",
+      "popular_badge": "Plus Populaire",
+      "cta": "Choisir ce forfait",
+      "items": [
+        {
+          "name": "Forfait Économique",
+          "price": "À partir de 15 000 MAD",
+          "duration": "15 jours",
+          "features": [
+            "Vol aller-retour",
+            "Hôtel 3 étoiles",
+            "Transferts inclus",
+            "Guide spirituel",
+            "Visa Omra"
+          ]
+        },
+        {
+          "name": "Forfait Premium",
+          "price": "À partir de 25 000 MAD",
+          "duration": "20 jours",
+          "features": [
+            "Vol direct premium",
+            "Hôtel 5 étoiles près Haram",
+            "Transferts VIP",
+            "Guide spirituel privé",
+            "Visa Omra + assurance",
+            "Repas inclus"
+          ]
+        },
+        {
+          "name": "Forfait Luxe",
+          "price": "À partir de 40 000 MAD",
+          "duration": "25 jours",
+          "features": [
+            "Vol première classe",
+            "Suite 5 étoiles vue Kaaba",
+            "Transferts privés",
+            "Guide spirituel personnel",
+            "Visa Omra + assurance premium",
+            "Tous repas inclus",
+            "Excursions historiques"
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Galerie des Lieux Saints",
+      "subtitle": "Découvrez la beauté et la spiritualité des lieux saints de l'Islam à travers notre galerie de 8 photos",
+      "images": {
+        "kaaba": "La Kaaba",
+        "prophet_mosque": "Mosquée du Prophète",
+        "arafat": "Mont Arafat",
+        "tawaf": "Tawaf autour de la Kaaba",
+        "medina": "Médine",
+        "grand_mosque_prayer": "Prière à la Grande Mosquée",
+        "pilgrims_prayer": "Pèlerins en prière",
+        "spiritual_journey": "Voyage spirituel"
+      },
+      "descriptions": {
+        "kaaba": "La Kaaba au cœur de la Grande Mosquée de La Mecque",
+        "prophet_mosque": "La magnifique Mosquée du Prophète à Médine",
+        "arafat": "Le Mont Arafat, lieu sacré du Hajj",
+        "tawaf": "Les pèlerins effectuant le Tawaf autour de la Kaaba",
+        "medina": "Vue panoramique de Médine",
+        "grand_mosque_prayer": "Moment de prière à la Grande Mosquée",
+        "pilgrims_prayer": "Pèlerins en recueillement et prière",
+        "spiritual_journey": "L'essence du voyage spirituel de l'Omra"
+      }
+    },
+    "program": {
+      "title": "Programme Détaillé de l'Omra",
+      "subtitle": "Un voyage spirituel organisé jour par jour pour une expérience inoubliable",
+      "days": {
+        "day_1_2": "Jour 1-2",
+        "day_3_5": "Jour 3-5",
+        "day_6": "Jour 6",
+        "day_7_10": "Jour 7-10",
+        "day_11": "Jour 11"
+      },
+      "titles": {
+        "arrival_medina": "Arrivée à Médine",
+        "stay_medina": "Séjour à Médine",
+        "departure_mecca": "Départ vers La Mecque",
+        "stay_mecca": "Séjour à La Mecque",
+        "departure": "Départ"
+      },
+      "activities": {
+        "airport_welcome": "Accueil à l'aéroport de Médine",
+        "hotel_checkin": "Installation à l'hôtel",
+        "prophet_mosque_visit": "Visite de la Mosquée du Prophète",
+        "rawda_prayer": "Prière dans la Rawda",
+        "daily_prayers": "Prières quotidiennes à la mosquée",
+        "historical_sites": "Visite des sites historiques",
+        "quba_mosque": "Mosquée de Quba",
+        "baqi_cemetery": "Cimetière d'Al-Baqi",
+        "bus_travel": "Voyage en bus climatisé",
+        "mecca_checkin": "Installation à l'hôtel de La Mecque",
+        "first_umrah": "Première Omra (Tawaf et Sa'i)",
+        "haram_prayers": "Prières quotidiennes au Haram",
+        "additional_tawaf": "Tawaf et Sa'i supplémentaires",
+        "jabal_nur_visit": "Visite du Jabal Nur (Grotte de Hira)",
+        "shopping_rest": "Shopping et repos",
+        "last_umrah": "Dernière Omra",
+        "departure_prep": "Préparatifs de départ",
+        "airport_transfer": "Transfert à l'aéroport",
+        "return_flight": "Vol de retour"
+      },
+      "highlights": {
+        "title": "Points forts du programme",
+        "holy_sites": {
+          "title": "Lieux Saints",
+          "description": "Visite de tous les lieux saints importants"
+        },
+        "expert_guide": {
+          "title": "Guide Expert",
+          "description": "Accompagnement par un guide religieux expérimenté"
+        },
+        "transport": {
+          "title": "Transport",
+          "description": "Transport climatisé entre toutes les destinations"
+        }
+      }
+    },
+    "reservation": {
+      "title": "Réservez votre Omra",
+      "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les plus brefs délais",
+      "form": {
+        "full_name": "Nom complet *",
+        "email": "Email *",
+        "phone": "Téléphone *",
+        "desired_package": "Forfait souhaité *",
+        "message": "Message ou demandes spéciales",
+        "placeholders": {
+          "full_name": "Votre nom complet",
+          "email": "votre@email.com",
+          "phone": "+212 6XX XXX XXX",
+          "message": "Partagez-nous vos besoins spécifiques ou vos questions..."
+        },
+        "package_options": {
+          "choose": "Choisir un forfait",
+          "economic": "Forfait Économique",
+          "comfort": "Forfait Confort",
+          "premium": "Forfait Premium"
+        },
+        "submit": "Envoyer ma demande",
+        "success_message": "Votre demande a été envoyée avec succès !"
+      },
+      "contact_info": {
+        "phone": {
+          "title": "Téléphone",
+          "number": "+212 XXX XXX XXX"
+        },
+        "whatsapp": {
+          "title": "WhatsApp",
+          "number": "+212 XXX XXX XXX"
+        },
+        "email": {
+          "title": "Email",
+          "address": "omra@vaoyage.com"
+        }
+      }
+    },
+    "hero_buttons": {
+      "discover_gallery": "Découvrir la galerie",
+      "view_program": "Voir le programme",
+      "book_now": "Réserver maintenant"
+    },
+    "contact": {
+      "title": "Prêt pour votre voyage spirituel ?",
+      "subtitle": "Contactez-nous dès aujourd'hui pour planifier votre Omra ou Hajj",
+      "phone": {
+        "title": "Appelez-nous"
+      },
+      "whatsapp": {
+        "title": "WhatsApp"
+      },
+      "email": {
+        "title": "Email"
+      }
+    }
+  },
+  "hotels_luxe": {
+    "title": "Hôtels de Luxe",
+    "subtitle": "Séjours d'Exception",
+    "description": "Découvrez notre sélection d'hôtels de luxe 5 étoiles. Tarifs préférentiels, surclassements et avantages VIP dans les plus beaux établissements du monde.",
+    "hero": {
+      "tagline": "🏨 Séjours d'Exception",
+      "title": "Hôtels de Luxe",
+      "description": "Une sélection des plus beaux établissements à travers le monde",
+      "cta_primary": "Découvrir nos hôtels",
+      "cta_secondary": "Réserver maintenant"
+    },
+    "advantages": {
+      "title": "Vos Avantages Sirine Travel",
+      "subtitle": "Bénéficiez de nos partenariats privilégiés avec les plus grands groupes hôteliers",
+      "items": [
+        {
+          "title": "Tarifs Préférentiels",
+          "description": "Négociation de tarifs exclusifs grâce à nos partenariats privilégiés"
+        },
+        {
+          "title": "Surclassement Garanti",
+          "description": "Upgrade automatique vers les meilleures catégories de chambres"
+        },
+        {
+          "title": "Avantages VIP",
+          "description": "Petit-déjeuner offert, crédits spa, late check-out et services exclusifs"
+        },
+        {
+          "title": "Accès Privilégié",
+          "description": "Réservations dans les hôtels complets et accès aux suites présidentielles"
+        }
+      ]
+    },
+    "categories": {
+      "title": "Nos Catégories d'Hôtels",
+      "items": [
+        {
+          "name": "Palaces Urbains",
+          "description": "Les plus prestigieux hôtels au cœur des grandes métropoles",
+          "examples": ["Ritz Paris", "Plaza New York", "Burj Al Arab Dubai", "Peninsula Tokyo"]
+        },
+        {
+          "name": "Resorts Tropicaux",
+          "description": "Évasion paradisiaque dans les plus beaux resorts du monde",
+          "examples": ["Four Seasons Maldives", "Aman Bali", "One&Only Mauritius", "St. Regis Bora Bora"]
+        },
+        {
+          "name": "Châteaux & Domaines",
+          "description": "Séjours d'exception dans des propriétés historiques",
+          "examples": ["Château du Fey", "Ashford Castle", "Villa San Martino", "Schloss Elmau"]
+        },
+        {
+          "name": "Lodges Safari",
+          "description": "Aventure luxueuse au cœur de la nature sauvage",
+          "examples": ["Singita Serengeti", "Sabi Sabi", "Chobe Game Lodge", "Mahali Mzuri"]
+        }
+      ],
+      "reference_label": "Établissements de référence :"
+    },
+    "featured": {
+      "title": "Hôtels Coup de Cœur",
+      "subtitle": "Découvrez quelques-uns de nos établissements préférés",
+      "hotels": [
+        {
+          "name": "La Mamounia",
+          "location": "Marrakech, Maroc",
+          "category": "Palace Historique",
+          "highlights": ["Jardins centenaires", "Spa La Mamounia", "Restaurants étoilés", "Architecture mauresque"]
+        },
+        {
+          "name": "Burj Al Arab",
+          "location": "Dubai, EAU",
+          "category": "Hôtel 7 Étoiles",
+          "highlights": ["Suites duplex", "Héliport privé", "Plage privée", "Service majordome"]
+        },
+        {
+          "name": "Aman Tokyo",
+          "location": "Tokyo, Japon",
+          "category": "Urban Sanctuary",
+          "highlights": ["Design minimaliste", "Spa Aman", "Vue Mont Fuji", "Cuisine kaiseki"]
+        },
+        {
+          "name": "Four Seasons Safari",
+          "location": "Serengeti, Tanzanie",
+          "category": "Lodge de Luxe",
+          "highlights": ["Tentes de luxe", "Game drives privés", "Spa en pleine nature", "Cuisine gastronomique"]
+        }
+      ],
+      "cta": "Réserver"
+    },
+    "concierge": {
+      "title": "Service Conciergerie 24/7",
+      "subtitle": "Notre équipe dédiée s'occupe de tous les détails de votre séjour",
+      "services": [
+        {
+          "title": "Réservations Express",
+          "description": "Réservation immédiate dans les hôtels de votre choix, même complets"
+        },
+        {
+          "title": "Demandes Spéciales",
+          "description": "Organisation de surprises, anniversaires et événements privés"
+        },
+        {
+          "title": "Services Annexes",
+          "description": "Transferts VIP, excursions privées et réservations restaurants"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Réservez Votre Séjour d'Exception",
+      "subtitle": "Contactez nos experts pour bénéficier de nos tarifs préférentiels",
+      "cta_phone": "📞 Réservation immédiate",
+      "cta_whatsapp": "💬 WhatsApp",
+      "cta_email": "✉️ Devis personnalisé"
+    }
+  }
+}

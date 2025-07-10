@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4682B4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#000080;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="800" height="600" fill="url(#skyGradient)" />
+
+  <!-- Bosphorus -->
+  <path d="M0 400 Q400 380 800 400 L800 600 L0 600 Z" fill="url(#waterGradient)">
+    <animate attributeName="d" values="M0 400 Q400 380 800 400 L800 600 L0 600 Z;M0 400 Q400 420 800 400 L800 600 L0 600 Z;M0 400 Q400 380 800 400 L800 600 L0 600 Z" dur="5s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Hagia Sophia -->
+  <g transform="translate(400,300)">
+    <!-- Main Dome -->
+    <path d="M-80 0 Q-80 -80 0 -80 Q80 -80 80 0" fill="#DEB887" />
+    <ellipse cx="0" cy="0" rx="80" ry="20" fill="#CD853F" />
+
+    <!-- Central Dome -->
+    <path d="M-40 0 Q-40 -60 0 -60 Q40 -60 40 0" fill="#D2B48C" />
+    
+    <!-- Minarets -->
+    <g>
+      <!-- Left Minaret -->
+      <rect x="-90" y="-120" width="10" height="120" fill="#DEB887" />
+      <path d="M-95 -120 L-85 -140 L-75 -120" fill="#DEB887" />
+      
+      <!-- Right Minaret -->
+      <rect x="80" y="-120" width="10" height="120" fill="#DEB887" />
+      <path d="M75 -120 L85 -140 L95 -120" fill="#DEB887" />
+    </g>
+
+    <!-- Windows and Details -->
+    <g fill="#FFD700" opacity="0.6">
+      <circle cx="0" cy="-40" r="10">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-30" cy="-30" r="5" />
+      <circle cx="30" cy="-30" r="5" />
+    </g>
+  </g>
+
+  <!-- Blue Mosque -->
+  <g transform="translate(200,320)">
+    <!-- Main Structure -->
+    <path d="M-60 0 Q-60 -60 0 -60 Q60 -60 60 0" fill="#4169E1" opacity="0.9" />
+    <ellipse cx="0" cy="0" rx="60" ry="15" fill="#4169E1" />
+
+    <!-- Minarets -->
+    <rect x="-70" y="-90" width="8" height="90" fill="#4169E1" />
+    <rect x="62" y="-90" width="8" height="90" fill="#4169E1" />
+  </g>
+
+  <!-- Topkapi Palace -->
+  <g transform="translate(600,340)">
+    <rect x="-100" y="-40" width="200" height="40" fill="#DEB887" />
+    <path d="M-110 -40 L0 -80 L110 -40" fill="#CD853F" />
+    
+    <!-- Decorative Elements -->
+    <g fill="#FFD700" opacity="0.7">
+      <rect x="-80" y="-30" width="10" height="20" />
+      <rect x="-40" y="-30" width="10" height="20" />
+      <rect x="0" y="-30" width="10" height="20" />
+      <rect x="40" y="-30" width="10" height="20" />
+      <rect x="70" y="-30" width="10" height="20" />
+    </g>
+  </g>
+
+  <!-- Boats on Bosphorus -->
+  <g>
+    <path d="M100 420 L130 420 L120 430 L110 430 Z" fill="#FFFFFF">
+      <animate attributeName="transform" type="translate" values="0,0; 10,-2; 0,0" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M500 440 L530 440 L520 450 L510 450 Z" fill="#FFFFFF">
+      <animate attributeName="transform" type="translate" values="0,0; -10,-2; 0,0" dur="2.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Birds -->
+  <g fill="none" stroke="#000000" stroke-width="2" opacity="0.6">
+    <path d="M150 100 Q160 90 170 100 Q180 90 190 100">
+      <animate attributeName="d" values="M150 100 Q160 90 170 100 Q180 90 190 100;M150 105 Q160 95 170 105 Q180 95 190 105;M150 100 Q160 90 170 100 Q180 90 190 100" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M180 120 Q190 110 200 120 Q210 110 220 120">
+      <animate attributeName="d" values="M180 120 Q190 110 200 120 Q210 110 220 120;M180 125 Q190 115 200 125 Q210 115 220 125;M180 120 Q190 110 200 120 Q210 110 220 120" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Moon and Stars -->
+  <g transform="translate(700,100)">
+    <circle cx="0" cy="0" r="20" fill="#FFD700" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <g fill="#FFD700" opacity="0.6">
+      <circle cx="-40" cy="-20" r="2">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="-30" cy="30" r="2">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="20" cy="-30" r="2">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+</svg>

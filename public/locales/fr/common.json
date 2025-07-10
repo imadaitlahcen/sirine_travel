@@ -1,0 +1,43 @@
+{
+  "site_name": "Sirine Travel",
+  "tagline": "Votre voyage de luxe commence ici",
+  "buttons": {
+    "discover": "Découvrir",
+    "book_now": "Réserver maintenant",
+    "learn_more": "En savoir plus",
+    "contact_us": "Nous contacter",
+    "view_all": "Voir tout"
+  },
+  "contact": {
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Adresse",
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe d'experts passionnés est à votre disposition pour créer l'expérience de voyage parfaite, adaptée à vos désirs les plus exigeants.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subtitle": "Partagez vos rêves de voyage, nous les transformerons en réalité",
+      "name": "Nom complet",
+      "email_label": "Adresse email",
+      "phone_label": "Numéro de téléphone",
+      "service": "Service souhaité",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "placeholders": {
+        "name": "Votre nom complet",
+        "email": "votre@email.com",
+        "phone": "+212 XXX-XXXXXX",
+        "message": "Décrivez-nous votre projet de voyage, vos préférences, dates souhaitées..."
+      }
+    },
+    "info": {
+      "agency": "Notre Agence",
+      "social": "Réseaux Sociaux"
+    }
+  },
+  "currency": "€",
+  "from": "À partir de",
+  "loading": "Chargement...",
+  "error": "Une erreur s'est produite"
+}

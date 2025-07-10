@@ -1,0 +1,526 @@
+{
+  "business_travel": {
+    "title": "Business Travel",
+    "subtitle": "Corporate Solutions",
+    "description": "Premium solutions to optimize your business travel",
+    "hero": {
+      "tagline": "🎯 Corporate Solutions",
+      "title": "Business Travel",
+      "description": "Premium solutions to optimize your business travel",
+      "cta_primary": "Discover our solutions",
+      "cta_secondary": "Free audit"
+    },
+    "advantages": {
+      "title": "Why Choose Sirine Travel?",
+      "subtitle": "Optimize your business travel with our expertise and innovative tools",
+      "items": [
+        {
+          "title": "Guaranteed Savings",
+          "description": "Average reduction of 15-25% on your travel costs through our negotiations"
+        },
+        {
+          "title": "Time Savings",
+          "description": "Complete delegation of travel management to our dedicated experts"
+        },
+        {
+          "title": "24/7 Assistance",
+          "description": "Emergency support available worldwide, 24/7"
+        },
+        {
+          "title": "Continuous Optimization",
+          "description": "Regular analysis and optimization of your travel policy"
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Corporate Services",
+      "items": [
+        {
+          "title": "Business & First Class Flights",
+          "description": "Bookings on all airlines with the best corporate rates",
+          "features": ["Total flexibility", "Free upgrades", "VIP lounges", "Priority baggage"]
+        },
+        {
+          "title": "Business Hotels",
+          "description": "Selection of hotels adapted to business travelers",
+          "features": ["High-speed WiFi", "Business centers", "Meeting rooms", "24/7 service"]
+        },
+        {
+          "title": "Transfers & Rentals",
+          "description": "Transport solutions adapted to your professional needs",
+          "features": ["Private drivers", "Premium vehicles", "Guaranteed punctuality", "Centralized billing"]
+        },
+        {
+          "title": "Management & Reporting",
+          "description": "Tools for tracking and optimizing your business travel",
+          "features": ["Dashboard", "Detailed reports", "Cost control", "Travel policy"]
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Our Tailored Solutions",
+      "subtitle": "Choose the solution adapted to your company's size and needs",
+      "items": [
+        {
+          "name": "SME Starter",
+          "description": "Solution adapted to small and medium enterprises",
+          "ideal": "5-50 travelers",
+          "features": [
+            "Online booking platform",
+            "Dedicated account manager",
+            "Monthly reports",
+            "Email and phone support",
+            "Centralized billing"
+          ]
+        },
+        {
+          "name": "Corporate Plus",
+          "description": "Complete solution for large enterprises",
+          "ideal": "50+ travelers",
+          "popular": true,
+          "features": [
+            "Personalized platform",
+            "Dedicated 24/7 team",
+            "Real-time reports",
+            "ERP/SAP integration",
+            "Custom travel policy",
+            "Supplier negotiations"
+          ]
+        },
+        {
+          "name": "Executive VIP",
+          "description": "Premium service for executives and VIPs",
+          "ideal": "Executives & VIP",
+          "features": [
+            "Personal concierge",
+            "Private flights and jets",
+            "Prestige hotels",
+            "Enhanced security",
+            "Protocol assistance",
+            "Absolute discretion"
+          ]
+        }
+      ]
+    }
+  },
+  "custom_travel": {
+    "title": "Custom Travel",
+    "subtitle": "Exclusive Luxury Circuits",
+    "description": "Exclusive circuits designed according to your desires and travel style",
+    "hero": {
+      "tagline": "✈️ Unique Experiences",
+      "title": "Custom Travel",
+      "description": "Exclusive circuits designed according to your desires and travel style",
+      "cta_primary": "Discover our destinations",
+      "cta_secondary": "Create my trip"
+    },
+    "process": {
+      "title": "How We Create Your Journey",
+      "steps": [
+        {
+          "title": "Consultation",
+          "description": "Personalized interview to understand your desires and preferences"
+        },
+        {
+          "title": "Design",
+          "description": "Creation of a unique itinerary adapted to your tastes and budget"
+        },
+        {
+          "title": "Validation",
+          "description": "Adjustments and finalization of your custom trip"
+        },
+        {
+          "title": "Support",
+          "description": "24/7 support and concierge service throughout your stay"
+        }
+      ]
+    },
+    "services": {
+      "title": "Our Exclusive Services",
+      "items": [
+        {
+          "title": "Personalized Design",
+          "description": "Each trip is unique, designed according to your passions and dreams"
+        },
+        {
+          "title": "Exclusive Experiences",
+          "description": "Privileged access to places and experiences closed to the general public"
+        },
+        {
+          "title": "Private Concierge",
+          "description": "A dedicated advisor available 24/7 during your trip"
+        },
+        {
+          "title": "Premium Transport",
+          "description": "Private flights, VIP transfers and luxury vehicles with driver"
+        }
+      ]
+    },
+    "destinations": {
+      "title": "Exceptional Destinations",
+      "subtitle": "Discover some of our most sought-after destinations",
+      "items": [
+        {
+          "name": "Authentic Japan",
+          "duration": "12 days",
+          "highlights": ["Modern Tokyo", "Traditional Kyoto", "Mount Fuji", "Luxury ryokans"]
+        },
+        {
+          "name": "Tanzania Safari",
+          "duration": "10 days",
+          "highlights": ["Serengeti", "Ngorongoro Crater", "Premium lodges", "Animal migration"]
+        },
+        {
+          "name": "Maldives Islands",
+          "duration": "8 days",
+          "highlights": ["Overwater villas", "Private diving", "Luxury spa", "Gourmet cuisine"]
+        },
+        {
+          "name": "Wild Patagonia",
+          "duration": "14 days",
+          "highlights": ["Torres del Paine", "Glaciers", "Luxury estancias", "Private trekking"]
+        }
+      ],
+      "cta": "Customize"
+    }
+  },
+  "omra_hajj": {
+    "title": "Umrah & Hajj",
+    "subtitle": "Luxury Pilgrimage",
+    "description": "Discover our premium Umrah and Hajj packages. All-inclusive spiritual journeys with 5-star hotels, experienced guides and VIP service.",
+    "hero": {
+      "tagline": "🕌 Spiritual Journey",
+      "title": "Umrah & Hajj",
+      "description": "Experience an unforgettable spiritual journey with our premium all-inclusive packages",
+      "cta_primary": "View our packages",
+      "cta_secondary": "Request a quote"
+    },
+    "why_choose": {
+      "title": "Why Choose Sirine Travel?",
+      "features": [
+        {
+          "title": "Direct Flights",
+          "description": "Direct and comfortable flights to Jeddah with the best airlines"
+        },
+        {
+          "title": "Premium Hotels",
+          "description": "Accommodation in the best 5-star hotels near the holy sites"
+        },
+        {
+          "title": "Experienced Guides",
+          "description": "Accompaniment by qualified and experienced spiritual guides"
+        },
+        {
+          "title": "All Inclusive",
+          "description": "Visa, transfers, meals and excursions included in our packages"
+        },
+        {
+          "title": "VIP Transfers",
+          "description": "Private and air-conditioned transfers between airport, hotel and holy sites"
+        },
+        {
+          "title": "24/7 Support",
+          "description": "Assistance and support available 24/7 throughout your stay"
+        }
+      ]
+    },
+    "packages": {
+      "title": "Our Umrah Packages",
+      "subtitle": "Choose the package that suits your needs and budget",
+      "popular_badge": "Most Popular",
+      "cta": "Choose this package",
+      "items": [
+        {
+          "name": "Economy Package",
+          "price": "From 15,000 MAD",
+          "duration": "15 days",
+          "features": [
+            "Round-trip flight",
+            "3-star hotel",
+            "Transfers included",
+            "Spiritual guide",
+            "Umrah visa"
+          ]
+        },
+        {
+          "name": "Premium Package",
+          "price": "From 25,000 MAD",
+          "duration": "20 days",
+          "features": [
+            "Premium direct flight",
+            "5-star hotel near Haram",
+            "VIP transfers",
+            "Private spiritual guide",
+            "Umrah visa + insurance",
+            "Meals included"
+          ]
+        },
+        {
+          "name": "Luxury Package",
+          "price": "From 40,000 MAD",
+          "duration": "25 days",
+          "features": [
+            "First class flight",
+            "5-star suite with Kaaba view",
+            "Private transfers",
+            "Personal spiritual guide",
+            "Umrah visa + premium insurance",
+            "All meals included",
+            "Historical excursions"
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Holy Places Gallery",
+      "subtitle": "Discover the beauty and spirituality of Islam's holy places through our gallery of 8 photos",
+      "images": {
+        "kaaba": "The Kaaba",
+        "prophet_mosque": "Prophet's Mosque",
+        "arafat": "Mount Arafat",
+        "tawaf": "Tawaf around the Kaaba",
+        "medina": "Medina",
+        "grand_mosque_prayer": "Prayer at the Grand Mosque",
+        "pilgrims_prayer": "Pilgrims in prayer",
+        "spiritual_journey": "Spiritual journey"
+      },
+      "descriptions": {
+        "kaaba": "The Kaaba at the heart of the Grand Mosque in Mecca",
+        "prophet_mosque": "The magnificent Prophet's Mosque in Medina",
+        "arafat": "Mount Arafat, sacred place of Hajj",
+        "tawaf": "Pilgrims performing Tawaf around the Kaaba",
+        "medina": "Panoramic view of Medina",
+        "grand_mosque_prayer": "Prayer moment at the Grand Mosque",
+        "pilgrims_prayer": "Pilgrims in contemplation and prayer",
+        "spiritual_journey": "The essence of the spiritual journey of Umrah"
+      }
+    },
+    "program": {
+      "title": "Detailed Umrah Program",
+      "subtitle": "A spiritual journey organized day by day for an unforgettable experience",
+      "days": {
+        "day_1_2": "Day 1-2",
+        "day_3_5": "Day 3-5",
+        "day_6": "Day 6",
+        "day_7_10": "Day 7-10",
+        "day_11": "Day 11"
+      },
+      "titles": {
+        "arrival_medina": "Arrival in Medina",
+        "stay_medina": "Stay in Medina",
+        "departure_mecca": "Departure to Mecca",
+        "stay_mecca": "Stay in Mecca",
+        "departure": "Departure"
+      },
+      "activities": {
+        "airport_welcome": "Welcome at Medina airport",
+        "hotel_checkin": "Hotel check-in",
+        "prophet_mosque_visit": "Visit to the Prophet's Mosque",
+        "rawda_prayer": "Prayer in the Rawda",
+        "daily_prayers": "Daily prayers at the mosque",
+        "historical_sites": "Visit to historical sites",
+        "quba_mosque": "Quba Mosque",
+        "baqi_cemetery": "Al-Baqi Cemetery",
+        "bus_travel": "Air-conditioned bus travel",
+        "mecca_checkin": "Check-in at Mecca hotel",
+        "first_umrah": "First Umrah (Tawaf and Sa'i)",
+        "haram_prayers": "Daily prayers at the Haram",
+        "additional_tawaf": "Additional Tawaf and Sa'i",
+        "jabal_nur_visit": "Visit to Jabal Nur (Cave of Hira)",
+        "shopping_rest": "Shopping and rest",
+        "last_umrah": "Last Umrah",
+        "departure_prep": "Departure preparations",
+        "airport_transfer": "Airport transfer",
+        "return_flight": "Return flight"
+      },
+      "highlights": {
+        "title": "Program highlights",
+        "holy_sites": {
+          "title": "Holy Sites",
+          "description": "Visit to all important holy places"
+        },
+        "expert_guide": {
+          "title": "Expert Guide",
+          "description": "Accompaniment by an experienced religious guide"
+        },
+        "transport": {
+          "title": "Transport",
+          "description": "Air-conditioned transport between all destinations"
+        }
+      }
+    },
+    "reservation": {
+      "title": "Book your Umrah",
+      "subtitle": "Fill out the form below and our team will contact you as soon as possible",
+      "form": {
+        "full_name": "Full name *",
+        "email": "Email *",
+        "phone": "Phone *",
+        "desired_package": "Desired package *",
+        "message": "Message or special requests",
+        "placeholders": {
+          "full_name": "Your full name",
+          "email": "your@email.com",
+          "phone": "+212 6XX XXX XXX",
+          "message": "Share your specific needs or questions..."
+        },
+        "package_options": {
+          "choose": "Choose a package",
+          "economic": "Economy Package",
+          "comfort": "Comfort Package",
+          "premium": "Premium Package"
+        },
+        "submit": "Send my request",
+        "success_message": "Your request has been sent successfully!"
+      },
+      "contact_info": {
+        "phone": {
+          "title": "Phone",
+          "number": "+212 XXX XXX XXX"
+        },
+        "whatsapp": {
+          "title": "WhatsApp",
+          "number": "+212 XXX XXX XXX"
+        },
+        "email": {
+          "title": "Email",
+          "address": "omra@vaoyage.com"
+        }
+      }
+    },
+    "hero_buttons": {
+      "discover_gallery": "Discover gallery",
+      "view_program": "View program",
+      "book_now": "Book now"
+    },
+    "contact": {
+      "title": "Ready for your spiritual journey?",
+      "subtitle": "Contact us today to plan your Umrah or Hajj",
+      "phone": {
+        "title": "Call us"
+      },
+      "whatsapp": {
+        "title": "WhatsApp"
+      },
+      "email": {
+        "title": "Email"
+      }
+    }
+  },
+  "hotels_luxe": {
+    "title": "Luxury Hotels",
+    "subtitle": "Exceptional Stays",
+    "description": "Discover our selection of 5-star luxury hotels. Preferential rates, upgrades and VIP benefits in the world's finest establishments.",
+    "hero": {
+      "tagline": "🏨 Exceptional Stays",
+      "title": "Luxury Hotels",
+      "description": "A selection of the world's finest establishments",
+      "cta_primary": "Discover our hotels",
+      "cta_secondary": "Book now"
+    },
+    "advantages": {
+      "title": "Your Sirine Travel Advantages",
+      "subtitle": "Benefit from our privileged partnerships with the world's leading hotel groups",
+      "items": [
+        {
+          "title": "Preferential Rates",
+          "description": "Exclusive rate negotiations through our privileged partnerships"
+        },
+        {
+          "title": "Guaranteed Upgrades",
+          "description": "Automatic upgrade to the best room categories"
+        },
+        {
+          "title": "VIP Benefits",
+          "description": "Complimentary breakfast, spa credits, late check-out and exclusive services"
+        },
+        {
+          "title": "Privileged Access",
+          "description": "Reservations in fully booked hotels and access to presidential suites"
+        }
+      ]
+    },
+    "categories": {
+      "title": "Our Hotel Categories",
+      "items": [
+        {
+          "name": "Urban Palaces",
+          "description": "The most prestigious hotels in the heart of major metropolises",
+          "examples": ["Ritz Paris", "Plaza New York", "Burj Al Arab Dubai", "Peninsula Tokyo"]
+        },
+        {
+          "name": "Tropical Resorts",
+          "description": "Paradise escape in the world's most beautiful resorts",
+          "examples": ["Four Seasons Maldives", "Aman Bali", "One&Only Mauritius", "St. Regis Bora Bora"]
+        },
+        {
+          "name": "Castles & Estates",
+          "description": "Exceptional stays in historic properties",
+          "examples": ["Château du Fey", "Ashford Castle", "Villa San Martino", "Schloss Elmau"]
+        },
+        {
+          "name": "Safari Lodges",
+          "description": "Luxurious adventure in the heart of the wild",
+          "examples": ["Singita Serengeti", "Sabi Sabi", "Chobe Game Lodge", "Mahali Mzuri"]
+        }
+      ],
+      "reference_label": "Reference establishments:"
+    },
+    "featured": {
+      "title": "Featured Hotels",
+      "subtitle": "Discover some of our favorite establishments",
+      "hotels": [
+        {
+          "name": "La Mamounia",
+          "location": "Marrakech, Morocco",
+          "category": "Historic Palace",
+          "highlights": ["Century-old gardens", "La Mamounia Spa", "Starred restaurants", "Moorish architecture"]
+        },
+        {
+          "name": "Burj Al Arab",
+          "location": "Dubai, UAE",
+          "category": "7-Star Hotel",
+          "highlights": ["Duplex suites", "Private helipad", "Private beach", "Butler service"]
+        },
+        {
+          "name": "Aman Tokyo",
+          "location": "Tokyo, Japan",
+          "category": "Urban Sanctuary",
+          "highlights": ["Minimalist design", "Aman Spa", "Mount Fuji view", "Kaiseki cuisine"]
+        },
+        {
+          "name": "Four Seasons Safari",
+          "location": "Serengeti, Tanzania",
+          "category": "Luxury Lodge",
+          "highlights": ["Luxury tents", "Private game drives", "Wilderness spa", "Gourmet cuisine"]
+        }
+      ],
+      "cta": "Book"
+    },
+    "concierge": {
+      "title": "24/7 Concierge Service",
+      "subtitle": "Our dedicated team takes care of every detail of your stay",
+      "services": [
+        {
+          "title": "Express Reservations",
+          "description": "Immediate booking in hotels of your choice, even when fully booked"
+        },
+        {
+          "title": "Special Requests",
+          "description": "Organization of surprises, anniversaries and private events"
+        },
+        {
+          "title": "Additional Services",
+          "description": "VIP transfers, private excursions and restaurant reservations"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Book Your Exceptional Stay",
+      "subtitle": "Contact our experts to benefit from our preferential rates",
+      "cta_phone": "📞 Immediate booking",
+      "cta_whatsapp": "💬 WhatsApp",
+      "cta_email": "✉️ Custom quote"
+    }
+  }
+}

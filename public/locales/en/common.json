@@ -1,0 +1,43 @@
+{
+  "site_name": "Sirine Travel",
+  "tagline": "Your luxury journey starts here",
+  "buttons": {
+    "discover": "Discover",
+    "book_now": "Book now",
+    "learn_more": "Learn more",
+    "contact_us": "Contact us",
+    "view_all": "View all"
+  },
+  "contact": {
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "title": "Contact Us",
+    "subtitle": "Our team of passionate experts is at your disposal to create the perfect travel experience, tailored to your most demanding desires.",
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "Share your travel dreams, we will turn them into reality",
+      "name": "Full name",
+      "email_label": "Email address",
+      "phone_label": "Phone number",
+      "service": "Desired service",
+      "message": "Your message",
+      "submit": "Send message",
+      "placeholders": {
+        "name": "Your full name",
+        "email": "your@email.com",
+        "phone": "+212 XXX-XXXXXX",
+        "message": "Describe your travel project, preferences, desired dates..."
+      }
+    },
+    "info": {
+      "agency": "Our Agency",
+      "social": "Social Networks"
+    }
+  },
+  "currency": "€",
+  "from": "From",
+  "loading": "Loading...",
+  "error": "An error occurred"
+}

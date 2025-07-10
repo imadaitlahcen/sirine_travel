@@ -1,0 +1,31 @@
+{
+  "why_atlas": {
+    "title": "Pourquoi Atlas Voyages ?",
+    "stats": {
+      "advisors": {
+        "value": "+20",
+        "title": "Conseillers spécialistes",
+        "description": "du voyage sur-mesure de luxe",
+        "icon_label": "Équipe de conseillers"
+      },
+      "destinations": {
+        "value": "80",
+        "title": "Destinations",
+        "description": "choisies et testées par nos experts",
+        "icon_label": "Destinations mondiales"
+      },
+      "guides": {
+        "value": "+100",
+        "title": "Guides locaux",
+        "description": "vous accompagnent à travers le monde",
+        "icon_label": "Guides locaux expérimentés"
+      },
+      "support": {
+        "value": "24h/7",
+        "title": "Assistance réelle",
+        "description": "avant, pendant et après votre voyage",
+        "icon_label": "Assistance disponible 24h/7"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "why_atlas": {
+    "title": "لماذا أطلس للسفر؟",
+    "stats": {
+      "advisors": {
+        "value": "+20",
+        "title": "مستشارون متخصصون",
+        "description": "للسفر الفاخر المصمم خصيصاً",
+        "icon_label": "فريق الاستشارة"
+      },
+      "destinations": {
+        "value": "80",
+        "title": "وجهة",
+        "description": "مختارة ومجربة من قبل خبرائنا",
+        "icon_label": "وجهات عالمية"
+      },
+      "guides": {
+        "value": "+100",
+        "title": "مرشد محلي",
+        "description": "يرافقونك حول العالم",
+        "icon_label": "مرشدون محليون ذوو خبرة"
+      },
+      "support": {
+        "value": "24/7",
+        "title": "مساعدة حقيقية",
+        "description": "قبل وأثناء وبعد رحلتك",
+        "icon_label": "مساعدة متاحة 24/7"
+      }
+    }
+  }
+}

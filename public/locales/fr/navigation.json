@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "services": "Services",
+    "destinations": "Destinations",
+    "about": "À Propos",
+    "contact": "Contact"
+  },
+  "services_submenu": {
+    "omra_hajj": "Omra & Hajj",
+    "luxury_hotels": "Hôtels de Luxe",
+    "business_travel": "Voyages d'Affaires",
+    "custom_travel": "Voyages Sur-Mesure"
+  },
+  "language_selector": {
+    "french": "Français",
+    "english": "English",
+    "arabic": "العربية"
+  }
+}

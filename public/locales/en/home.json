@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Sirine Travel",
+    "cta_primary": "Discover our destinations",
+    "cta_secondary": "Plan my trip"
+  },
+  "services": {
+    "title": "Our Exceptional Services",
+    "subtitle": "A tailor-made experience for every traveler"
+  },
+  "destinations": {
+    "title": "Exceptional Destinations",
+    "subtitle": "Discover our most sought-after destinations"
+  },
+  "trending": {
+    "title": "Trending Now",
+    "subtitle": "The most popular destinations this season"
+  }
+}

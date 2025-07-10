@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3559;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#skyGradient)" />
+
+  <!-- Stars -->
+  <g>
+    <circle cx="100" cy="100" r="1" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="200" cy="150" r="1" fill="#ffffff" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="80" r="1" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Add more stars with different positions and animations -->
+  </g>
+
+  <!-- Moon Glow Effect -->
+  <circle cx="600" cy="100" r="80" fill="url(#moonGlow)" />
+  <circle cx="600" cy="100" r="40" fill="#ffd700" />
+
+  <!-- Kaaba Structure -->
+  <g transform="translate(400,300)">
+    <!-- Base shadow -->
+    <ellipse cx="0" cy="150" rx="120" ry="20" fill="#000000" opacity="0.3" />
+    
+    <!-- Main structure -->
+    <rect x="-80" y="-100" width="160" height="160" fill="#1a1a1a">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Gold decorative band -->
+    <rect x="-80" y="-40" width="160" height="20" fill="#ffd700" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Door -->
+    <rect x="-20" y="-60" width="40" height="80" fill="#4a4a4a" />
+    
+    <!-- Arabic calligraphy suggestion -->
+    <path d="M-60 -20 H60" stroke="#ffd700" stroke-width="2" fill="none" opacity="0.6" />
+  </g>
+
+  <!-- Surrounding buildings silhouette -->
+  <g opacity="0.8">
+    <path d="M0 400 L100 300 L200 350 L300 280 L400 320 L500 270 L600 330 L700 290 L800 400 L800 600 L0 600 Z" fill="#2d3559" />
+  </g>
+
+  <!-- Crowd suggestion -->
+  <g transform="translate(0,450)">
+    <path d="M0 0 Q400 -50 800 0" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.2" />
+    <path d="M0 20 Q400 -30 800 20" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.15" />
+    <path d="M0 40 Q400 -10 800 40" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.1" />
+  </g>
+</svg>

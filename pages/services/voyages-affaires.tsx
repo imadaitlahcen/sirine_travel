@@ -19,25 +19,25 @@ export default function VoyagesAffairesPage() {
       icon: "✈️",
       title: t('services:business_travel.services.items.0.title'),
       description: t('services:business_travel.services.items.0.description'),
-      features: t('services:business_travel.services.items.0.features', { returnObjects: true })
+      features: t('services:business_travel.services.items.0.features', { returnObjects: true }) as string[]
     },
     {
       icon: "🏨",
       title: t('services:business_travel.services.items.1.title'),
       description: t('services:business_travel.services.items.1.description'),
-      features: t('services:business_travel.services.items.1.features', { returnObjects: true })
+      features: t('services:business_travel.services.items.1.features', { returnObjects: true }) as string[]
     },
     {
       icon: "🚗",
       title: t('services:business_travel.services.items.2.title'),
       description: t('services:business_travel.services.items.2.description'),
-      features: t('services:business_travel.services.items.2.features', { returnObjects: true })
+      features: t('services:business_travel.services.items.2.features', { returnObjects: true }) as string[]
     },
     {
       icon: "📊",
       title: t('services:business_travel.services.items.3.title'),
       description: t('services:business_travel.services.items.3.description'),
-      features: t('services:business_travel.services.items.3.features', { returnObjects: true })
+      features: t('services:business_travel.services.items.3.features', { returnObjects: true }) as string[]
     }
   ];
 
@@ -68,20 +68,20 @@ export default function VoyagesAffairesPage() {
     {
       name: t('services:business_travel.solutions.items.0.name'),
       description: t('services:business_travel.solutions.items.0.description'),
-      features: t('services:business_travel.solutions.items.0.features', { returnObjects: true }),
+      features: t('services:business_travel.solutions.items.0.features', { returnObjects: true }) as string[],
       ideal: t('services:business_travel.solutions.items.0.ideal')
     },
     {
       name: t('services:business_travel.solutions.items.1.name'),
       description: t('services:business_travel.solutions.items.1.description'),
-      features: t('services:business_travel.solutions.items.1.features', { returnObjects: true }),
+      features: t('services:business_travel.solutions.items.1.features', { returnObjects: true }) as string[],
       ideal: t('services:business_travel.solutions.items.1.ideal'),
       popular: true
     },
     {
       name: t('services:business_travel.solutions.items.2.name'),
       description: t('services:business_travel.solutions.items.2.description'),
-      features: t('services:business_travel.solutions.items.2.features', { returnObjects: true }),
+      features: t('services:business_travel.solutions.items.2.features', { returnObjects: true }) as string[],
       ideal: t('services:business_travel.solutions.items.2.ideal')
     }
   ];

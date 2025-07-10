@@ -19,25 +19,25 @@ export default function VoyagesSurMesurePage() {
       name: t('services:custom_travel.destinations.items.0.name'),
       image: "🏯",
       duration: t('services:custom_travel.destinations.items.0.duration'),
-      highlights: t('services:custom_travel.destinations.items.0.highlights', { returnObjects: true })
+      highlights: t('services:custom_travel.destinations.items.0.highlights', { returnObjects: true }) as string[]
     },
     {
       name: t('services:custom_travel.destinations.items.1.name'),
       image: "🦁",
       duration: t('services:custom_travel.destinations.items.1.duration'),
-      highlights: t('services:custom_travel.destinations.items.1.highlights', { returnObjects: true })
+      highlights: t('services:custom_travel.destinations.items.1.highlights', { returnObjects: true }) as string[]
     },
     {
       name: t('services:custom_travel.destinations.items.2.name'),
       image: "🏝️",
       duration: t('services:custom_travel.destinations.items.2.duration'),
-      highlights: t('services:custom_travel.destinations.items.2.highlights', { returnObjects: true })
+      highlights: t('services:custom_travel.destinations.items.2.highlights', { returnObjects: true }) as string[]
     },
     {
       name: t('services:custom_travel.destinations.items.3.name'),
       image: "🏔️",
       duration: t('services:custom_travel.destinations.items.3.duration'),
-      highlights: t('services:custom_travel.destinations.items.3.highlights', { returnObjects: true })
+      highlights: t('services:custom_travel.destinations.items.3.highlights', { returnObjects: true }) as string[]
     }
   ];
 

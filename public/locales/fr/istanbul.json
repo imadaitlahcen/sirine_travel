@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "Istanbul",
+    "subtitle": "Découvrez la Magie de l'Orient",
+    "description": "Plongez dans l'histoire millénaire d'Istanbul, où l'Orient rencontre l'Occident dans une symphonie de cultures, de saveurs et d'architectures extraordinaires.",
+    "cta_primary": "Réserver maintenant",
+    "cta_secondary": "Découvrir les lieux"
+  },
+  "destinations": {
+    "title": "Lieux Incontournables",
+    "subtitle": "Explorez les trésors cachés d'Istanbul",
+    "places": {
+      "hagia_sophia": {
+        "name": "Sainte-Sophie",
+        "description": "Chef-d'œuvre architectural byzantin devenu mosquée, symbole de l'histoire d'Istanbul."
+      },
+      "blue_mosque": {
+        "name": "Mosquée Bleue",
+        "description": "Magnifique mosquée aux six minarets, célèbre pour ses carreaux de faïence bleue."
+      },
+      "topkapi_palace": {
+        "name": "Palais de Topkapi",
+        "description": "Ancien palais des sultans ottomans offrant une vue imprenable sur le Bosphore."
+      },
+      "grand_bazaar": {
+        "name": "Grand Bazar",
+        "description": "L'un des plus anciens marchés couverts au monde avec plus de 4000 boutiques."
+      }
+    }
+  },
+  "reservation": {
+    "title": "Réservez votre Voyage à Istanbul",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous vous contacterons pour organiser votre escapade parfaite à Istanbul",
+    "form": {
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Votre nom complet",
+        "aria_label": "Nom complet requis"
+      },
+      "email": {
+        "label": "Adresse email",
+        "placeholder": "votre@email.com",
+        "aria_label": "Adresse email requise"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+212 6XX XXX XXX",
+        "aria_label": "Numéro de téléphone requis"
+      },
+      "travel_dates": {
+        "label": "Dates de voyage souhaitées",
+        "placeholder": "Ex: 15-22 Mars 2024",
+        "aria_label": "Dates de voyage requises"
+      },
+      "message": {
+        "label": "Message (optionnel)",
+        "placeholder": "Dites-nous vos préférences, besoins spéciaux, ou toute question...",
+        "aria_label": "Message optionnel"
+      },
+      "submit": "Envoyer ma demande",
+      "submitting": "Envoi en cours...",
+      "success_message": "Demande envoyée avec succès ! Nous vous contacterons bientôt."
+    },
+    "contact_info": {
+      "phone": {
+        "title": "Téléphone",
+        "number": "+212 6XX XXX XXX",
+        "action": "Appeler"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "number": "+212 644 354 175",
+        "action": "WhatsApp",
+        "message": "Bonjour, je suis intéressé par un voyage à Istanbul"
+      },
+      "email": {
+        "title": "Email",
+        "address": "contact@vaoyage.com",
+        "action": "Email"
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt pour votre Escapade à Istanbul ?",
+    "subtitle": "Laissez-vous séduire par la magie d'Istanbul avec nos circuits sur mesure",
+    "contact_us": "Nous contacter",
+    "back_home": "Retour à l'accueil"
+  },
+  "whatsapp_messages": {
+    "fr": "Bonjour ! Je souhaite réserver un voyage à Istanbul.\n\nMes informations :\n• Nom : {name}\n• Email : {email}\n• Téléphone : {phone}\n• Dates souhaitées : {travelDates}\n\nMessage : {message}\n\nMerci de me contacter pour finaliser ma réservation.",
+    "en": "Hello! I would like to book a trip to Istanbul.\n\nMy information:\n• Name: {name}\n• Email: {email}\n• Phone: {phone}\n• Desired dates: {travelDates}\n\nMessage: {message}\n\nPlease contact me to finalize my booking.",
+    "ar": "مرحباً! أود حجز رحلة إلى إسطنبول.\n\nمعلوماتي:\n• الاسم: {name}\n• البريد الإلكتروني: {email}\n• الهاتف: {phone}\n• التواريخ المرغوبة: {travelDates}\n\nالرسالة: {message}\n\nيرجى التواصل معي لإتمام الحجز."
+  }
+}

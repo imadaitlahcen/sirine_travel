@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "Dubai",
+    "subtitle": "Modern luxury and oriental traditions",
+    "cta_book": "Book now",
+    "cta_quote": "Request a quote"
+  },
+  "content": {
+    "title": "Dubai, Metropolis of the Arabian Nights",
+    "description1": "Dubai dazzles you with its unique blend of futuristic modernity and ancestral traditions. This metropolis of the United Arab Emirates constantly pushes the boundaries of architecture, luxury and innovation.",
+    "description2": "Explore its towering skyscrapers, grandiose shopping centers, authentic souks and golden beaches. Dubai offers an incomparable travel experience where dreams become reality at every moment.",
+    "stats": {
+      "burj_khalifa": "Burj Khalifa",
+      "travel_days": "Travel days"
+    }
+  },
+  "attractions": {
+    "title": "Iconic Attractions",
+    "subtitle": "Discover the architectural and cultural wonders of Dubai",
+    "burj_khalifa": {
+      "name": "Burj Khalifa",
+      "description": "World's tallest tower with panoramic view"
+    },
+    "burj_al_arab": {
+      "name": "Burj Al Arab",
+      "description": "Iconic sail-shaped hotel"
+    },
+    "palm_jumeirah": {
+      "name": "Palm Jumeirah",
+      "description": "Palm-shaped artificial island"
+    }
+  },
+  "reservation": {
+    "title": "Book your Trip to Dubai",
+    "subtitle": "Fill out this form and we will contact you to organize your dream stay in Dubai",
+    "form": {
+      "name_label": "Full name",
+      "name_placeholder": "Your full name",
+      "email_label": "Email address",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Phone number",
+      "phone_placeholder": "+1 234 567 8900",
+      "dates_label": "Desired travel dates",
+      "dates_placeholder": "Ex: March 15-22, 2024",
+      "message_label": "Message (optional)",
+      "message_placeholder": "Tell us more about your travel preferences...",
+      "submit_button": "Send my request",
+      "loading_text": "Sending..."
+    },
+    "success": {
+      "title": "Request sent successfully!",
+      "message": "We will contact you very soon to finalize your reservation."
+    },
+    "contact": {
+      "phone": {
+        "title": "Phone",
+        "action": "Call"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "action": "WhatsApp"
+      },
+      "email": {
+        "title": "Email",
+        "action": "Email"
+      }
+    },
+    "whatsapp_message": "Hello! I would like to book a trip to Dubai.\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nDesired dates: {dates}\nMessage: {message}"
+  },
+  "cta": {
+    "title": "Ready for your Dubai Adventure?",
+    "subtitle": "Discover the magic of Dubai with our personalized tours",
+    "contact_button": "Contact us",
+    "home_button": "Back to home"
+  }
+}

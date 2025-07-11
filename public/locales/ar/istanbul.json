@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "إسطنبول",
+    "subtitle": "اكتشف سحر الشرق",
+    "description": "انغمس في تاريخ إسطنبول الألفي، حيث يلتقي الشرق بالغرب في سيمفونية من الثقافات والنكهات والعمارة الاستثنائية.",
+    "cta_primary": "احجز الآن",
+    "cta_secondary": "اكتشف الأماكن"
+  },
+  "destinations": {
+    "title": "الأماكن التي لا يمكن تفويتها",
+    "subtitle": "استكشف كنوز إسطنبول المخفية",
+    "places": {
+      "hagia_sophia": {
+        "name": "آيا صوفيا",
+        "description": "تحفة معمارية بيزنطية أصبحت مسجداً، رمز تاريخ إسطنبول."
+      },
+      "blue_mosque": {
+        "name": "المسجد الأزرق",
+        "description": "مسجد رائع بستة مآذن، مشهور ببلاط الفيانس الأزرق."
+      },
+      "topkapi_palace": {
+        "name": "قصر توب كابي",
+        "description": "قصر السلاطين العثمانيين السابق يوفر إطلالة خلابة على البوسفور."
+      },
+      "grand_bazaar": {
+        "name": "البازار الكبير",
+        "description": "واحد من أقدم الأسواق المغطاة في العالم مع أكثر من 4000 متجر."
+      }
+    }
+  },
+  "reservation": {
+    "title": "احجز رحلتك إلى إسطنبول",
+    "subtitle": "املأ النموذج أدناه وسنتواصل معك لتنظيم رحلتك المثالية إلى إسطنبول",
+    "form": {
+      "name": {
+        "label": "الاسم الكامل",
+        "placeholder": "اسمك الكامل",
+        "aria_label": "الاسم الكامل مطلوب"
+      },
+      "email": {
+        "label": "عنوان البريد الإلكتروني",
+        "placeholder": "your@email.com",
+        "aria_label": "عنوان البريد الإلكتروني مطلوب"
+      },
+      "phone": {
+        "label": "رقم الهاتف",
+        "placeholder": "+212 6XX XXX XXX",
+        "aria_label": "رقم الهاتف مطلوب"
+      },
+      "travel_dates": {
+        "label": "تواريخ السفر المرغوبة",
+        "placeholder": "مثال: 15-22 مارس 2024",
+        "aria_label": "تواريخ السفر مطلوبة"
+      },
+      "message": {
+        "label": "رسالة (اختيارية)",
+        "placeholder": "أخبرنا عن تفضيلاتك، الاحتياجات الخاصة، أو أي أسئلة...",
+        "aria_label": "رسالة اختيارية"
+      },
+      "submit": "إرسال طلبي",
+      "submitting": "جاري الإرسال...",
+      "success_message": "تم إرسال الطلب بنجاح! سنتواصل معك قريباً."
+    },
+    "contact_info": {
+      "phone": {
+        "title": "الهاتف",
+        "number": "+212 6XX XXX XXX",
+        "action": "اتصل"
+      },
+      "whatsapp": {
+        "title": "واتساب",
+        "number": "+212 644 354 175",
+        "action": "واتساب",
+        "message": "مرحباً، أنا مهتم برحلة إلى إسطنبول"
+      },
+      "email": {
+        "title": "البريد الإلكتروني",
+        "address": "contact@vaoyage.com",
+        "action": "إيميل"
+      }
+    }
+  },
+  "cta": {
+    "title": "هل أنت مستعد لرحلتك إلى إسطنبول؟",
+    "subtitle": "دع نفسك تنجذب لسحر إسطنبول مع جولاتنا المصممة خصيصاً",
+    "contact_us": "اتصل بنا",
+    "back_home": "العودة للرئيسية"
+  },
+  "whatsapp_messages": {
+    "fr": "Bonjour ! Je souhaite réserver un voyage à Istanbul.\n\nMes informations :\n• Nom : {name}\n• Email : {email}\n• Téléphone : {phone}\n• Dates souhaitées : {travelDates}\n\nMessage : {message}\n\nMerci de me contacter pour finaliser ma réservation.",
+    "en": "Hello! I would like to book a trip to Istanbul.\n\nMy information:\n• Name: {name}\n• Email: {email}\n• Phone: {phone}\n• Desired dates: {travelDates}\n\nMessage: {message}\n\nPlease contact me to finalize my booking.",
+    "ar": "مرحباً! أود حجز رحلة إلى إسطنبول.\n\nمعلوماتي:\n• الاسم: {name}\n• البريد الإلكتروني: {email}\n• الهاتف: {phone}\n• التواريخ المرغوبة: {travelDates}\n\nالرسالة: {message}\n\nيرجى التواصل معي لإتمام الحجز."
+  }
+}

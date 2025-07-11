@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "title": "مصر",
+    "subtitle": "استكشف عجائب مصر القديمة، من الأهرامات المهيبة إلى المعابد المقدسة",
+    "cta_book": "احجز الآن",
+    "cta_discover": "اكتشف مصر",
+    "badge": "وجهة غامضة"
+  },
+  "destinations": {
+    "title": "الوجهات الأساسية",
+    "subtitle": "اكتشف أشهر المواقع في مصر",
+    "giza": {
+      "name": "أهرامات الجيزة",
+      "description": "آخر عجائب الدنيا السبع القديمة الباقية"
+    },
+    "valley_kings": {
+      "name": "وادي الملوك",
+      "description": "مقابر الفراعنة وكنوز مصر القديمة"
+    },
+    "nile_cruise": {
+      "name": "رحلة نيلية",
+      "description": "رحلة سحرية على النهر الأسطوري"
+    }
+  },
+  "reservation": {
+    "title": "احجز رحلتك إلى مصر",
+    "subtitle": "املأ هذا النموذج وسنتواصل معك لتنظيم رحلتك المخصصة",
+    "form": {
+      "name_label": "الاسم الكامل",
+      "name_placeholder": "اسمك الكامل",
+      "email_label": "عنوان البريد الإلكتروني",
+      "email_placeholder": "your@email.com",
+      "phone_label": "رقم الهاتف",
+      "phone_placeholder": "+33 6 12 34 56 78",
+      "dates_label": "تواريخ السفر المرغوبة",
+      "dates_placeholder": "مثال: 15-25 مارس 2024",
+      "message_label": "رسالة (اختيارية)",
+      "message_placeholder": "صف تفضيلاتك أو احتياجاتك الخاصة أو أسئلتك...",
+      "submit_button": "أرسل طلبي",
+      "loading_text": "جاري الإرسال..."
+    },
+    "success": {
+      "title": "تم إرسال الطلب بنجاح!",
+      "message": "سنتواصل معك قريباً جداً لإنهاء ترتيبات رحلتك."
+    },
+    "contact": {
+      "phone": {
+        "title": "الهاتف",
+        "action": "اتصل الآن"
+      },
+      "whatsapp": {
+        "title": "واتساب",
+        "action": "تحدث الآن"
+      },
+      "email": {
+        "title": "البريد الإلكتروني",
+        "action": "أرسل إيميل"
+      }
+    },
+    "whatsapp_message": "طلب حجز جديد لمصر:\n\nالاسم: {name}\nالبريد الإلكتروني: {email}\nالهاتف: {phone}\nتواريخ السفر: {dates}\nالرسالة: {message}"
+  },
+  "contact_section": {
+    "title": "خطط لرحلتك إلى مصر",
+    "subtitle": "تواصل مع خبرائنا لإنشاء رحلتك المخصصة",
+    "contact_button": "تواصل معنا",
+    "home_button": "العودة للرئيسية"
+  }
+}

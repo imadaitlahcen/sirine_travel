@@ -119,7 +119,7 @@ export default function VoyagesAffairesPage() {
                 <a href="#solutions" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                   {t('services:business_travel.hero.cta_primary')}
                 </a>
-                <a href="#contact" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
                   {t('services:business_travel.hero.cta_secondary')}
                 </a>
               </div>
@@ -225,7 +225,7 @@ export default function VoyagesAffairesPage() {
                       ))}
                     </ul>
                     
-                    <a href="#contact" className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    <a href="/contact" className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       solution.popular 
                         ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-indigo-600 hover:to-blue-500 shadow-lg'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
@@ -290,7 +290,7 @@ export default function VoyagesAffairesPage() {
               <a href="tel:+212XXXXXXXXX" className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 📞 Audit gratuit
               </a>
-              <a href="https://wa.me/212XXXXXXXXX" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a href="https://wa.me/message/HCUPHT7NUHCOO1" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 💬 WhatsApp
               </a>
               <a href="mailto:corporate@vaoyage.com" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">

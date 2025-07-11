@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you plan your perfect trip. Contact us today and let us turn your dreams into reality.",
+    "badge": "Excellence in Customer Service"
+  },
+  "contact_info": {
+    "title": "Contact Information",
+    "address": {
+      "title": "Address",
+      "value": "Abi Hanifa Annuman Street Al Khair Road\nBernoussi, Casablanca, Morocco"
+    },
+    "phone": {
+      "title": "Phone",
+      "action": "Call Us"
+    },
+    "email": {
+      "title": "Email",
+      "action": "Email Us"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "action": "Chat with Us"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "weekend": "Saturday: 9:00 AM - 4:00 PM | Sunday: Closed"
+    }
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "fields": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Choose your message subject",
+        "options": {
+          "general": "General Inquiry",
+          "booking": "Trip Booking",
+          "support": "Technical Support",
+          "partnership": "Partnership"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      }
+    },
+    "submit_button": "Send Message",
+    "loading_text": "Sending...",
+    "success": {
+      "title": "Message sent successfully!",
+      "message": "Thank you for contacting us. We'll get back to you as soon as possible."
+    }
+  },
+  "whatsapp_message": "Hello! I would like to inquire about:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nSubject: {subject}\n\nMessage:\n{message}\n\nThank you!",
+  "cta": {
+    "title": "Ready to plan your next adventure?",
+    "subtitle": "Contact us today and let us create the trip of your dreams.",
+    "call_button": "Call us now",
+    "whatsapp_button": "WhatsApp",
+    "destinations_button": "View our destinations",
+    "services_button": "Our services"
+  }
+}

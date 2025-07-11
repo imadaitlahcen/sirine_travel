@@ -128,7 +128,7 @@ export default function HotelsLuxePage() {
                 <a href="#categories" className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-600 hover:to-amber-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                   {t('services:hotels_luxe.hero.cta_primary')}
                 </a>
-                <a href="#contact" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-amber-900 transition-all duration-300">
+                <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-amber-900 transition-all duration-300">
                   {t('services:hotels_luxe.hero.cta_secondary')}
                 </a>
               </div>
@@ -235,7 +235,7 @@ export default function HotelsLuxePage() {
                       ))}
                     </ul>
                     
-                    <a href="#contact" className="block w-full text-center py-3 px-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-semibold hover:from-orange-600 hover:to-amber-500 transition-all duration-300">
+                    <a href="/contact" className="block w-full text-center py-3 px-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-semibold hover:from-orange-600 hover:to-amber-500 transition-all duration-300">
                       Réserver
                     </a>
                   </div>
@@ -296,7 +296,7 @@ export default function HotelsLuxePage() {
               <a href="tel:+212XXXXXXXXX" className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-600 hover:to-amber-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {t('services:hotels_luxe.contact.cta_phone')}
               </a>
-              <a href="https://wa.me/212XXXXXXXXX" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a href="https://wa.me/message/HCUPHT7NUHCOO1" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 {t('services:hotels_luxe.contact.cta_whatsapp')}
               </a>
               <a href="mailto:contact@vaoyage.com" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-amber-900 transition-all duration-300">

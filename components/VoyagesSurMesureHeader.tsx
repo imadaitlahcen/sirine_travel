@@ -68,9 +68,7 @@ export default function VoyagesSurMesureHeader() {
               )}
             </div>
             
-            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
-              {t('menu.destinations')}
-            </a>
+            
             <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
@@ -86,7 +84,7 @@ export default function VoyagesSurMesureHeader() {
             
             {/* WhatsApp spécialisé Sur-Mesure */}
             <a
-              href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20créer%20un%20voyage%20sur-mesure"
+              href="https://wa.me/message/HCUPHT7NUHCOO1"
               className="bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 font-medium flex-shrink-0 text-sm"
               target="_blank"
               rel="noopener noreferrer"

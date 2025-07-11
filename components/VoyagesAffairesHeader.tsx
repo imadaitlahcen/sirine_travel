@@ -68,9 +68,7 @@ export default function VoyagesAffairesHeader() {
               )}
             </div>
             
-            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
-              {t('menu.destinations')}
-            </a>
+            
             <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
@@ -86,7 +84,7 @@ export default function VoyagesAffairesHeader() {
             
             {/* WhatsApp spécialisé Business */}
             <a
-              href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20des%20infos%20sur%20vos%20voyages%20d'affaires"
+              href="https://wa.me/message/HCUPHT7NUHCOO1"
               className="bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 font-medium flex-shrink-0 text-sm"
               target="_blank"
               rel="noopener noreferrer"

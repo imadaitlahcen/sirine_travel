@@ -371,6 +371,7 @@
           "premium": "Premium Package"
         },
         "submit": "Send my request",
+        "submitting": "Sending...",
         "success_message": "Your request has been sent successfully!"
       },
       "contact_info": {
@@ -400,7 +401,8 @@
         "title": "Call us"
       },
       "whatsapp": {
-        "title": "WhatsApp"
+        "title": "WhatsApp",
+        "message": "I want an Umrah"
       },
       "email": {
         "title": "Email"

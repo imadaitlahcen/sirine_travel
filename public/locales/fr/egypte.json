@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "title": "Égypte",
+    "subtitle": "Explorez les merveilles de l'Égypte antique, des majestueuses pyramides aux temples sacrés",
+    "cta_book": "Réserver maintenant",
+    "cta_discover": "Découvrir l'Égypte",
+    "badge": "Destination Mystique"
+  },
+  "destinations": {
+    "title": "Destinations Incontournables",
+    "subtitle": "Découvrez les sites les plus emblématiques de l'Égypte",
+    "giza": {
+      "name": "Pyramides de Gizeh",
+      "description": "Les dernières merveilles du monde antique encore debout"
+    },
+    "valley_kings": {
+      "name": "Vallée des Rois",
+      "description": "Tombeaux des pharaons et trésors de l'Égypte antique"
+    },
+    "nile_cruise": {
+      "name": "Croisière sur le Nil",
+      "description": "Voyage magique sur le fleuve légendaire"
+    }
+  },
+  "reservation": {
+    "title": "Réservez votre voyage en Égypte",
+    "subtitle": "Remplissez ce formulaire et nous vous contacterons pour organiser votre voyage sur mesure",
+    "form": {
+      "name_label": "Nom complet",
+      "name_placeholder": "Votre nom complet",
+      "email_label": "Adresse email",
+      "email_placeholder": "votre@email.com",
+      "phone_label": "Numéro de téléphone",
+      "phone_placeholder": "+33 6 12 34 56 78",
+      "dates_label": "Dates de voyage souhaitées",
+      "dates_placeholder": "Ex: 15-25 Mars 2024",
+      "message_label": "Message (optionnel)",
+      "message_placeholder": "Décrivez vos préférences, besoins spéciaux, ou questions...",
+      "submit_button": "Envoyer ma demande",
+      "loading_text": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Demande envoyée avec succès !",
+      "message": "Nous vous contacterons très bientôt pour finaliser votre voyage."
+    },
+    "contact": {
+      "phone": {
+        "title": "Téléphone",
+        "action": "Appeler maintenant"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "action": "Chatter maintenant"
+      },
+      "email": {
+        "title": "Email",
+        "action": "Envoyer un email"
+      }
+    },
+    "whatsapp_message": "Nouvelle demande de réservation pour l'Égypte:\n\nNom: {name}\nEmail: {email}\nTéléphone: {phone}\nDates de voyage: {dates}\nMessage: {message}"
+  },
+  "contact_section": {
+    "title": "Planifiez votre voyage en Égypte",
+    "subtitle": "Contactez nos experts pour créer votre voyage sur mesure",
+    "contact_button": "Nous contacter",
+    "home_button": "Retour à l'accueil"
+  }
+}

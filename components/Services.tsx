@@ -178,7 +178,7 @@ export default function Services() {
                     </span>
                   </a>
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="group/btn relative block w-full text-center py-3 px-6 rounded-xl border-2 border-blue-300/50 text-blue-700 font-semibold hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300 transform hover:scale-[1.02] backdrop-blur-sm bg-blue-50/30 hover:shadow-lg"
                   >
                     <span className="relative flex items-center justify-center gap-2">

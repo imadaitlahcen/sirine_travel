@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "title": "Egypt",
+    "subtitle": "Explore the wonders of ancient Egypt, from majestic pyramids to sacred temples",
+    "cta_book": "Book Now",
+    "cta_discover": "Discover Egypt",
+    "badge": "Mystical Destination"
+  },
+  "destinations": {
+    "title": "Must-See Destinations",
+    "subtitle": "Discover Egypt's most iconic sites",
+    "giza": {
+      "name": "Pyramids of Giza",
+      "description": "The last remaining wonders of the ancient world"
+    },
+    "valley_kings": {
+      "name": "Valley of the Kings",
+      "description": "Pharaohs' tombs and treasures of ancient Egypt"
+    },
+    "nile_cruise": {
+      "name": "Nile Cruise",
+      "description": "Magical journey on the legendary river"
+    }
+  },
+  "reservation": {
+    "title": "Book Your Trip to Egypt",
+    "subtitle": "Fill out this form and we'll contact you to organize your custom trip",
+    "form": {
+      "name_label": "Full Name",
+      "name_placeholder": "Your full name",
+      "email_label": "Email Address",
+      "email_placeholder": "your@email.com",
+      "phone_label": "Phone Number",
+      "phone_placeholder": "+1 234 567 8900",
+      "dates_label": "Desired Travel Dates",
+      "dates_placeholder": "e.g., March 15-25, 2024",
+      "message_label": "Message (optional)",
+      "message_placeholder": "Describe your preferences, special needs, or questions...",
+      "submit_button": "Send My Request",
+      "loading_text": "Sending..."
+    },
+    "success": {
+      "title": "Request sent successfully!",
+      "message": "We'll contact you very soon to finalize your trip."
+    },
+    "contact": {
+      "phone": {
+        "title": "Phone",
+        "action": "Call Now"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "action": "Chat Now"
+      },
+      "email": {
+        "title": "Email",
+        "action": "Send Email"
+      }
+    },
+    "whatsapp_message": "New booking request for Egypt:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nTravel dates: {dates}\nMessage: {message}"
+  },
+  "contact_section": {
+    "title": "Plan Your Trip to Egypt",
+    "subtitle": "Contact our experts to create your custom journey",
+    "contact_button": "Contact Us",
+    "home_button": "Back to Home"
+  }
+}

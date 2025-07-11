@@ -2,13 +2,18 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import OmraHajjHeader from '../../components/OmraHajjHeader';
 import Footer from '../../components/Footer';
+import FormInput from '../../components/FormInput';
+import LoadingButton from '../../components/LoadingButton';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useFormValidation, commonValidationRules } from '../../hooks/useFormValidation';
 
 export default function OmraHajjPage() {
   const { t } = useTranslation(['common', 'services']);
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
@@ -18,6 +23,26 @@ export default function OmraHajjPage() {
     package: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  
+  // Form validation setup
+  const validationRules = {
+    name: commonValidationRules.name,
+    email: commonValidationRules.email,
+    phone: commonValidationRules.phone,
+    package: { required: true },
+    message: commonValidationRules.message
+  };
+  
+  const {
+    validateForm,
+    validateSingleField,
+    setFieldTouched,
+    clearErrors,
+    getFieldError
+  } = useFormValidation(validationRules);
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -119,18 +144,89 @@ export default function OmraHajjPage() {
     }
   ];
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Logique de soumission du formulaire
-    console.log('Formulaire soumis:', formData);
-    alert('Votre demande a été envoyée avec succès!');
+    
+    // Validate form
+    if (!validateForm(formData)) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form processing delay
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // Create dynamic WhatsApp message based on current language
+      let whatsappMessage = '';
+      
+      if (router.locale === 'ar') {
+        whatsappMessage = `🕌 *طلب حجز العمرة/الحج*\n\n` +
+          `👤 *الاسم الكامل:* ${formData.name}\n` +
+          `📧 *البريد الإلكتروني:* ${formData.email}\n` +
+          `📱 *الهاتف:* ${formData.phone}\n` +
+          `📦 *الباقة المرغوبة:* ${formData.package}\n` +
+          `💬 *الرسالة:* ${formData.message || 'لا توجد رسالة محددة'}\n\n` +
+          `يرجى التواصل معي لإتمام الحجز.\n\n` +
+          `📸 اكتشف صور العمرة: https://votre-domaine.com/images/header-omra.jpg`;
+      } else if (router.locale === 'en') {
+        whatsappMessage = `🕌 *Omra/Hajj Reservation Request*\n\n` +
+          `👤 *Full Name:* ${formData.name}\n` +
+          `📧 *Email:* ${formData.email}\n` +
+          `📱 *Phone:* ${formData.phone}\n` +
+          `📦 *Desired Package:* ${formData.package}\n` +
+          `💬 *Message:* ${formData.message || 'No specific message'}\n\n` +
+          `Please contact me to finalize my reservation.\n\n` +
+          `📸 Discover our Omra photos: https://votre-domaine.com/images/header-omra.jpg`;
+      } else {
+        // Default to French
+        whatsappMessage = `🕌 *Demande de réservation Omra/Hajj*\n\n` +
+          `👤 *Nom complet:* ${formData.name}\n` +
+          `📧 *Email:* ${formData.email}\n` +
+          `📱 *Téléphone:* ${formData.phone}\n` +
+          `📦 *Package souhaité:* ${formData.package}\n` +
+          `💬 *Message:* ${formData.message || 'Aucun message spécifique'}\n\n` +
+          `Merci de me contacter pour finaliser ma réservation.\n\n` +
+          `📸 Découvrez nos photos Omra: https://votre-domaine.com/images/header-omra.jpg`;
+      }
+      
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/212644354175?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success state
+      setSubmitSuccess(true);
+      
+      // Reset form after delay
+      setTimeout(() => {
+        setFormData({ name: '', email: '', phone: '', package: '', message: '' });
+        clearErrors();
+        setSubmitSuccess(false);
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Error sending form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+    
+    // Validate field on change if it was previously touched
+    validateSingleField(name, value);
+  };
+  
+  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFieldTouched(name);
+    validateSingleField(name, value);
   };
 
   const nextImage = () => {
@@ -155,6 +251,7 @@ export default function OmraHajjPage() {
         <OmraHajjHeader />
         
         {/* Hero Section with Header Photo */}
+        
         <section className="relative h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 overflow-hidden">
           {/* Photo de header */}
           <div className="absolute inset-0">
@@ -212,7 +309,8 @@ export default function OmraHajjPage() {
           </div>
         </section>
 
-        {/* Gallery Section */}
+
+            {/* Gallery Section */}
         <section id="gallery" className="py-24 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -388,7 +486,7 @@ export default function OmraHajjPage() {
                 ))}
               </div>
             </div>
-            </div>
+          </div>
         </section>
 
         {/* Reservation Form Section */}
@@ -405,54 +503,48 @@ export default function OmraHajjPage() {
             <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-2xl">
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      {t('services:omra_hajj.reservation.form.full_name')}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
-                      placeholder={t('services:omra_hajj.reservation.form.placeholders.full_name')}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      {t('services:omra_hajj.reservation.form.email')}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
-                      placeholder={t('services:omra_hajj.reservation.form.placeholders.email')}
-                    />
-                  </div>
+                  <FormInput
+                    type="text"
+                    id="name"
+                    name="name"
+                    label={t('services:omra_hajj.reservation.form.full_name')}
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    placeholder={t('services:omra_hajj.reservation.form.placeholders.full_name')}
+                    required
+                    error={getFieldError('name')}
+                    aria-label="Nom complet requis"
+                  />
+                  <FormInput
+                    type="email"
+                    id="email"
+                    name="email"
+                    label={t('services:omra_hajj.reservation.form.email')}
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    placeholder={t('services:omra_hajj.reservation.form.placeholders.email')}
+                    required
+                    error={getFieldError('email')}
+                    aria-label="Adresse email requise"
+                  />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                      {t('services:omra_hajj.reservation.form.phone')}
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
-                      placeholder={t('services:omra_hajj.reservation.form.placeholders.phone')}
-                    />
-                  </div>
+                  <FormInput
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    label={t('services:omra_hajj.reservation.form.phone')}
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    placeholder={t('services:omra_hajj.reservation.form.placeholders.phone')}
+                    required
+                    error={getFieldError('phone')}
+                    aria-label="Numéro de téléphone requis"
+                  />
                   <div>
                     <label htmlFor="package" className="block text-sm font-semibold text-gray-700 mb-2">
                       {t('services:omra_hajj.reservation.form.desired_package')}
@@ -462,46 +554,59 @@ export default function OmraHajjPage() {
                       name="package"
                       value={formData.package}
                       onChange={handleInputChange}
+                      onBlur={handleInputBlur}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300"
+                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 text-gray-900 bg-white ${
+                        getFieldError('package') ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'
+                      }`}
+                      aria-label="Sélection du package requis"
+                      aria-describedby={getFieldError('package') ? 'package-error' : undefined}
                     >
                       <option value="">{t('services:omra_hajj.reservation.form.package_options.choose')}</option>
                       <option value="economique">{t('services:omra_hajj.reservation.form.package_options.economic')}</option>
                       <option value="confort">{t('services:omra_hajj.reservation.form.package_options.comfort')}</option>
                       <option value="premium">{t('services:omra_hajj.reservation.form.package_options.premium')}</option>
                     </select>
+                    {getFieldError('package') && (
+                      <p id="package-error" className="mt-1 text-sm text-red-600" role="alert">
+                        {getFieldError('package')}
+                      </p>
+                    )}
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                    {t('services:omra_hajj.reservation.form.message')}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder={t('services:omra_hajj.reservation.form.placeholders.message')}
-                  ></textarea>
-                </div>
+                <FormInput
+                  type="textarea"
+                  id="message"
+                  name="message"
+                  label={t('services:omra_hajj.reservation.form.message')}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  onBlur={handleInputBlur}
+                  placeholder={t('services:omra_hajj.reservation.form.placeholders.message')}
+                  rows={4}
+                  error={getFieldError('message')}
+                  aria-label="Message optionnel"
+                />
 
                 <div className="text-center">
-                  <button
-                    type="submit"
-                    className="group relative bg-gradient-to-r from-emerald-600 to-teal-700 text-white px-10 md:px-12 py-4 md:py-5 rounded-xl font-semibold hover:from-teal-700 hover:to-emerald-600 transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl overflow-hidden min-w-[200px]"
-                  >
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      <svg className="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  {submitSuccess ? (
+                    <div className="flex items-center justify-center gap-3 px-10 py-5 bg-green-100 text-green-800 rounded-xl border border-green-200">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
+                      <span className="font-semibold">{t('services:omra_hajj.reservation.form.success_message')}</span>
+                    </div>
+                  ) : (
+                    <LoadingButton
+                      type="submit"
+                      loading={isSubmitting}
+                      loadingText={t('services:omra_hajj.reservation.form.submitting')}
+                      className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    >
                       {t('services:omra_hajj.reservation.form.submit')}
-                    </span>
-                    <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                  </button>
+                    </LoadingButton>
+                  )}
                 </div>
               </form>
 
@@ -569,7 +674,16 @@ export default function OmraHajjPage() {
               <a href="tel:+212XXXXXXXXX" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 📞 {t('services:omra_hajj.contact.phone.title')}
               </a>
-              <a href="https://wa.me/212XXXXXXXXX" className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <a 
+                href={`https://wa.me/212644354175?text=${encodeURIComponent(
+                  router.locale === 'ar' 
+                    ? t('services:omra_hajj.contact.whatsapp.message') || 'أريد عمرة'
+                    : router.locale === 'en'
+                    ? 'I want Omra'
+                    : 'Je veux une Omra'
+                )}`} 
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 💬 {t('services:omra_hajj.contact.whatsapp.title')}
               </a>
               <a href="mailto:contact@vaoyage.com" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300">
@@ -584,6 +698,7 @@ export default function OmraHajjPage() {
     </>
   );
 }
+
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {

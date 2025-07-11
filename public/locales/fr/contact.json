@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider à planifier votre voyage parfait. Contactez-nous dès aujourd'hui et laissez-nous transformer vos rêves en réalité.",
+    "badge": "Service client d'excellence"
+  },
+  "contact_info": {
+    "title": "Informations de contact",
+    "address": {
+      "title": "Adresse",
+      "value": "Rue Abi Hanifa Annuman Route Al Khair\nBernoussi, Casablanca, Maroc"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "action": "Appelez-nous"
+    },
+    "email": {
+      "title": "Email",
+      "action": "Écrivez-nous"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "action": "Chattez avec nous"
+    },
+    "hours": {
+      "title": "Horaires d'ouverture",
+      "weekdays": "Lundi - Vendredi: 9h00 - 18h00",
+      "weekend": "Samedi: 9h00 - 16h00 | Dimanche: Fermé"
+    }
+  },
+  "form": {
+    "title": "Envoyez-nous un message",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.",
+    "fields": {
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Entrez votre nom complet"
+      },
+      "email": {
+        "label": "Adresse email",
+        "placeholder": "Entrez votre adresse email"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "Entrez votre numéro de téléphone"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "Choisissez le sujet de votre message",
+        "options": {
+          "general": "Demande générale",
+          "booking": "Réservation de voyage",
+          "support": "Support technique",
+          "partnership": "Partenariat"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Écrivez votre message ici..."
+      }
+    },
+    "submit_button": "Envoyer le message",
+    "loading_text": "Envoi en cours...",
+    "success": {
+      "title": "Message envoyé avec succès !",
+      "message": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais."
+    }
+  },
+  "whatsapp_message": "Bonjour ! J'aimerais me renseigner sur :\n\nNom : {name}\nEmail : {email}\nTéléphone : {phone}\nSujet : {subject}\n\nMessage :\n{message}\n\nMerci !",
+  "cta": {
+    "title": "Prêt à planifier votre prochaine aventure ?",
+    "subtitle": "Contactez-nous dès aujourd'hui et laissez-nous créer le voyage de vos rêves.",
+    "call_button": "Appelez-nous maintenant",
+    "whatsapp_button": "WhatsApp",
+    "destinations_button": "Voir nos destinations",
+    "services_button": "Nos services"
+  }
+}

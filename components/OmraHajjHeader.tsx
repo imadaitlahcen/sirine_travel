@@ -68,9 +68,7 @@ export default function OmraHajjHeader() {
               )}
             </div>
             
-            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
-              {t('menu.destinations')}
-            </a>
+            
             <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
@@ -88,7 +86,7 @@ export default function OmraHajjHeader() {
             
             {/* WhatsApp spécialisé Omra */}
             <a
-              href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20des%20infos%20sur%20vos%20packages%20Omra%20et%20Hajj"
+              href="https://wa.me/message/HCUPHT7NUHCOO1"
               className="bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 flex items-center space-x-1 font-medium flex-shrink-0 text-sm"
               target="_blank"
               rel="noopener noreferrer"

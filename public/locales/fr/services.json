@@ -371,6 +371,7 @@
           "premium": "Forfait Premium"
         },
         "submit": "Envoyer ma demande",
+        "submitting": "Envoi en cours...",
         "success_message": "Votre demande a été envoyée avec succès !"
       },
       "contact_info": {
@@ -400,7 +401,8 @@
         "title": "Appelez-nous"
       },
       "whatsapp": {
-        "title": "WhatsApp"
+        "title": "WhatsApp",
+        "message": "Je veux une Omra"
       },
       "email": {
         "title": "Email"

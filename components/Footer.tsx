@@ -38,7 +38,7 @@ export default function Footer() {
       title: 'Contact',
       links: [
         { label: 'Téléphone: +212 XX XX XX XX', href: 'tel:+212XXXXXXXXX' },
-        { label: 'WhatsApp: +212 XX XX XX XX', href: 'https://wa.me/212XXXXXXXXX' },
+        { label: 'WhatsApp: +212 XX XX XX XX', href: 'https://wa.me/message/HCUPHT7NUHCOO1' },
         { label: 'Email: contact@vaoyage.com', href: 'mailto:contact@vaoyage.com' },
         { label: 'Adresse: Casablanca, Maroc', href: 'https://goo.gl/maps/XXXXXX' }
       ]
@@ -116,7 +116,7 @@ export default function Footer() {
         <div className="border-t border-slate-700/50 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-6 md:mb-0">
             {[
-              { icon: '📱', label: 'WhatsApp', href: 'https://wa.me/212XXXXXXXXX', color: 'hover:text-green-400' },
+              { icon: '📱', label: 'WhatsApp', href: 'https://wa.me/message/HCUPHT7NUHCOO1', color: 'hover:text-green-400' },
               { icon: '📸', label: 'Instagram', href: '#', color: 'hover:text-pink-400' },
               { icon: '👍', label: 'Facebook', href: '#', color: 'hover:text-blue-400' },
               { icon: '🐦', label: 'Twitter', href: '#', color: 'hover:text-sky-400' }

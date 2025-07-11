@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "Dubaï",
+    "subtitle": "Luxe moderne et traditions orientales",
+    "cta_book": "Réserver maintenant",
+    "cta_quote": "Demander un devis"
+  },
+  "content": {
+    "title": "Dubaï, Métropole des Mille et Une Nuits",
+    "description1": "Dubaï vous éblouit par son mélange unique de modernité futuriste et de traditions ancestrales. Cette métropole des Émirats Arabes Unis repousse constamment les limites de l'architecture, du luxe et de l'innovation.",
+    "description2": "Explorez ses gratte-ciels vertigineux, ses centres commerciaux grandioses, ses souks authentiques et ses plages dorées. Dubaï offre une expérience de voyage incomparable où le rêve devient réalité à chaque instant.",
+    "stats": {
+      "burj_khalifa": "Burj Khalifa",
+      "travel_days": "Jours de voyage"
+    }
+  },
+  "attractions": {
+    "title": "Attractions Emblématiques",
+    "subtitle": "Découvrez les merveilles architecturales et culturelles de Dubaï",
+    "burj_khalifa": {
+      "name": "Burj Khalifa",
+      "description": "Plus haute tour du monde avec vue panoramique"
+    },
+    "burj_al_arab": {
+      "name": "Burj Al Arab",
+      "description": "Hôtel iconique en forme de voile"
+    },
+    "palm_jumeirah": {
+      "name": "Palm Jumeirah",
+      "description": "Île artificielle en forme de palmier"
+    }
+  },
+  "reservation": {
+    "title": "Réservez votre Voyage à Dubaï",
+    "subtitle": "Remplissez ce formulaire et nous vous contacterons pour organiser votre séjour de rêve à Dubaï",
+    "form": {
+      "name_label": "Nom complet",
+      "name_placeholder": "Votre nom complet",
+      "email_label": "Adresse email",
+      "email_placeholder": "votre@email.com",
+      "phone_label": "Numéro de téléphone",
+      "phone_placeholder": "+33 6 12 34 56 78",
+      "dates_label": "Dates de voyage souhaitées",
+      "dates_placeholder": "Ex: 15-22 Mars 2024",
+      "message_label": "Message (optionnel)",
+      "message_placeholder": "Dites-nous en plus sur vos préférences de voyage...",
+      "submit_button": "Envoyer ma demande",
+      "loading_text": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Demande envoyée avec succès !",
+      "message": "Nous vous contacterons très bientôt pour finaliser votre réservation."
+    },
+    "contact": {
+      "phone": {
+        "title": "Téléphone",
+        "action": "Appeler"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "action": "WhatsApp"
+      },
+      "email": {
+        "title": "Email",
+        "action": "Email"
+      }
+    },
+    "whatsapp_message": "Bonjour! Je souhaite réserver un voyage à Dubaï.\n\nNom: {name}\nEmail: {email}\nTéléphone: {phone}\nDates souhaitées: {dates}\nMessage: {message}"
+  },
+  "cta": {
+    "title": "Prêt pour votre Aventure à Dubaï ?",
+    "subtitle": "Découvrez la magie de Dubaï avec nos circuits personnalisés",
+    "contact_button": "Nous contacter",
+    "home_button": "Retour à l'accueil"
+  }
+}

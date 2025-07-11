@@ -370,7 +370,8 @@
           "comfort": "باقة الراحة",
           "premium": "الباقة المميزة"
         },
-        "submit": "أرسل طلبي",
+        "submit": "إرسال طلبي",
+        "submitting": "جاري الإرسال...",
         "success_message": "تم إرسال طلبك بنجاح!"
       },
       "contact_info": {
@@ -400,7 +401,8 @@
         "title": "اتصل بنا"
       },
       "whatsapp": {
-        "title": "واتساب"
+        "title": "واتساب",
+        "message": "أريد عمرة"
       },
       "email": {
         "title": "إيميل"

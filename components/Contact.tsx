@@ -181,7 +181,7 @@ export default function Contact() {
                 <div className="flex-1">
                   <h3 className="text-xl font-playfair font-semibold text-slate-900 mb-3">WhatsApp Business</h3>
                   <div className="space-y-2 mb-4">
-                    <a href="https://wa.me/212661234567" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors group">
+                    <a href="https://wa.me/message/HCUPHT7NUHCOO1" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors group">
                       <span className="text-sm text-slate-600">Réservations & Info</span>
                       <span className="text-green-600 font-medium group-hover:text-green-700">+212 661-234-567</span>
                     </a>

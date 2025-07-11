@@ -64,15 +64,13 @@ export default function Header() {
               )}
             </div>
             
-            <a href="#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
-              {t('menu.destinations')}
-            </a>
+
             <a href="#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
-            <a href="#contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
+            <Link href="/contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.contact')}
-            </a>
+            </Link>
           </nav>
 
           {/* Language Selector, WhatsApp & Menu Mobile */}
@@ -82,7 +80,7 @@ export default function Header() {
             
             {/* WhatsApp */}
             <a
-              href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20des%20infos%20sur%20votre%20agence"
+              href="https://wa.me/message/HCUPHT7NUHCOO1"
               className="bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 font-medium text-sm"
               target="_blank"
               rel="noopener noreferrer"
@@ -143,13 +141,7 @@ export default function Header() {
                 )}
               </div>
               
-              <a
-                href="#destinations"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('menu.destinations')}
-              </a>
+
               <a
                 href="#about"
                 className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
@@ -157,13 +149,13 @@ export default function Header() {
               >
                 {t('menu.about')}
               </a>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.contact')}
-              </a>
+              </Link>
             </nav>
           </div>
         )}

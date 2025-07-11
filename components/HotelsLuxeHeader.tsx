@@ -68,9 +68,7 @@ export default function HotelsLuxeHeader() {
               )}
             </div>
             
-            <a href="/#destinations" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
-              {t('menu.destinations')}
-            </a>
+            
             <a href="/#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
               {t('menu.about')}
             </a>
@@ -86,7 +84,7 @@ export default function HotelsLuxeHeader() {
             
             {/* WhatsApp spécialisé Hôtels */}
             <a
-              href="https://wa.me/212XXXXXXXXX?text=Bonjour,%20je%20souhaite%20des%20infos%20sur%20vos%20hôtels%20de%20luxe"
+              href="https://wa.me/message/HCUPHT7NUHCOO1"
               className="bg-purple-600 text-white px-3 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300 flex items-center space-x-1 sm:space-x-2 font-medium flex-shrink-0 text-sm"
               target="_blank"
               rel="noopener noreferrer"

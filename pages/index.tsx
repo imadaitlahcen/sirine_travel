@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import HomeHeader from '../components/HomeHeader';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-import Services from '../components/Services';
+
 import TrendingDestinations from '../components/TrendingDestinations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -27,7 +27,7 @@ export default function Home() {
         <main>
           <Hero />
           <AboutSection />
-          <Services />
+
           <TrendingDestinations />
     
           <Contact />
@@ -82,7 +82,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
         'common',
         'navigation', 
         'home',
-        'about'
+        'about',
+        'contact'
       ])),
     },
   };

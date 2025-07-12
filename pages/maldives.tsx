@@ -169,20 +169,20 @@ export default function MaldivesPage() {
             {[
               {
                 title: 'Séjour Découverte',
-                price: '3,500€',
+                price: '35,000 MAD',
                 duration: '5 jours / 4 nuits',
                 features: ['Resort 4*', 'Pension complète', 'Transferts inclus', 'Excursion snorkeling']
               },
               {
                 title: 'Séjour Prestige',
-                price: '5,800€',
+                price: '58,000 MAD',
                 duration: '7 jours / 6 nuits',
                 features: ['Resort 5*', 'Villa sur pilotis', 'All inclusive', 'Spa & activités', 'Excursions privées'],
                 featured: true
               },
               {
                 title: 'Séjour Luxe',
-                price: '9,200€',
+                price: '92,000 MAD',
                 duration: '10 jours / 9 nuits',
                 features: ['Resort 5* Deluxe', 'Suite présidentielle', 'Butler privé', 'Yacht privé', 'Expériences sur mesure']
               }

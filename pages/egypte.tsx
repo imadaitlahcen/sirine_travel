@@ -85,7 +85,7 @@ export default function EgyptePage() {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -93,12 +93,6 @@ export default function EgyptePage() {
     });
     
     // Validate field on change if it was previously touched
-    validateSingleField(name, value);
-  };
-  
-  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFieldTouched(name);
     validateSingleField(name, value);
   };
 
@@ -186,7 +180,7 @@ export default function EgyptePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{tEgypte('destinations.giza.name')}</h3>
                   <p className="text-gray-600 mb-4">{tEgypte('destinations.giza.description')}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-amber-600">À partir de 120€</span>
+                    <span className="text-2xl font-bold text-amber-600">À partir de 1,200 MAD</span>
                     <span className="text-sm text-gray-500">par personne</span>
                   </div>
                 </div>
@@ -207,7 +201,7 @@ export default function EgyptePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{tEgypte('destinations.valley_kings.name')}</h3>
                   <p className="text-gray-600 mb-4">{tEgypte('destinations.valley_kings.description')}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-amber-600">À partir de 95€</span>
+                    <span className="text-2xl font-bold text-amber-600">À partir de 950 MAD</span>
                     <span className="text-sm text-gray-500">par personne</span>
                   </div>
                 </div>
@@ -228,7 +222,7 @@ export default function EgyptePage() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{tEgypte('destinations.nile_cruise.name')}</h3>
                   <p className="text-gray-600 mb-4">{tEgypte('destinations.nile_cruise.description')}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-amber-600">À partir de 450€</span>
+                    <span className="text-2xl font-bold text-amber-600">À partir de 4,500 MAD</span>
                     <span className="text-sm text-gray-500">par personne</span>
                   </div>
                 </div>
@@ -264,23 +258,23 @@ export default function EgyptePage() {
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormInput
+                      id="name"
                       label={tEgypte('reservation.form.name_label')}
                       name="name"
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
                       placeholder={tEgypte('reservation.form.name_placeholder')}
                       error={getFieldError('name')}
                       required
                     />
                     <FormInput
+                      id="email"
                       label={tEgypte('reservation.form.email_label')}
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
                       placeholder={tEgypte('reservation.form.email_placeholder')}
                       error={getFieldError('email')}
                       required
@@ -289,23 +283,23 @@ export default function EgyptePage() {
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormInput
+                      id="phone"
                       label={tEgypte('reservation.form.phone_label')}
                       name="phone"
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
                       placeholder={tEgypte('reservation.form.phone_placeholder')}
                       error={getFieldError('phone')}
                       required
                     />
                     <FormInput
+                      id="travelDates"
                       label={tEgypte('reservation.form.dates_label')}
                       name="travelDates"
                       type="text"
                       value={formData.travelDates}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
                       placeholder={tEgypte('reservation.form.dates_placeholder')}
                       error={getFieldError('travelDates')}
                       required
@@ -313,12 +307,12 @@ export default function EgyptePage() {
                   </div>
                   
                   <FormInput
+                    id="message"
                     label={tEgypte('reservation.form.message_label')}
                     name="message"
                     type="textarea"
                     value={formData.message}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={tEgypte('reservation.form.message_placeholder')}
                     error={getFieldError('message')}
                     rows={4}
@@ -327,7 +321,7 @@ export default function EgyptePage() {
                   <div className="pt-4">
                     <LoadingButton
                       type="submit"
-                      isLoading={isSubmitting}
+                      loading={isSubmitting}
                       loadingText={tEgypte('reservation.form.loading_text')}
                       className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-4 px-8 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >

@@ -6,25 +6,41 @@
   },
   "contact_info": {
     "title": "Contact Information",
+    "badge": "Excellence & Customer Service",
+    "agency_certified": "Certified Travel Agency",
+    "iata_certified": "IATA Certified",
+    "experience": "15+ years experience",
     "address": {
       "title": "Address",
       "value": "Abi Hanifa Annuman Street Al Khair Road\nBernoussi, Casablanca, Morocco"
     },
     "phone": {
       "title": "Phone",
-      "action": "Call Us"
+      "action": "Call Us",
+      "office": "Office",
+      "mobile": "Mobile",
+      "emergency": "24h Emergency"
     },
     "email": {
       "title": "Email",
-      "action": "Email Us"
+      "action": "Email Us",
+      "general": "General",
+      "reservations": "Reservations",
+      "support": "Support"
     },
     "whatsapp": {
       "title": "WhatsApp",
-      "action": "Chat with Us"
+      "action": "Chat with Us",
+      "business": "WhatsApp Business",
+      "reservations_info": "Reservations & Info",
+      "follow_us": "Follow us"
     },
     "hours": {
       "title": "Opening Hours",
-      "weekdays": "Monday - Friday: 9:00 AM - 6:00 PM",
+      "label": "Opening hours",
+      "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+      "saturday": "Sat: 9:00 AM - 1:00 PM",
+      "sunday": "Sun: Closed",
       "weekend": "Saturday: 9:00 AM - 4:00 PM | Sunday: Closed"
     }
   },

@@ -169,20 +169,20 @@ export default function GrecePage() {
             {[
               {
                 title: 'Découverte',
-                price: '1,400€',
+                price: '14,000 MAD',
                 duration: '7 jours / 6 nuits',
                 features: ['Hôtel 3-4*', 'Petit-déjeuner', 'Transferts', 'Athènes & 1 île', 'Visites guidées']
               },
               {
                 title: 'Odyssée',
-                price: '2,200€',
+                price: '22,000 MAD',
                 duration: '10 jours / 9 nuits',
                 features: ['Hôtel 4-5*', 'Demi-pension', 'Multi-îles', 'Croisière incluse', 'Expériences locales'],
                 featured: true
               },
               {
                 title: 'Luxe Antique',
-                price: '3,800€',
+                price: '38,000 MAD',
                 duration: '14 jours / 13 nuits',
                 features: ['Resort 5*', 'Pension complète', 'Yacht privé', 'Guide archéologue', 'Expériences VIP']
               }

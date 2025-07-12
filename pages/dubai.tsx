@@ -87,7 +87,7 @@ export default function DubaiPage() {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -95,12 +95,6 @@ export default function DubaiPage() {
     });
     
     // Validate field on change if it was previously touched
-    validateSingleField(name, value);
-  };
-  
-  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFieldTouched(name);
     validateSingleField(name, value);
   };
 
@@ -264,23 +258,23 @@ export default function DubaiPage() {
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <FormInput
+                    id="name"
                     label={tDubai('reservation.form.name_label')}
                     name="name"
                     type="text"
                     value={formData.name}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={tDubai('reservation.form.name_placeholder')}
                     error={getFieldError('name')}
                     required
                   />
                   <FormInput
+                    id="email"
                     label={tDubai('reservation.form.email_label')}
                     name="email"
                     type="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={tDubai('reservation.form.email_placeholder')}
                     error={getFieldError('email')}
                     required
@@ -289,23 +283,23 @@ export default function DubaiPage() {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <FormInput
+                    id="phone"
                     label={tDubai('reservation.form.phone_label')}
                     name="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={tDubai('reservation.form.phone_placeholder')}
                     error={getFieldError('phone')}
                     required
                   />
                   <FormInput
+                    id="travelDates"
                     label={tDubai('reservation.form.dates_label')}
                     name="travelDates"
                     type="text"
                     value={formData.travelDates}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={tDubai('reservation.form.dates_placeholder')}
                     error={getFieldError('travelDates')}
                     required
@@ -313,12 +307,12 @@ export default function DubaiPage() {
                 </div>
                 
                 <FormInput
+                  id="message"
                   label={tDubai('reservation.form.message_label')}
                   name="message"
                   type="textarea"
                   value={formData.message}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={tDubai('reservation.form.message_placeholder')}
                   error={getFieldError('message')}
                   rows={4}
@@ -327,7 +321,7 @@ export default function DubaiPage() {
                 <div className="pt-4">
                   <LoadingButton
                     type="submit"
-                    isLoading={isSubmitting}
+                    loading={isSubmitting}
                     loadingText={tDubai('reservation.form.loading_text')}
                     className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-4 px-8 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >

@@ -6,25 +6,41 @@
   },
   "contact_info": {
     "title": "Informations de contact",
+    "badge": "Excellence & Service Client",
+    "agency_certified": "Agence de Voyage Certifiée",
+    "iata_certified": "Certifiée IATA",
+    "experience": "15+ ans d'expérience",
     "address": {
       "title": "Adresse",
       "value": "Rue Abi Hanifa Annuman Route Al Khair\nBernoussi, Casablanca, Maroc"
     },
     "phone": {
       "title": "Téléphone",
-      "action": "Appelez-nous"
+      "action": "Appelez-nous",
+      "office": "Bureau",
+      "mobile": "Mobile",
+      "emergency": "Urgence 24h"
     },
     "email": {
       "title": "Email",
-      "action": "Écrivez-nous"
+      "action": "Écrivez-nous",
+      "general": "Général",
+      "reservations": "Réservations",
+      "support": "Support"
     },
     "whatsapp": {
       "title": "WhatsApp",
-      "action": "Chattez avec nous"
+      "action": "Chattez avec nous",
+      "business": "WhatsApp Business",
+      "reservations_info": "Réservations & Info",
+      "follow_us": "Suivez-nous"
     },
     "hours": {
       "title": "Horaires d'ouverture",
-      "weekdays": "Lundi - Vendredi: 9h00 - 18h00",
+      "label": "Heures d'ouverture",
+      "weekdays": "Lun - Ven: 9h00 - 18h00",
+      "saturday": "Sam: 9h00 - 13h00",
+      "sunday": "Dim: Fermé",
       "weekend": "Samedi: 9h00 - 16h00 | Dimanche: Fermé"
     }
   },

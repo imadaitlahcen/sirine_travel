@@ -169,20 +169,20 @@ export default function JaponPage() {
             {[
               {
                 title: 'Découverte',
-                price: '3,200€',
+                price: '32,000 MAD',
                 duration: '10 jours / 9 nuits',
                 features: ['Hôtel 3-4*', 'Petit-déjeuner', 'JR Pass 7 jours', 'Tokyo & Kyoto', 'Guides francophones']
               },
               {
                 title: 'Grand Tour',
-                price: '4,800€',
+                price: '48,000 MAD',
                 duration: '14 jours / 13 nuits',
                 features: ['Hôtel 4-5*', 'Demi-pension', 'JR Pass 14 jours', 'Multi-villes', 'Expériences culturelles'],
                 featured: true
               },
               {
                 title: 'Luxe Impérial',
-                price: '7,500€',
+                price: '75,000 MAD',
                 duration: '21 jours / 20 nuits',
                 features: ['Ryokan de luxe', 'Pension complète', 'Transport privé', 'Guides privés', 'Expériences VIP']
               }

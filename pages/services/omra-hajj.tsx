@@ -223,11 +223,7 @@ export default function OmraHajjPage() {
     validateSingleField(name, value);
   };
   
-  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFieldTouched(name);
-    validateSingleField(name, value);
-  };
+
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
@@ -510,7 +506,6 @@ export default function OmraHajjPage() {
                     label={t('services:omra_hajj.reservation.form.full_name')}
                     value={formData.name}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={t('services:omra_hajj.reservation.form.placeholders.full_name')}
                     required
                     error={getFieldError('name')}
@@ -523,7 +518,6 @@ export default function OmraHajjPage() {
                     label={t('services:omra_hajj.reservation.form.email')}
                     value={formData.email}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={t('services:omra_hajj.reservation.form.placeholders.email')}
                     required
                     error={getFieldError('email')}
@@ -539,7 +533,6 @@ export default function OmraHajjPage() {
                     label={t('services:omra_hajj.reservation.form.phone')}
                     value={formData.phone}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
                     placeholder={t('services:omra_hajj.reservation.form.placeholders.phone')}
                     required
                     error={getFieldError('phone')}
@@ -554,7 +547,6 @@ export default function OmraHajjPage() {
                       name="package"
                       value={formData.package}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
                       required
                       className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 text-gray-900 bg-white ${
                         getFieldError('package') ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'
@@ -582,7 +574,6 @@ export default function OmraHajjPage() {
                   label={t('services:omra_hajj.reservation.form.message')}
                   value={formData.message}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={t('services:omra_hajj.reservation.form.placeholders.message')}
                   rows={4}
                   error={getFieldError('message')}

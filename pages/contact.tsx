@@ -8,7 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FormInput from '../components/FormInput';
 import LoadingButton from '../components/LoadingButton';
-import { useFormValidation, commonValidationRules } from '../hooks/useFormValidation';
+import { useFormValidation } from '../hooks/useFormValidation';
 
 export default function ContactPage() {
   const { t } = useTranslation(['common', 'navigation']);
@@ -23,22 +23,20 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const { errors, validateForm, getFieldError } = useFormValidation(formData, {
-    name: [commonValidationRules.required],
-    email: [commonValidationRules.required, commonValidationRules.email],
-    phone: [commonValidationRules.required],
-    subject: [commonValidationRules.required],
-    message: [commonValidationRules.required]
+  const { errors, validateForm, getFieldError } = useFormValidation({
+    name: { required: true, minLength: 2, maxLength: 50 },
+    email: { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+    phone: { required: true, pattern: /^[+]?[0-9\s\-()]{10,}$/ },
+    subject: { required: true },
+    message: { required: true, maxLength: 500 }
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    // Trigger validation on blur if needed
-  };
+
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -223,24 +221,26 @@ export default function ContactPage() {
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormInput
+                      id="name"
                       label={tContact('form.fields.name.label')}
                       name="name"
                       type="text"
                       placeholder={tContact('form.fields.name.placeholder')}
                       value={formData.name}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
+
                       error={getFieldError('name')}
                       required
                     />
                     <FormInput
+                      id="email"
                       label={tContact('form.fields.email.label')}
                       name="email"
                       type="email"
                       placeholder={tContact('form.fields.email.placeholder')}
                       value={formData.email}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
+
                       error={getFieldError('email')}
                       required
                     />
@@ -248,37 +248,40 @@ export default function ContactPage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormInput
+                      id="phone"
                       label={tContact('form.fields.phone.label')}
                       name="phone"
                       type="tel"
                       placeholder={tContact('form.fields.phone.placeholder')}
                       value={formData.phone}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
+
                       error={getFieldError('phone')}
                       required
                     />
                     <FormInput
+                      id="subject"
                       label={tContact('form.fields.subject.label')}
                       name="subject"
                       type="text"
                       placeholder={tContact('form.fields.subject.placeholder')}
                       value={formData.subject}
                       onChange={handleInputChange}
-                      onBlur={handleInputBlur}
+
                       error={getFieldError('subject')}
                       required
                     />
                   </div>
 
                   <FormInput
+                    id="message"
                     label={tContact('form.fields.message.label')}
                     name="message"
                     type="textarea"
                     placeholder={tContact('form.fields.message.placeholder')}
                     value={formData.message}
                     onChange={handleInputChange}
-                    onBlur={handleInputBlur}
+                    
                     error={getFieldError('message')}
                     rows={6}
                     required
@@ -287,7 +290,7 @@ export default function ContactPage() {
                   <div className="pt-4">
                     <LoadingButton
                       type="submit"
-                      isLoading={isSubmitting}
+                      loading={isSubmitting}
                       loadingText={tContact('form.loading_text')}
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >

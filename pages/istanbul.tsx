@@ -89,7 +89,7 @@ export default function IstanbulPage() {
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -97,12 +97,6 @@ export default function IstanbulPage() {
     });
     
     // Validate field on change if it was previously touched
-    validateSingleField(name, value);
-  };
-  
-  const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFieldTouched(name);
     validateSingleField(name, value);
   };
 
@@ -265,7 +259,6 @@ export default function IstanbulPage() {
                   label={tIstanbul('reservation.form.name.label')}
                   value={formData.name}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={tIstanbul('reservation.form.name.placeholder')}
                   required
                   error={getFieldError('name')}
@@ -278,7 +271,6 @@ export default function IstanbulPage() {
                   label={tIstanbul('reservation.form.email.label')}
                   value={formData.email}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={tIstanbul('reservation.form.email.placeholder')}
                   required
                   error={getFieldError('email')}
@@ -294,7 +286,6 @@ export default function IstanbulPage() {
                   label={tIstanbul('reservation.form.phone.label')}
                   value={formData.phone}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={tIstanbul('reservation.form.phone.placeholder')}
                   required
                   error={getFieldError('phone')}
@@ -307,7 +298,6 @@ export default function IstanbulPage() {
                   label={tIstanbul('reservation.form.travel_dates.label')}
                   value={formData.travelDates}
                   onChange={handleInputChange}
-                  onBlur={handleInputBlur}
                   placeholder={tIstanbul('reservation.form.travel_dates.placeholder')}
                   required
                   error={getFieldError('travelDates')}
@@ -322,7 +312,6 @@ export default function IstanbulPage() {
                 label={tIstanbul('reservation.form.message.label')}
                 value={formData.message}
                 onChange={handleInputChange}
-                onBlur={handleInputBlur}
                 placeholder={tIstanbul('reservation.form.message.placeholder')}
                 rows={4}
                 error={getFieldError('message')}

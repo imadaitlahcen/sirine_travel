@@ -169,20 +169,20 @@ export default function BaliPage() {
             {[
               {
                 title: 'Découverte',
-                price: '1,800€',
+                price: '18,000 MAD',
                 duration: '7 jours / 6 nuits',
                 features: ['Hôtel 3-4*', 'Petit-déjeuner', 'Transferts', 'Ubud & temples', 'Cours de cuisine']
               },
               {
                 title: 'Immersion',
-                price: '2,800€',
+                price: '28,000 MAD',
                 duration: '10 jours / 9 nuits',
                 features: ['Resort 4-5*', 'Demi-pension', 'Multi-régions', 'Spa traditionnel', 'Activités culturelles'],
                 featured: true
               },
               {
                 title: 'Luxe Spirituel',
-                price: '4,200€',
+                price: '42,000 MAD',
                 duration: '14 jours / 13 nuits',
                 features: ['Villa privée', 'Butler personnel', 'Retraite yoga', 'Expériences VIP', 'Guide privé']
               }

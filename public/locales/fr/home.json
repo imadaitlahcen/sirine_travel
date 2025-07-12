@@ -4,10 +4,7 @@
     "cta_primary": "Découvrir nos destinations",
     "cta_secondary": "Planifier mon voyage"
   },
-  "services": {
-    "title": "Nos Services d'Exception",
-    "subtitle": "Une expérience sur-mesure pour chaque voyageur"
-  },
+
   "destinations": {
     "title": "Destinations d'Exception",
     "subtitle": "Découvrez nos destinations les plus prisées"

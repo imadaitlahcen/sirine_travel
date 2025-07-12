@@ -13,7 +13,7 @@ export default function TrendingDestinations() {
       slug: 'services/omra-hajj',
       image: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       description: 'Découvrez la ville sainte de l\'Islam dans un voyage spirituel unique. Nos forfaits Omra et Hajj incluent l\'hébergement, les vols et l\'accompagnement religieux pour une expérience inoubliable.',
-      price: 'À partir de 2,800€'
+      price: 'À partir de 28,000 MAD'
     },
     {
       name: 'Istanbul',
@@ -21,14 +21,14 @@ export default function TrendingDestinations() {
       slug: 'istanbul',
       image: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       description: 'Plongez dans l\'atmosphère magique d\'Istanbul, où l\'Orient rencontre l\'Occident. Explorez les mosquées historiques, les bazars colorés et savourez la cuisine turque authentique.',
-      price: 'À partir de 1,200€'
+      price: 'À partir de 12,000 MAD'
     },
     {
       name: 'Dubaï',
       slug: 'dubai',
       image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       description: 'Vivez le luxe moderne dans la perle du Moyen-Orient. Entre gratte-ciels futuristes, shopping de luxe et traditions bédouines, Dubaï offre une expérience unique.',
-      price: 'À partir de 2,200€'
+      price: 'À partir de 22,000 MAD'
     }
   ];
 
@@ -37,7 +37,7 @@ export default function TrendingDestinations() {
     slug: 'egypte',
     image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80',
     description: 'Partez à la découverte des mystères des pharaons. Visitez les pyramides de Gizeh, naviguez sur le Nil et explorez les temples de Louxor dans cette terre chargée d\'histoire.',
-    price: 'À partir de 1,400€'
+    price: 'À partir de 14,000 MAD'
   };
 
   return (

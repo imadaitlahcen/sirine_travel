@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
 export default function Contact() {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'contact']);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: 'omra',
+    service: 'general',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,10 +18,22 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
+      // Create WhatsApp message
+      const whatsappTemplate = t('contact.whatsapp_message', { ns: 'contact' });
+      const whatsappMessage = whatsappTemplate
+        .replace('{name}', formData.name)
+        .replace('{email}', formData.email)
+        .replace('{phone}', formData.phone)
+        .replace('{subject}', formData.service)
+        .replace('{message}', formData.message);
+      
+      const whatsappUrl = `https://wa.me/212661234567?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappUrl, '_blank');
+      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', service: 'omra', message: '' });
+      setFormData({ name: '', email: '', phone: '', service: 'general', message: '' });
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -50,7 +62,7 @@ export default function Contact() {
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            Excellence & Service Client
+            {t('contact_info.badge', { ns: 'contact' })}
           </span>
           <h2 className="text-5xl lg:text-6xl font-playfair font-bold text-slate-900 mb-6">
             {t('contact.title')}
@@ -71,19 +83,19 @@ export default function Contact() {
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-8">
               <div className="text-center">
                 <h3 className="text-2xl font-playfair font-bold mb-2">{t('site_name')}</h3>
-                <p className="text-blue-100 mb-4">Agence de Voyage Certifiée</p>
+                <p className="text-blue-100 mb-4">{t('contact_info.agency_certified', { ns: 'contact' })}</p>
                 <div className="flex justify-center space-x-6 text-sm">
                   <span className="flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    Certifiée IATA
+                    {t('contact_info.iata_certified', { ns: 'contact' })}
                   </span>
                   <span className="flex items-center gap-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
                     </svg>
-                    15+ ans d'expérience
+                    {t('contact_info.experience', { ns: 'contact' })}
                   </span>
                 </div>
               </div>
@@ -104,10 +116,10 @@ export default function Contact() {
                     Casablanca 20000, Maroc
                   </p>
                   <div className="text-sm text-slate-500">
-                    <p className="font-medium mb-1">Heures d'ouverture:</p>
-                    <p>Lun - Ven: 9h00 - 18h00</p>
-                    <p>Sam: 9h00 - 13h00</p>
-                    <p className="text-red-500">Dim: Fermé</p>
+                    <p className="font-medium mb-1">{t('contact_info.hours.label', { ns: 'contact' })}:</p>
+                    <p>{t('contact_info.hours.weekdays', { ns: 'contact' })}</p>
+                    <p>{t('contact_info.hours.saturday', { ns: 'contact' })}</p>
+                    <p className="text-red-500">{t('contact_info.hours.sunday', { ns: 'contact' })}</p>
                   </div>
                 </div>
               </div>
@@ -125,15 +137,15 @@ export default function Contact() {
                   <h3 className="text-xl font-playfair font-semibold text-slate-900 mb-2">{t('contact.phone')}</h3>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Bureau:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.phone.office', { ns: 'contact' })}:</span>
                       <a href="tel:+212522123456" className="text-slate-600 hover:text-green-600 transition-colors font-medium">+212 522-123-456</a>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Mobile:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.phone.mobile', { ns: 'contact' })}:</span>
                       <a href="tel:+212661234567" className="text-slate-600 hover:text-green-600 transition-colors font-medium">+212 661-234-567</a>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Urgence 24h:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.phone.emergency', { ns: 'contact' })}:</span>
                       <a href="tel:+212662345678" className="text-slate-600 hover:text-green-600 transition-colors font-medium">+212 662-345-678</a>
                     </div>
                   </div>
@@ -154,15 +166,15 @@ export default function Contact() {
                   <h3 className="text-xl font-playfair font-semibold text-slate-900 mb-2">{t('contact.email')}</h3>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Général:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.email.general', { ns: 'contact' })}:</span>
                       <a href="mailto:contact@vaoyage.com" className="text-slate-600 hover:text-amber-600 transition-colors font-medium">contact@vaoyage.com</a>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Réservations:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.email.reservations', { ns: 'contact' })}:</span>
                       <a href="mailto:reservations@vaoyage.com" className="text-slate-600 hover:text-amber-600 transition-colors font-medium">reservations@vaoyage.com</a>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500">Support:</span>
+                      <span className="text-sm text-slate-500">{t('contact_info.email.support', { ns: 'contact' })}:</span>
                       <a href="mailto:support@vaoyage.com" className="text-slate-600 hover:text-amber-600 transition-colors font-medium">support@vaoyage.com</a>
                     </div>
                   </div>
@@ -179,15 +191,15 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-playfair font-semibold text-slate-900 mb-3">WhatsApp Business</h3>
+                  <h3 className="text-xl font-playfair font-semibold text-slate-900 mb-3">{t('contact_info.whatsapp.title', { ns: 'contact' })}</h3>
                   <div className="space-y-2 mb-4">
                     <a href="https://wa.me/message/HCUPHT7NUHCOO1" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 bg-green-50 rounded-lg hover:bg-green-100 transition-colors group">
-                      <span className="text-sm text-slate-600">Réservations & Info</span>
+                      <span className="text-sm text-slate-600">{t('contact_info.whatsapp.subtitle', { ns: 'contact' })}</span>
                       <span className="text-green-600 font-medium group-hover:text-green-700">+212 661-234-567</span>
                     </a>
                   </div>
                   <div className="border-t pt-3">
-                    <p className="text-sm text-slate-500 mb-2">Suivez-nous:</p>
+                    <p className="text-sm text-slate-500 mb-2">{t('contact_info.social.title', { ns: 'contact' })}:</p>
                     <div className="flex space-x-3">
                       <a href="#" className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -214,16 +226,16 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-slate-200/50 p-8 lg:p-12 transform hover:scale-[1.02] transition-all duration-500 hover:shadow-3xl hover:shadow-blue-500/10">
             <div className="text-center mb-10">
-              <h3 className="text-3xl font-playfair font-bold text-slate-900 mb-4">{t('contact.form.title')}</h3>
+              <h3 className="text-3xl font-playfair font-bold text-slate-900 mb-4">{t('form.title', { ns: 'contact' })}</h3>
               <div className="w-16 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4" />
-              <p className="text-slate-600">{t('contact.form.subtitle')}</p>
+              <p className="text-slate-600">{t('form.subtitle', { ns: 'contact' })}</p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="group">
                   <label htmlFor="name" className="block text-sm font-inter font-medium text-slate-700 mb-3">
-                    {t('contact.form.name')} *
+                    {t('form.fields.name.label', { ns: 'contact' })} *
                   </label>
                   <input
                     type="text"
@@ -232,14 +244,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-5 py-4 rounded-xl border border-slate-300 bg-slate-50/50 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all duration-300 placeholder-slate-400"
-                    placeholder={t('contact.form.placeholders.name')}
+                    placeholder={t('form.fields.name.placeholder', { ns: 'contact' })}
                     required
                   />
                 </div>
 
                 <div className="group">
                   <label htmlFor="email" className="block text-sm font-inter font-medium text-slate-700 mb-3">
-                    {t('contact.form.email_label')} *
+                    {t('form.fields.email.label', { ns: 'contact' })} *
                   </label>
                   <input
                     type="email"
@@ -248,7 +260,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-5 py-4 rounded-xl border border-slate-300 bg-slate-50/50 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all duration-300 placeholder-slate-400"
-                    placeholder={t('contact.form.placeholders.email')}
+                    placeholder={t('form.fields.email.placeholder', { ns: 'contact' })}
                     required
                   />
                 </div>
@@ -257,7 +269,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="group">
                   <label htmlFor="phone" className="block text-sm font-inter font-medium text-slate-700 mb-3">
-                    {t('contact.form.phone_label')} *
+                    {t('form.fields.phone.label', { ns: 'contact' })} *
                   </label>
                   <input
                     type="tel"
@@ -266,14 +278,14 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-5 py-4 rounded-xl border border-slate-300 bg-slate-50/50 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all duration-300 placeholder-slate-400"
-                    placeholder={t('contact.form.placeholders.phone')}
+                    placeholder={t('form.fields.phone.placeholder', { ns: 'contact' })}
                     required
                   />
                 </div>
 
                 <div className="group">
                   <label htmlFor="service" className="block text-sm font-inter font-medium text-slate-700 mb-3">
-                    {t('contact.form.service')}
+                    {t('form.fields.subject.label', { ns: 'contact' })}
                   </label>
                   <select
                     id="service"
@@ -282,17 +294,17 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full px-5 py-4 rounded-xl border border-slate-300 bg-slate-50/50 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all duration-300"
                   >
-                    <option value="omra">Omra & Hajj</option>
-                    <option value="voyage">Voyage Sur-Mesure</option>
-                    <option value="hotel">Hôtels de Luxe</option>
-                    <option value="business">Voyage d'Affaires</option>
+                    <option value="general">{t('form.fields.subject.options.general', { ns: 'contact' })}</option>
+                    <option value="booking">{t('form.fields.subject.options.booking', { ns: 'contact' })}</option>
+                    <option value="support">{t('form.fields.subject.options.support', { ns: 'contact' })}</option>
+                    <option value="partnership">{t('form.fields.subject.options.partnership', { ns: 'contact' })}</option>
                   </select>
                 </div>
               </div>
 
               <div className="group">
                 <label htmlFor="message" className="block text-sm font-inter font-medium text-slate-700 mb-3">
-                  {t('contact.form.message')} *
+                  {t('form.fields.message.label', { ns: 'contact' })} *
                 </label>
                 <textarea
                   id="message"
@@ -301,7 +313,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-5 py-4 rounded-xl border border-slate-300 bg-slate-50/50 focus:ring-2 focus:ring-blue-500/20 focus:border-blue-400 focus:bg-white transition-all duration-300 placeholder-slate-400 resize-none"
-                  placeholder={t('contact.form.placeholders.message')}
+                  placeholder={t('form.fields.message.placeholder', { ns: 'contact' })}
                   required
                 ></textarea>
               </div>
@@ -312,7 +324,7 @@ export default function Contact() {
                   <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <p className="text-green-800 font-medium">Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</p>
+                  <p className="text-green-800 font-medium">{t('form.success.message', { ns: 'contact' })}</p>
                 </div>
               )}
               
@@ -336,14 +348,14 @@ export default function Contact() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    <span>Envoi en cours...</span>
+                    <span>{t('form.loading_text', { ns: 'contact' })}</span>
                   </span>
                 ) : (
                   <span className="relative z-10 flex items-center justify-center space-x-2">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                     </svg>
-                    <span>{t('contact.form.submit')}</span>
+                    <span>{t('form.submit_button', { ns: 'contact' })}</span>
                   </span>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

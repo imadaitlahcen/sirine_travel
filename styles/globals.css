@@ -44,6 +44,46 @@
 body {
   padding-top: 64px; /* Height of fixed navbar (h-16 = 4rem = 64px) */
   overflow-x: hidden; /* Prevent layout shift during transitions */
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+/* Mobile layout fixes */
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px; /* Keep consistent navbar height */
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Prevent any element from exceeding viewport width */
+  * {
+    max-width: 100%;
+  }
+  
+  /* Ensure containers don't create horizontal scroll */
+  .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Animations personnalisées pour la page Omra */

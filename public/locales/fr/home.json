@@ -11,6 +11,20 @@
   },
   "trending": {
     "title": "Tendances du Moment",
-    "subtitle": "Les destinations les plus populaires cette saison"
+    "subtitle": "Les destinations les plus populaires cette saison",
+    "destinations": {
+      "mecca": {
+        "description": "Découvrez la ville sainte de l'Islam dans un voyage spirituel unique. Nos forfaits Omra et Hajj incluent l'hébergement, les vols et l'accompagnement religieux pour une expérience inoubliable."
+      },
+      "istanbul": {
+        "description": "Plongez dans l'atmosphère magique d'Istanbul, où l'Orient rencontre l'Occident. Explorez les mosquées historiques, les bazars colorés et savourez la cuisine turque authentique."
+      },
+      "dubai": {
+        "description": "Vivez le luxe moderne dans la perle du Moyen-Orient. Entre gratte-ciels futuristes, shopping de luxe et traditions bédouines, Dubaï offre une expérience unique."
+      },
+      "egypt": {
+        "description": "Partez à la découverte des mystères des pharaons. Visitez les pyramides de Gizeh, naviguez sur le Nil et explorez les temples de Louxor dans cette terre chargée d'histoire."
+      }
+    }
   }
 }

@@ -243,7 +243,7 @@ export default function OmraHajjPage() {
         <meta name="keywords" content="omra, hajj, pèlerinage, mecque, médine, voyage spirituel, forfait omra, agence omra maroc" />
       </Head>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white w-full overflow-x-hidden">
         <OmraHajjHeader />
         
         {/* Hero Section with Header Photo */}

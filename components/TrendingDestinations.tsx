@@ -9,10 +9,10 @@ export default function TrendingDestinations() {
 
   const mainDestinations = [
     {
-      name: 'La Mecque',
+      name: 'Omra & Hajj',
       slug: 'services/omra-hajj',
       image: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Découvrez la ville sainte de l\'Islam dans un voyage spirituel unique. Nos forfaits Omra et Hajj incluent l\'hébergement, les vols et l\'accompagnement religieux pour une expérience inoubliable.',
+      descriptionKey: 'trending.destinations.mecca.description',
       price: 'À partir de 28,000 MAD'
     },
     {
@@ -20,25 +20,26 @@ export default function TrendingDestinations() {
       subtitle: 'Turquie',
       slug: 'istanbul',
       image: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Plongez dans l\'atmosphère magique d\'Istanbul, où l\'Orient rencontre l\'Occident. Explorez les mosquées historiques, les bazars colorés et savourez la cuisine turque authentique.',
+      descriptionKey: 'trending.destinations.istanbul.description',
       price: 'À partir de 12,000 MAD'
     },
     {
       name: 'Dubaï',
       slug: 'dubai',
       image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      description: 'Vivez le luxe moderne dans la perle du Moyen-Orient. Entre gratte-ciels futuristes, shopping de luxe et traditions bédouines, Dubaï offre une expérience unique.',
+      descriptionKey: 'trending.destinations.dubai.description',
       price: 'À partir de 22,000 MAD'
+    },
+    {
+      name: 'Égypte',
+      slug: 'egypte',
+      image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      descriptionKey: 'trending.destinations.egypt.description',
+      price: 'À partir de 14,000 MAD'
     }
   ];
 
-  const featuredDestination = {
-    name: 'Égypte',
-    slug: 'egypte',
-    image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80',
-    description: 'Partez à la découverte des mystères des pharaons. Visitez les pyramides de Gizeh, naviguez sur le Nil et explorez les temples de Louxor dans cette terre chargée d\'histoire.',
-    price: 'À partir de 14,000 MAD'
-  };
+
 
   return (
     <section id="tendances-moment" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -113,7 +114,7 @@ export default function TrendingDestinations() {
                     )}
                   </h4>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    {destination.description}
+                    {t(destination.descriptionKey)}
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-gray-900">
@@ -132,58 +133,7 @@ export default function TrendingDestinations() {
           ))}
         </div>
 
-        {/* Separator */}
-        <div className="my-20">
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-        </div>
 
-        {/* Featured Destination - Egypt */}
-        <div className="relative">
-          <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-3xl shadow-2xl group"
-            onMouseEnter={() => setHoveredDestination(featuredDestination.name)}
-            onMouseLeave={() => setHoveredDestination(null)}
-          >
-            {/* Full-width background image */}
-            <Image
-              src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-              alt="Pyramides d'Égypte dans le désert"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="100vw"
-              priority
-            />
-            
-            {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-            
-            {/* Centered content */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white px-8 max-w-4xl">
-                <div className={`transform transition-all duration-500 ${
-                  hoveredDestination === featuredDestination.name ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-95'
-                }`}>
-                  <h3 className="text-5xl md:text-7xl font-bold mb-6 font-serif drop-shadow-2xl">
-                    {featuredDestination.name}
-                  </h3>
-                  <p className="text-xl md:text-2xl mb-10 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-                    {featuredDestination.description}
-                  </p>
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-                    <span className="text-3xl md:text-4xl font-bold drop-shadow-lg">
-                      {featuredDestination.price}
-                    </span>
-                    <Link
-                      href={`/${featuredDestination.slug}`}
-                      className="bg-white text-black px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl text-lg"
-                    >
-                      Découvrir l'Égypte
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

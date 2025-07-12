@@ -19,6 +19,6 @@ module.exports = {
   },
   
   // Namespace configuration
-  ns: ['common', 'navigation', 'home', 'about', 'services', 'destinations'],
+  ns: ['common', 'navigation', 'home', 'about', 'services', 'destinations', 'contact', 'egypte', 'istanbul', 'dubai'],
   defaultNS: 'common',
 };

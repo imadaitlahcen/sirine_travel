@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 const destinations = [
   {
-    name: 'La Mecque',
+    name: 'Omra & Hajj',
     description: 'Vivez une expérience spirituelle unique avec nos forfaits Omra premium',
     price: 'À partir de 25 000 DH',
     image: '/destinations/mecca.svg',

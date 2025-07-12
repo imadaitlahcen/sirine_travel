@@ -11,6 +11,20 @@
   },
   "trending": {
     "title": "Trending Now",
-    "subtitle": "The most popular destinations this season"
+    "subtitle": "The most popular destinations this season",
+    "destinations": {
+      "mecca": {
+        "description": "Discover the holy city of Islam in a unique spiritual journey. Our Umrah and Hajj packages include accommodation, flights and religious guidance for an unforgettable experience."
+      },
+      "istanbul": {
+        "description": "Immerse yourself in the magical atmosphere of Istanbul, where East meets West. Explore historic mosques, colorful bazaars and savor authentic Turkish cuisine."
+      },
+      "dubai": {
+        "description": "Experience modern luxury in the pearl of the Middle East. Between futuristic skyscrapers, luxury shopping and Bedouin traditions, Dubai offers a unique experience."
+      },
+      "egypt": {
+        "description": "Set off to discover the mysteries of the pharaohs. Visit the pyramids of Giza, sail the Nile and explore the temples of Luxor in this land steeped in history."
+      }
+    }
   }
 }

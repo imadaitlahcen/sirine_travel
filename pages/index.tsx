@@ -4,6 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
+import VoyageMaroc from '../components/VoyageMaroc';
 import TrendingDestinations from '../components/TrendingDestinations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -23,11 +24,10 @@ export default function Home() {
       <div className="min-h-screen bg-white">
         <main>
           <Hero />
-          <AboutSection />
-
-          <TrendingDestinations />
-    
-          <Contact />
+            <AboutSection />
+            <VoyageMaroc />
+            <TrendingDestinations />
+            <Contact />
         </main>
         <Footer />
 

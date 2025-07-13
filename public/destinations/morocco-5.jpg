@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="atlas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e24aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ab47bc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#atlas)"/>
+  <polygon points="0,250 80,150 160,200 240,120 320,180 400,140 400,300 0,300" fill="#795548" opacity="0.8"/>
+  <polygon points="60,200 120,130 180,170" fill="#6d4c41" opacity="0.9"/>
+  <polygon points="200,160 280,100 360,140" fill="#5d4037" opacity="0.9"/>
+  <circle cx="100" cy="80" r="20" fill="#fff176" opacity="0.9"/>
+  <path d="M150 220 Q200 200 250 220 Q300 240 350 220" stroke="#4fc3f7" stroke-width="4" fill="none" opacity="0.7"/>
+  <polygon points="180,180 190,170 200,180 190,190" fill="#4caf50"/>
+  <polygon points="260,160 270,150 280,160 270,170" fill="#4caf50"/>
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">Atlas et Vallées</text>
+</svg>

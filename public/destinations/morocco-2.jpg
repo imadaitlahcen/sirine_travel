@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="desert" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4a261;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e76f51;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#desert)"/>
+  <ellipse cx="100" cy="200" rx="80" ry="30" fill="#d2691e" opacity="0.7"/>
+  <ellipse cx="250" cy="180" rx="100" ry="40" fill="#cd853f" opacity="0.7"/>
+  <ellipse cx="350" cy="220" rx="60" ry="25" fill="#d2691e" opacity="0.7"/>
+  <path d="M50 250 Q150 200 250 240 T400 220" stroke="#8b4513" stroke-width="3" fill="none"/>
+  <circle cx="320" cy="60" r="35" fill="#ffd700" opacity="0.9"/>
+  <polygon points="200,120 220,140 200,160 180,140" fill="#2e8b57" opacity="0.8"/>
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="white" font-weight="bold">Désert et Oasis</text>
+</svg>

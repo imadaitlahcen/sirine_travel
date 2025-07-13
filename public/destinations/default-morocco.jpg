@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <rect x="50" y="50" width="300" height="200" fill="#e5e7eb" rx="10"/>
+  <circle cx="120" cy="120" r="20" fill="#d1d5db"/>
+  <path d="M80 180 L120 140 L160 160 L200 120 L240 140 L280 100 L320 120" stroke="#9ca3af" stroke-width="3" fill="none"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">Morocco Travel</text>
+</svg>

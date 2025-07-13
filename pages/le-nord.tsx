@@ -25,13 +25,16 @@ export default function LeNordPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const { errors, validateField, validateForm } = useFormValidation({
-    name: [commonValidationRules.required],
-    email: [commonValidationRules.required, commonValidationRules.email],
-    phone: [commonValidationRules.required, commonValidationRules.phone],
-    dates: [commonValidationRules.required],
-    travelers: [commonValidationRules.required]
-  });
+  const validationRules = {
+    name: commonValidationRules.name,
+    email: commonValidationRules.email,
+    phone: commonValidationRules.phone,
+    dates: { required: true },
+    travelers: { required: true },
+    message: commonValidationRules.message
+  };
+
+  const { errors, validateSingleField, validateForm, getFieldError } = useFormValidation(validationRules);
 
   const images = [
     '/destinations/Jebha-Playa-Sghira-webp_format.webp',
@@ -51,7 +54,7 @@ export default function LeNordPage() {
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    validateField(field, value);
+    validateSingleField(field, value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -327,65 +330,77 @@ export default function LeNordPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <FormInput
+                  id="name"
+                  name="name"
                   label="Nom complet"
                   type="text"
                   value={formData.name}
-                  onChange={(value) => handleInputChange('name', value)}
-                  error={errors.name}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
+                  error={getFieldError('name')}
                   required
                 />
                 <FormInput
+                  id="email"
+                  name="email"
                   label="Email"
                   type="email"
                   value={formData.email}
-                  onChange={(value) => handleInputChange('email', value)}
-                  error={errors.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  error={getFieldError('email')}
                   required
                 />
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <FormInput
+                  id="phone"
+                  name="phone"
                   label="Téléphone"
                   type="tel"
                   value={formData.phone}
-                  onChange={(value) => handleInputChange('phone', value)}
-                  error={errors.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  error={getFieldError('phone')}
                   required
                 />
                 <FormInput
+                  id="dates"
+                  name="dates"
                   label="Dates souhaitées"
                   type="text"
                   value={formData.dates}
-                  onChange={(value) => handleInputChange('dates', value)}
-                  error={errors.dates}
+                  onChange={(e) => handleInputChange('dates', e.target.value)}
+                  error={getFieldError('dates')}
                   placeholder="Ex: 15-24 Mars 2024"
                   required
                 />
               </div>
               
               <FormInput
+                id="travelers"
+                name="travelers"
                 label="Nombre de voyageurs"
-                type="number"
+                type="text"
                 value={formData.travelers}
-                onChange={(value) => handleInputChange('travelers', value)}
-                error={errors.travelers}
-                min="1"
+                onChange={(e) => handleInputChange('travelers', e.target.value)}
+                error={getFieldError('travelers')}
+                placeholder="Ex: 2 personnes"
                 required
               />
               
               <FormInput
+                id="message"
+                name="message"
                 label="Message (optionnel)"
                 type="textarea"
                 value={formData.message}
-                onChange={(value) => handleInputChange('message', value)}
+                onChange={(e) => handleInputChange('message', e.target.value)}
                 placeholder="Dites-nous en plus sur vos attentes..."
                 rows={4}
               />
               
               <LoadingButton
                 type="submit"
-                isLoading={isSubmitting}
+                loading={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Envoyer la Demande via WhatsApp

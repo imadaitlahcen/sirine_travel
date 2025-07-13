@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function BaliPage() {
+  const { t } = useTranslation('common');
 
   return (
     <>

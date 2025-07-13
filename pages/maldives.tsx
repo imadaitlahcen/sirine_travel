@@ -10,7 +10,7 @@ export default function MaldivesPage() {
   return (
     <>
       <Head>
-        <title>Maldives - Paradis Tropical | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez les Maldives, paradis tropical aux eaux cristallines. Séjours de luxe dans des resorts d'exception." />
       </Head>
 

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import VoyagesAffairesHeader from '../../components/VoyagesAffairesHeader';
+
 import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
 
@@ -89,13 +89,13 @@ export default function VoyagesAffairesPage() {
   return (
     <>
       <Head>
-        <title>{t('services:business_travel.title')} - {t('site_name')} | {t('services:business_travel.subtitle')}</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content={t('services:business_travel.description')} />
         <meta name="keywords" content="voyage national, travel national, gestion voyage national, vol national, hôtel national, TMC" />
       </Head>
 
       <div className="min-h-screen bg-white">
-        <VoyagesAffairesHeader />
+  
         
         {/* Hero Section */}
         <section className="relative py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-800 overflow-hidden">

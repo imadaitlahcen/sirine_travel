@@ -10,7 +10,7 @@ export default function JaponPage() {
   return (
     <>
       <Head>
-        <title>Japon - Terre du Soleil Levant | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez le Japon, pays des traditions millénaires et de la modernité. Temples, cerisiers en fleurs et culture unique." />
       </Head>
 

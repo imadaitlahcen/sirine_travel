@@ -10,7 +10,7 @@ export default function BaliPage() {
   return (
     <>
       <Head>
-        <title>Bali - Île des Dieux | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez Bali, l'île des dieux et des temples sacrés. Spiritualité, nature luxuriante et culture balinaise authentique." />
       </Head>
 

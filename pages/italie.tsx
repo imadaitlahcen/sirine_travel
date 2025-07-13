@@ -10,7 +10,7 @@ export default function ItaliePage() {
   return (
     <>
       <Head>
-        <title>Italie - Dolce Vita Italienne | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez l'Italie avec nos voyages sur mesure. Art, cuisine, histoire et dolce vita vous attendent." />
       </Head>
 

@@ -26,7 +26,7 @@ export default function Header() {
               <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">
                 {tCommon('site_name')}
               </h1>
-              <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-gray-400 font-medium hidden sm:inline">Depuis 2025</span>
+              <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-gray-400 font-medium hidden sm:inline"></span>
             </Link>
           </div>
 

@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FormInput from '../components/FormInput';
 import LoadingButton from '../components/LoadingButton';
@@ -106,11 +105,9 @@ export default function EgyptePage() {
   return (
     <>
       <Head>
-        <title>Égypte - Terre des Pharaons | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez l'Égypte, berceau de la civilisation antique. Pyramides, temples et croisière sur le Nil." />
       </Head>
-
-      <Header />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

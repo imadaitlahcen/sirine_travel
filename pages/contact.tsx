@@ -4,7 +4,6 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FormInput from '../components/FormInput';
 import LoadingButton from '../components/LoadingButton';
@@ -88,13 +87,11 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact - Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Contactez notre agence de voyage pour planifier votre prochaine aventure" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
 
       <main className="min-h-screen">
         {/* Hero Section */}

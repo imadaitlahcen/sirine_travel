@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import VoyagesSurMesureHeader from '../../components/VoyagesSurMesureHeader';
+
 import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
 import { GetStaticProps } from 'next';
@@ -67,13 +67,13 @@ export default function VoyagesSurMesurePage() {
   return (
     <>
       <Head>
-        <title>{t('services:custom_travel.title')} - {t('site_name')} | {t('services:custom_travel.subtitle')}</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content={t('services:custom_travel.description')} />
         <meta name="keywords" content="voyage sur mesure, circuit privé, voyage luxe, destination exclusive, conciergerie voyage, voyage personnalisé" />
       </Head>
 
       <div className="min-h-screen bg-white">
-        <VoyagesSurMesureHeader />
+  
         
         {/* Hero Section */}
         <section className="relative py-32 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-800 overflow-hidden">

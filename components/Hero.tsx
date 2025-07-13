@@ -52,7 +52,15 @@ export default function Hero() {
             >
               {t('hero.cta_primary')}
             </button>
-            <button className="border-2 border-white/80 text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-lg">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="border-2 border-white/80 text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-lg"
+            >
               {t('hero.cta_secondary')}
             </button>
           </div>

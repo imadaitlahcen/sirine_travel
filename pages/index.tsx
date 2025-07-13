@@ -2,10 +2,8 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import HomeHeader from '../components/HomeHeader';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-
 import TrendingDestinations from '../components/TrendingDestinations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -15,15 +13,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{`${t('site_name')} - ${t('tagline')}`}</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content={t('tagline')} />
-        <meta property="og:title" content={`${t('site_name')} - ${t('tagline')}`} />
+        <meta property="og:title" content={t('site_name')} />
         <meta property="og:description" content={t('tagline')} />
         <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
-        <HomeHeader />
         <main>
           <Hero />
           <AboutSection />

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import HotelsLuxeHeader from '../../components/HotelsLuxeHeader';
+
 import Footer from '../../components/Footer';
 import { useState, useEffect } from 'react';
 
@@ -98,13 +98,13 @@ export default function HotelsLuxePage() {
   return (
     <>
       <Head>
-        <title>{`${t('services:hotels_luxe.title')} - ${t('site_name')} | ${t('services:hotels_luxe.subtitle')}`}</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content={t('services:hotels_luxe.description')} />
         <meta name="keywords" content="hôtel luxe, palace, resort, château, lodge safari, 5 étoiles, séjour luxe, avantages VIP" />
       </Head>
 
       <div className="min-h-screen bg-white">
-        <HotelsLuxeHeader />
+  
         
         {/* Hero Section */}
         <section className="relative py-32 bg-gradient-to-br from-amber-900 via-orange-900 to-red-800 overflow-hidden">

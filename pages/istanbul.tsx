@@ -6,7 +6,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Header from '../components/Header';
+
 import Footer from '../components/Footer';
 import FormInput from '../components/FormInput';
 import LoadingButton from '../components/LoadingButton';
@@ -110,11 +110,9 @@ export default function IstanbulPage() {
   return (
     <>
       <Head>
-        <title>Istanbul - Istanbul is the New Cool | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez Istanbul, pont entre l'Orient et l'Occident. Escapade chic entre tradition et modernité." />
       </Head>
-      
-      <Header />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">

@@ -5,6 +5,7 @@ import { appWithTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import PageTransition from '../components/PageTransition';
+import Header from '../components/Header';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <Header />
       <PageTransition>
         <Component {...pageProps} />
       </PageTransition>

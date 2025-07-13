@@ -10,7 +10,7 @@ export default function GrecePage() {
   return (
     <>
       <Head>
-        <title>Grèce - Berceau de la Civilisation | Agence de Voyage</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content="Découvrez la Grèce, berceau de la civilisation occidentale. Îles paradisiaques, sites antiques et culture méditerranéenne." />
       </Head>
 

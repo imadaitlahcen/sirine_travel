@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import OmraHajjHeader from '../../components/OmraHajjHeader';
+
 import Footer from '../../components/Footer';
 import FormInput from '../../components/FormInput';
 import LoadingButton from '../../components/LoadingButton';
@@ -238,13 +238,13 @@ export default function OmraHajjPage() {
   return (
     <>
       <Head>
-        <title>{`${t('services:omra_hajj.title')} - ${t('site_name')} | ${t('services:omra_hajj.subtitle')}`}</title>
+        <title>{t('site_name')}</title>
         <meta name="description" content={t('services:omra_hajj.description')} />
         <meta name="keywords" content="omra, hajj, pèlerinage, mecque, médine, voyage spirituel, forfait omra, agence omra maroc" />
       </Head>
 
       <div className="min-h-screen bg-white w-full overflow-x-hidden">
-        <OmraHajjHeader />
+  
         
         {/* Hero Section with Header Photo */}
         

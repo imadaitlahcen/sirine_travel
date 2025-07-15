@@ -244,7 +244,7 @@ export default function GrecePage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
     },
   };
 };

@@ -1,13 +1,50 @@
 {
   "hero": {
     "title": "Sirine Travel",
-    "cta_primary": "Découvrir nos destinations",
-    "cta_secondary": "Contacter nous"
+    "cta_primary": "Destinations internationales",
+    "cta_secondary": "Destinations nationales",
+    "cta_contact": "Contacter nous"
   },
 
   "destinations": {
     "title": "Destinations d'Exception",
     "subtitle": "Découvrez nos destinations les plus prisées"
+  },
+  "morocco": {
+    "title": "MAROC, Terre de Lumière",
+    "subtitle": "Vivez avec nous la magie du maroc",
+    "offers": {
+      "dakhla": {
+        "title": "Aventure Désert de Dakhla",
+        "locations": "Dakhla - Lagune - Dunes dorées - Bivouac",
+        "duration": "8 jours / 7 nuits"
+      },
+      "road_trip": {
+        "title": "Road Trip Atlantique",
+        "locations": "Agadir - Taghazout - Sidi Ifni - Essaouira",
+        "duration": "6 jours / 5 nuits"
+      },
+      "mer_montagne": {
+        "title": "Entre Mer Et Montagne",
+        "locations": "Nador - Al Hoceima - Jebha - Chefchaouen",
+        "duration": "5 jours / 4 nuits"
+      },
+      "agadir": {
+        "title": "Agadir Atlantique : Surf, Soleil & Douceur Berbére",
+        "locations": "Taghazout - Aghroud - Timlaline - Imsouane",
+        "duration": "7 jours / 6 nuits"
+      },
+      "sablotherapie": {
+        "title": "Escapade Sablothérapie Au Coeur Du Sahara",
+        "locations": "Merzouga - Ouarzazate",
+        "duration": "4 jours / 3 nuits"
+      },
+      "nord": {
+        "title": "Le Nord",
+        "locations": "Martil - Tetouan - Fnideq",
+        "duration": "9 jours / 8 nuits"
+      }
+    }
   },
   "trending": {
     "title": "Tendances du Moment",

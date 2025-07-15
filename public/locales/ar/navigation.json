@@ -8,9 +8,21 @@
   },
   "services_submenu": {
     "omra_hajj": "العمرة والحج",
-    "luxury_hotels": "فنادق فاخرة",
-    "business_travel": "سفر الأعمال",
-    "custom_travel": "رحلات مخصصة"
+    "national_destinations": "الوجهات الوطنية",
+    "international_destinations": "الوجهات الدولية"
+  },
+  "national_submenu": {
+    "aventure_desert_dakhla": "مغامرة صحراء الداخلة",
+    "road_trip_atlantique": "رحلة برية أطلسية",
+    "entre_mer_montagne": "بين البحر والجبل",
+    "agadir_atlantique": "أكادير الأطلسي",
+    "le_nord": "الشمال",
+    "escapade_sablotherapie_sahara": "هروب العلاج بالرمال الصحراوية"
+  },
+  "international_submenu": {
+    "dubai": "دبي",
+    "egypt": "مصر",
+    "istanbul": "إسطنبول"
   },
   "language_selector": {
     "french": "Français",

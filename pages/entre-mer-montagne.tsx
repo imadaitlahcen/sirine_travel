@@ -12,7 +12,7 @@ import LoadingButton from '../components/LoadingButton';
 import { useFormValidation, commonValidationRules } from '../hooks/useFormValidation';
 
 export default function EntreMerMontagnePage() {
-  const { t } = useTranslation(['common', 'navigation']);
+  const { t } = useTranslation(['common', 'navigation', 'entre-mer-montagne']);
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -42,27 +42,27 @@ export default function EntreMerMontagnePage() {
     getFieldError
   } = useFormValidation(validationRules);
 
-  // Gallery images
+  // Gallery images - Using local images from entre mer et montagne folder
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
+      url: '/destinations/entre-mer-montagne/2783EE2A-0BFC-426F-B775-A75C7CE98A05.jpeg',
       alt: 'Vue panoramique entre mer et montagne'
     },
     {
-      url: 'https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      url: '/destinations/entre-mer-montagne/IMG_5475.jpeg',
       alt: 'Côte rocheuse avec montagnes'
     },
     {
-      url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Sentier de montagne vers la mer'
+      url: '/destinations/entre-mer-montagne/Mina-Rosita-Nador.jpeg',
+      alt: 'Port de Mina Rosita à Nador'
     },
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      url: '/destinations/entre-mer-montagne/2783EE2A-0BFC-426F-B775-A75C7CE98A05.jpeg',
       alt: 'Plage au pied des montagnes'
     },
     {
-      url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Lac de montagne'
+      url: '/destinations/entre-mer-montagne/IMG_5475.jpeg',
+      alt: 'Paysage montagneux côtier'
     }
   ];
 
@@ -147,7 +147,7 @@ export default function EntreMerMontagnePage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          src="/destinations/entre-mer-montagne/2783EE2A-0BFC-426F-B775-A75C7CE98A05.jpeg"
           alt="Vue panoramique entre mer et montagne"
           fill
           className="object-cover"
@@ -207,7 +207,7 @@ export default function EntreMerMontagnePage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="/destinations/entre-mer-montagne/IMG_5475.jpeg"
                 alt="Côte rocheuse avec montagnes en arrière-plan"
                 fill
                 className="object-cover"
@@ -441,7 +441,7 @@ export default function EntreMerMontagnePage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
+      ...(await serverSideTranslations(locale || 'fr', ['common', 'navigation', 'entre-mer-montagne'])),
     },
   };
 };

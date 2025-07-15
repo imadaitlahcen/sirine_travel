@@ -12,7 +12,7 @@ import LoadingButton from '../components/LoadingButton';
 import { useFormValidation, commonValidationRules } from '../hooks/useFormValidation';
 
 export default function AgadirAtlantiquePage() {
-  const { t } = useTranslation(['common', 'navigation']);
+  const { t } = useTranslation(['common', 'navigation', 'agadir-atlantique']);
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -42,27 +42,27 @@ export default function AgadirAtlantiquePage() {
     getFieldError
   } = useFormValidation(validationRules);
 
-  // Gallery images
+  // Gallery images - Using local images from agadir-atlantique folder
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Plage d\'Agadir au coucher du soleil'
+      url: '/destinations/agadir-atlantique/Marina-Agadir.jpg',
+      alt: 'Marina d\'Agadir au coucher du soleil'
     },
     {
-      url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Surfeurs sur les vagues d\'Agadir'
+      url: '/destinations/agadir-atlantique/Taghazout.jpeg',
+      alt: 'Plage de Taghazout, spot de surf près d\'Agadir'
     },
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Souk traditionnel berbère'
+      url: '/destinations/agadir-atlantique/Medina-coco-polizzi.jpg',
+      alt: 'Médina traditionnelle d\'Agadir'
     },
     {
-      url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Palmiers et plage d\'Agadir'
+      url: '/destinations/agadir-atlantique/Aghroud-Agadir.jpeg',
+      alt: 'Plage d\'Aghroud près d\'Agadir'
     },
     {
-      url: 'https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Architecture berbère traditionnelle'
+      url: '/destinations/agadir-atlantique/téléphérique.jpg',
+      alt: 'Téléphérique d\'Agadir avec vue panoramique'
     }
   ];
 
@@ -147,8 +147,8 @@ export default function AgadirAtlantiquePage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="Plage d'Agadir au coucher du soleil"
+          src="/destinations/agadir-atlantique/Marina-Agadir.jpg"
+          alt="Marina d'Agadir au coucher du soleil"
           fill
           className="object-cover"
           priority
@@ -156,26 +156,26 @@ export default function AgadirAtlantiquePage() {
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif leading-tight">
-            AGADIR ATLANTIQUE
+            {t('agadir-atlantique:hero.title')}
           </h1>
           <h2 className="text-2xl md:text-3xl mb-8 text-orange-200 font-light">
-            Surf, Soleil & Douceur Berbère
+            {t('agadir-atlantique:hero.subtitle')}
           </h2>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Vivez l'authenticité berbère au bord de l'océan Atlantique
+            {t('agadir-atlantique:hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={scrollToReservation}
               className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105"
             >
-              Réserver maintenant
+              {t('agadir-atlantique:hero.cta_book')}
             </button>
             <button 
               onClick={scrollToGallery}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300"
             >
-              Voir la galerie
+              {t('agadir-atlantique:hero.cta_gallery')}
             </button>
           </div>
         </div>
@@ -211,8 +211,8 @@ export default function AgadirAtlantiquePage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Surfeurs sur les vagues d'Agadir"
+                src="/destinations/agadir-atlantique/Taghazout.jpeg"
+                alt="Plage de Taghazout, spot de surf près d'Agadir"
                 fill
                 className="object-cover"
               />
@@ -237,17 +237,17 @@ export default function AgadirAtlantiquePage() {
             {[
               {
                 name: 'Surf & Sports Nautiques',
-                image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/agadir-atlantique/Taghazout.jpeg',
                 description: 'Initiez-vous au surf sur les vagues parfaites d\'Agadir ou perfectionnez votre technique'
               },
               {
                 name: 'Culture Berbère',
-                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/agadir-atlantique/Medina-coco-polizzi.jpg',
                 description: 'Explorez les souks traditionnels et découvrez l\'artisanat berbère authentique'
               },
               {
                 name: 'Détente & Bien-être',
-                image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/agadir-atlantique/Aghroud-Agadir.jpeg',
                 description: 'Relaxez-vous sur les plages dorées ou dans un spa traditionnel marocain'
               }
             ].map((activity, index) => (
@@ -494,7 +494,7 @@ export default function AgadirAtlantiquePage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
+      ...(await serverSideTranslations(locale || 'fr', ['common', 'navigation', 'agadir-atlantique'])),
     },
   };
 };

@@ -28,14 +28,14 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-        aria-label="Select language"
+    <div className="relative language-selector">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+          aria-label="Select language"
       >
         <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="hidden sm:inline text-sm font-medium">{currentLanguage.name}</span>
+        <span className="hidden sm:inline text-sm font-medium font-countryside">{currentLanguage.name}</span>
         <svg 
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none" 
@@ -65,7 +65,7 @@ export default function LanguageSelector() {
                 }`}
               >
                 <span className="text-lg">{language.flag}</span>
-                <span className="font-medium">{language.name}</span>
+                <span className="font-medium font-countryside">{language.name}</span>
                 {language.code === router.locale && (
                   <svg className="w-4 h-4 ml-auto text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />

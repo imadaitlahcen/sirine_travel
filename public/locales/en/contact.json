@@ -10,6 +10,8 @@
     "agency_certified": "Certified Travel Agency",
     "iata_certified": "IATA Certified",
     "experience": "15+ years experience",
+    "availability": "Available 24/7 to meet your travel needs",
+    "office_address": "123 Mohammed V Avenue, 3rd Floor\nCasablanca 20000, Morocco",
     "address": {
       "title": "Address",
       "value": "Abi Hanifa Annuman Street Al Khair Road\nBernoussi, Casablanca, Morocco"
@@ -30,10 +32,14 @@
     },
     "whatsapp": {
       "title": "WhatsApp",
+      "subtitle": "Reservations & Info",
       "action": "Chat with Us",
       "business": "WhatsApp Business",
       "reservations_info": "Reservations & Info",
       "follow_us": "Follow us"
+    },
+    "social": {
+      "title": "Follow us on social media"
     },
     "hours": {
       "title": "Opening Hours",

@@ -12,7 +12,7 @@ import LoadingButton from '../components/LoadingButton';
 import { useFormValidation, commonValidationRules } from '../hooks/useFormValidation';
 
 export default function AventureDesertDakhlaPage() {
-  const { t } = useTranslation(['common', 'navigation']);
+  const { t } = useTranslation(['common', 'navigation', 'aventure-desert-dakhla']);
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -42,28 +42,29 @@ export default function AventureDesertDakhlaPage() {
     getFieldError
   } = useFormValidation(validationRules);
 
-  // Gallery images
+  // Gallery images - Using local images from DAKHLA folder
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Dunes du désert de Dakhla au coucher du soleil'
+      url: '/destinations/dakhla/Dakhla---La-dune-blanche.webp',
+      alt: 'Dunes blanches de Dakhla au coucher du soleil'
     },
     {
-      url: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Caravane de chameaux dans le désert'
+      url: '/destinations/dakhla/Dakhla-Beach.jpg',
+      alt: 'Plage de Dakhla avec vue sur l\'océan'
     },
     {
-      url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Camp berbère traditionnel sous les étoiles'
+      url: '/destinations/dakhla/Îles-du-Dragon---Dakhla.jpg',
+      alt: 'Îles du Dragon - Dakhla'
     },
     {
-      url: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Oasis dans le désert de Dakhla'
+      url: '/destinations/dakhla/Dakhla-Club.jpg',
+      alt: 'Club et hébergement à Dakhla'
     },
     {
-      url: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Sandboarding sur les dunes'
+      url: '/destinations/dakhla/Kitsurf-a-Dakhla.jpg',
+      alt: 'Kitsurf sur les eaux de Dakhla'
     }
+    
   ];
 
   const handleFormSubmit = async (e: React.FormEvent) => {
@@ -147,8 +148,8 @@ export default function AventureDesertDakhlaPage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="Dunes du désert de Dakhla au coucher du soleil"
+          src="/destinations/dakhla/Dakhla---La-dune-blanche.webp"
+          alt="Dunes blanches de Dakhla au coucher du soleil"
           fill
           className="object-cover"
           priority
@@ -207,8 +208,8 @@ export default function AventureDesertDakhlaPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Caravane de chameaux traversant les dunes"
+                src="/destinations/dakhla/Dakhla-Beach.jpg"
+                alt="Plage de Dakhla avec vue sur l'océan"
                 fill
                 className="object-cover"
               />
@@ -233,18 +234,18 @@ export default function AventureDesertDakhlaPage() {
             {[
               {
                 name: 'Excursion 4x4',
-                image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/dakhla/Dakhla-Club.jpg',
                 description: 'Traversée des dunes en véhicule tout-terrain avec guide expérimenté'
               },
               {
-                name: 'Randonnée Chamelière',
-                image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Balade authentique à dos de chameau au coucher du soleil'
+                name: 'Kitesurf & Sports Nautiques',
+                image: '/destinations/dakhla/Kitsurf-a-Dakhla.jpg',
+                description: 'Profitez des vents parfaits de Dakhla pour le kitesurf et autres sports nautiques'
               },
               {
-                name: 'Nuit sous les Étoiles',
-                image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Bivouac traditionnel avec dîner berbère et observation des étoiles'
+                name: 'Îles du Dragon',
+                image: '/destinations/dakhla/iles-de-dragon.jpg',
+                description: 'Excursion vers les magnifiques îles du Dragon, un paradis naturel'
               }
             ].map((activity, index) => (
               <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -490,7 +491,7 @@ export default function AventureDesertDakhlaPage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
+      ...(await serverSideTranslations(locale || 'fr', ['common', 'navigation', 'aventure-desert-dakhla'])),
     },
   };
 };

@@ -10,6 +10,8 @@
     "agency_certified": "Agence de Voyage Certifiée",
     "iata_certified": "Certifiée IATA",
     "experience": "15+ ans d'expérience",
+    "availability": "Disponible 24h/7j pour répondre à vos besoins de voyage",
+    "office_address": "123 Avenue Mohammed V, Étage 3\nCasablanca 20000, Maroc",
     "address": {
       "title": "Adresse",
       "value": "Rue Abi Hanifa Annuman Route Al Khair\nBernoussi, Casablanca, Maroc"
@@ -30,10 +32,14 @@
     },
     "whatsapp": {
       "title": "WhatsApp",
+      "subtitle": "Réservations & Info",
       "action": "Chattez avec nous",
       "business": "WhatsApp Business",
       "reservations_info": "Réservations & Info",
       "follow_us": "Suivez-nous"
+    },
+    "social": {
+      "title": "Suivez-nous sur les réseaux sociaux"
     },
     "hours": {
       "title": "Horaires d'ouverture",

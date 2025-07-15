@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "title": "The Tropical Eden of the Maldives",
+    "description1": "The Maldives offer you the ultimate tropical paradise experience. This archipelago of 1,200 coral islands bathed by the Indian Ocean features turquoise waters of exceptional purity and pristine white sand beaches.",
+    "description2": "Stay in luxury overwater resorts, explore extraordinary underwater worlds, and let yourself be lulled by the absolute serenity of this natural sanctuary. Every moment in the Maldives is an invitation to dream and relax.",
+    "stats": {
+      "islands": "Coral islands",
+      "duration": "Days of stay"
+    }
+  },
+  "resorts": {
+    "title": "Exceptional Resorts",
+    "subtitle": "Discover our selection of luxury resorts for an unforgettable stay",
+    "types": {
+      "overwater_villas": {
+        "name": "Overwater Villas",
+        "description": "Luxury accommodation above crystal-clear waters"
+      },
+      "private_beaches": {
+        "name": "Private Beaches",
+        "description": "Pristine white sand and absolute privacy"
+      },
+      "spa_wellness": {
+        "name": "Spa & Wellness",
+        "description": "Relaxing treatments facing the Indian Ocean"
+      }
+    }
+  },
+  "activities": {
+    "title": "Paradise Activities",
+    "list": {
+      "diving": {
+        "title": "Diving & Snorkeling",
+        "description": "Explore exceptional coral reefs"
+      },
+      "island_hopping": {
+        "title": "Island Excursions",
+        "description": "Discover atolls and sandbanks"
+      },
+      "marine_life": {
+        "title": "Marine Life",
+        "description": "Observe manta rays and whale sharks"
+      },
+      "sunsets": {
+        "title": "Sunsets",
+        "description": "Magical moments over the Indian Ocean"
+      }
+    }
+  },
+  "packages": {
+    "title": "Maldives Packages",
+    "recommended": "Recommended",
+    "discovery": {
+      "title": "Discovery Stay",
+      "duration": "5 days / 4 nights",
+      "features": [
+        "4* Resort",
+        "Full board",
+        "Transfers included",
+        "Snorkeling excursion"
+      ]
+    },
+    "prestige": {
+      "title": "Prestige Stay",
+      "duration": "7 days / 6 nights",
+      "features": [
+        "5* Resort",
+        "Overwater villa",
+        "All inclusive",
+        "Spa & activities",
+        "Private excursions"
+      ]
+    },
+    "luxury": {
+      "title": "Luxury Stay",
+      "duration": "10 days / 9 nights",
+      "features": [
+        "5* Deluxe Resort",
+        "Presidential suite",
+        "Private butler",
+        "Private yacht",
+        "Tailor-made experiences"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Ready for your Maldives Escape?",
+    "subtitle": "Let us create your dream stay in this tropical paradise",
+    "contact_button": "Contact us",
+    "home_button": "Back to home",
+    "book_button": "Book"
+  }
+}

@@ -3,17 +3,47 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import LanguageSelector from './LanguageSelector';
 
+interface SubmenuItem {
+  href: string;
+  label: string;
+}
+
+interface ServiceLink {
+  href?: string;
+  label: string;
+  hasSubmenu?: boolean;
+  submenu?: SubmenuItem[];
+}
+
 export default function OmraHajjHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const { t } = useTranslation('navigation');
   const { t: tCommon } = useTranslation('common');
 
-  const servicesLinks = [
+  const servicesLinks: ServiceLink[] = [
     { href: '/services/omra-hajj', label: t('services_submenu.omra_hajj') },
-    { href: '/services/hotels-luxe', label: t('services_submenu.luxury_hotels') },
-    { href: '/services/voyages-affaires', label: t('services_submenu.business_travel') },
-    { href: '/services/voyages-sur-mesure', label: t('services_submenu.custom_travel') }
+    {
+      label: t('services_submenu.national_destinations'),
+      hasSubmenu: true,
+      submenu: [
+         { href: '/aventure-desert-dakhla', label: t('national_submenu.aventure_desert_dakhla') },
+         { href: '/road-trip-atlantique', label: t('national_submenu.road_trip_atlantique') },
+         { href: '/entre-mer-montagne', label: t('national_submenu.entre_mer_montagne') },
+         { href: '/agadir-atlantique', label: t('national_submenu.agadir_atlantique') },
+         { href: '/le-nord', label: t('national_submenu.le_nord') },
+         { href: '/escapade-sablotherapie-sahara', label: t('national_submenu.escapade_sablotherapie_sahara') }
+       ]
+    },
+    {
+      label: t('services_submenu.international_destinations'),
+      hasSubmenu: true,
+      submenu: [
+        { href: '/dubai', label: t('international_submenu.dubai') },
+        { href: '/egypte', label: t('international_submenu.egypt') },
+        { href: '/istanbul', label: t('international_submenu.istanbul') }
+      ]
+    }
   ];
 
   return (
@@ -51,18 +81,40 @@ export default function OmraHajjHeader() {
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {servicesLinks.map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      className={`block px-4 py-3 font-medium transition-colors duration-200 ${
-                        href === '/services/omra-hajj' 
-                          ? 'text-green-600 bg-green-50 border-l-4 border-green-600' 
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
-                      }`}
-                    >
-                      {label}
-                    </Link>
+                  {servicesLinks.map((item, index) => (
+                    item.hasSubmenu ? (
+                      <div key={index} className="relative group">
+                        <div className="px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium cursor-pointer flex items-center justify-between">
+                          {item.label}
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                        <div className="absolute left-full top-0 ml-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                          {item.submenu?.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : item.href ? (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`block px-4 py-3 font-medium transition-colors duration-200 ${
+                          item.href === '/services/omra-hajj' 
+                            ? 'text-green-600 bg-green-50 border-l-4 border-green-600' 
+                            : 'text-gray-700 hover:bg-gray-50 hover:text-blue-600'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : null
                   ))}
                 </div>
               )}
@@ -133,15 +185,35 @@ export default function OmraHajjHeader() {
                 
                 {isServicesOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    {servicesLinks.map(({ href, label }) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 px-3 py-2 rounded text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {label}
-                      </Link>
+                    {servicesLinks.map((item, index) => (
+                      item.hasSubmenu ? (
+                        <div key={index}>
+                          <div className="text-gray-300 font-medium px-3 py-2 text-sm">
+                            {item.label}
+                          </div>
+                          <div className="ml-4 space-y-1">
+                            {item.submenu?.map((subItem) => (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className="block text-gray-400 hover:text-white font-medium transition-colors duration-300 px-3 py-2 rounded text-xs"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : item.href ? (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 px-3 py-2 rounded text-sm"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ) : null
                     ))}
                   </div>
                 )}

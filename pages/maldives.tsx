@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MaldivesPage() {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('maldives');
+  const { t: tCommon } = useTranslation('common');
 
   return (
     <>
@@ -49,28 +50,22 @@ export default function MaldivesPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-                L'Éden Tropical des Maldives
+                {t('hero.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Les Maldives vous offrent l'expérience ultime du paradis tropical. 
-                Cet archipel de 1 200 îles coralliennes baignées par l'océan Indien 
-                propose des eaux turquoise d'une pureté exceptionnelle et des plages 
-                de sable blanc immaculé.
+                {t('hero.description1')}
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Séjournez dans des resorts de luxe sur pilotis, explorez les fonds 
-                marins extraordinaires, et laissez-vous bercer par la sérénité absolue 
-                de ce sanctuaire naturel. Chaque moment aux Maldives est une invitation 
-                au rêve et à la détente.
+                {t('hero.description2')}
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
                   <div className="text-3xl font-bold text-blue-600 mb-2">1200+</div>
-                  <div className="text-gray-600">Îles coralliennes</div>
+                  <div className="text-gray-600">{t('hero.stats.islands')}</div>
                 </div>
                 <div className="text-center p-4 bg-cyan-50 rounded-lg">
                   <div className="text-3xl font-bold text-cyan-600 mb-2">5-10</div>
-                  <div className="text-gray-600">Jours de séjour</div>
+                  <div className="text-gray-600">{t('hero.stats.duration')}</div>
                 </div>
               </div>
             </div>
@@ -91,29 +86,29 @@ export default function MaldivesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-              Resorts d'Exception
+              {t('resorts.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Découvrez nos sélections de resorts de luxe pour un séjour inoubliable
+              {t('resorts.subtitle')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Villas sur Pilotis',
+                name: t('resorts.types.overwater_villas.name'),
                 image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Hébergement de luxe au-dessus des eaux cristallines'
+                description: t('resorts.types.overwater_villas.description')
               },
               {
-                name: 'Plages Privées',
+                name: t('resorts.types.private_beaches.name'),
                 image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Sable blanc immaculé et intimité absolue'
+                description: t('resorts.types.private_beaches.description')
               },
               {
-                name: 'Spa & Wellness',
+                name: t('resorts.types.spa_wellness.name'),
                 image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-                description: 'Soins relaxants face à l&rsquo;océan Indien'
+                description: t('resorts.types.spa_wellness.description')
               }
             ].map((resort, index) => (
               <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -140,15 +135,15 @@ export default function MaldivesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-              Activités Paradisiaques
+              {t('activities.title')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '🤿', title: 'Plongée & Snorkeling', desc: 'Explorez les récifs coralliens exceptionnels' },
-              { icon: '🏝️', title: 'Excursions Îles', desc: 'Découverte des atolls et bancs de sable' },
-              { icon: '🐠', title: 'Vie Marine', desc: 'Observation des raies manta et requins-baleines' },
-              { icon: '🌅', title: 'Couchers de Soleil', desc: 'Moments magiques sur l&rsquo;océan Indien' }
+              { icon: '🤿', title: t('activities.list.diving.title'), desc: t('activities.list.diving.description') },
+              { icon: '🏝️', title: t('activities.list.island_hopping.title'), desc: t('activities.list.island_hopping.description') },
+              { icon: '🐠', title: t('activities.list.marine_life.title'), desc: t('activities.list.marine_life.description') },
+              { icon: '🌅', title: t('activities.list.sunsets.title'), desc: t('activities.list.sunsets.description') }
             ].map((activity, index) => (
               <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
                 <div className="text-4xl mb-4">{activity.icon}</div>
@@ -164,44 +159,38 @@ export default function MaldivesPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">
-            Forfaits Maldives
+            {t('packages.title')}
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {[
               {
-                title: 'Séjour Découverte',
-                price: '35,000 MAD',
-                duration: '5 jours / 4 nuits',
-                features: ['Resort 4*', 'Pension complète', 'Transferts inclus', 'Excursion snorkeling']
+                key: 'discovery',
+                features: [0, 1, 2, 3]
               },
               {
-                title: 'Séjour Prestige',
-                price: '58,000 MAD',
-                duration: '7 jours / 6 nuits',
-                features: ['Resort 5*', 'Villa sur pilotis', 'All inclusive', 'Spa & activités', 'Excursions privées'],
+                key: 'prestige',
+                features: [0, 1, 2, 3, 4],
                 featured: true
               },
               {
-                title: 'Séjour Luxe',
-                price: '92,000 MAD',
-                duration: '10 jours / 9 nuits',
-                features: ['Resort 5* Deluxe', 'Suite présidentielle', 'Butler privé', 'Yacht privé', 'Expériences sur mesure']
+                key: 'luxury',
+                features: [0, 1, 2, 3, 4]
               }
             ].map((package_, index) => (
               <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg ${package_.featured ? 'ring-2 ring-blue-500 transform scale-105' : ''}`}>
                 {package_.featured && (
                   <div className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                    Recommandé
+                    {t('packages.recommended')}
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{package_.title}</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-2">{package_.price}</div>
-                <div className="text-gray-600 mb-6">{package_.duration}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t(`packages.${package_.key}.title`)}</h3>
+                <div className="text-3xl font-bold text-blue-600 mb-2">{t(`packages.${package_.key}.price`)}</div>
+                <div className="text-gray-600 mb-6">{t(`packages.${package_.key}.duration`)}</div>
                 <ul className="space-y-3 mb-8">
                   {package_.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-600">
                       <span className="text-blue-500 mr-2">✓</span>
-                      {feature}
+                      {t(`packages.${package_.key}.features.${idx}`)}
                     </li>
                   ))}
                 </ul>
@@ -210,7 +199,7 @@ export default function MaldivesPage() {
                     ? 'bg-blue-500 text-white hover:bg-blue-600' 
                     : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
                 }`}>
-                  Réserver
+                  {t('cta.book_button')}
                 </button>
               </div>
             ))}
@@ -222,17 +211,17 @@ export default function MaldivesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-500 to-cyan-500">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold text-white mb-6 font-serif">
-            Prêt pour votre Évasion aux Maldives ?
+            {t('cta.title')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Laissez-nous créer votre séjour de rêve dans ce paradis tropical
+            {t('cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Nous contacter
+              {t('cta.contact_button')}
             </Link>
             <Link href="/" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Retour à l'accueil
+              {t('cta.home_button')}
             </Link>
           </div>
         </div>
@@ -244,7 +233,7 @@ export default function MaldivesPage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common'])),
+      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
     },
   };
 };

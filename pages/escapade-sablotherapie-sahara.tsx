@@ -42,27 +42,27 @@ export default function EscapadeSablotherapieSaharaPage() {
     getFieldError
   } = useFormValidation(validationRules);
 
-  // Gallery images
+  // Gallery images - Using local images from merzouga/sahara folder
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Dunes dorées du Sahara au coucher du soleil'
+      url: '/destinations/escapade-sablotherapie-sahara/Les-dunes-d\'Erg-Chebbi.jpg',
+      alt: 'Dunes dorées d\'Erg Chebbi au coucher du soleil'
     },
     {
-      url: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Sablothérapie traditionnelle dans le désert'
+      url: '/destinations/escapade-sablotherapie-sahara/Merzouga-4_4.jpg',
+      alt: 'Sablothérapie traditionnelle dans le désert de Merzouga'
     },
     {
-      url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Campement berbère sous les étoiles'
+      url: '/destinations/escapade-sablotherapie-sahara/Azawad-Luxury-Camp.jpeg',
+      alt: 'Campement de luxe Azawad sous les étoiles'
     },
     {
-      url: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Caravane de chameaux dans les dunes'
+      url: '/destinations/escapade-sablotherapie-sahara/Merzouga-Camel.jpg',
+      alt: 'Caravane de chameaux dans les dunes de Merzouga'
     },
     {
-      url: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Oasis verdoyante au cœur du Sahara'
+      url: '/destinations/escapade-sablotherapie-sahara/balade-chameaux-dunes-merzouga-.jpg',
+      alt: 'Balade à dos de chameau dans les dunes de Merzouga'
     }
   ];
 
@@ -147,8 +147,8 @@ export default function EscapadeSablotherapieSaharaPage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="Dunes dorées du Sahara au coucher du soleil"
+          src="/destinations/escapade-sablotherapie-sahara/Les-dunes-d'Erg-Chebbi.jpg"
+          alt="Dunes dorées d'Erg Chebbi au coucher du soleil"
           fill
           className="object-cover"
           priority
@@ -212,8 +212,8 @@ export default function EscapadeSablotherapieSaharaPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Sablothérapie traditionnelle dans le désert"
+                src="/destinations/escapade-sablotherapie-sahara/Merzouga-4_4.jpg"
+                alt="Sablothérapie traditionnelle dans le désert de Merzouga"
                 fill
                 className="object-cover"
               />
@@ -238,17 +238,17 @@ export default function EscapadeSablotherapieSaharaPage() {
             {[
               {
                 name: 'Soulagement Articulaire',
-                image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/escapade-sablotherapie-sahara/Merzouga-4_4.jpg',
                 description: 'La chaleur du sable pénètre en profondeur pour soulager rhumatismes et douleurs'
               },
               {
                 name: 'Détoxification Naturelle',
-                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/escapade-sablotherapie-sahara/Les-dunes-d\'Erg-Chebbi.jpg',
                 description: 'Élimination des toxines par la sudation et purification de l\'organisme'
               },
               {
                 name: 'Relaxation Profonde',
-                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/escapade-sablotherapie-sahara/Azawad-Luxury-Camp.jpeg',
                 description: 'Apaisement du stress et reconnexion avec les énergies du désert'
               }
             ].map((benefit, index) => (

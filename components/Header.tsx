@@ -3,17 +3,50 @@ import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import LanguageSelector from './LanguageSelector';
 
+interface SubmenuItem {
+  href: string;
+  label: string;
+}
+
+interface ServiceLink {
+  href?: string;
+  label: string;
+  hasSubmenu?: boolean;
+  submenu?: SubmenuItem[];
+}
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const { t } = useTranslation('navigation');
   const { t: tCommon } = useTranslation('common');
 
-  const servicesLinks = [
+  const [isNationalOpen, setIsNationalOpen] = useState(false);
+  const [isInternationalOpen, setIsInternationalOpen] = useState(false);
+
+  const servicesLinks: ServiceLink[] = [
     { href: '/services/omra-hajj', label: t('services_submenu.omra_hajj') },
-    { href: '/services/hotels-luxe', label: t('services_submenu.luxury_hotels') },
-    { href: '/services/voyages-affaires', label: t('services_submenu.business_travel') },
-    { href: '/services/voyages-sur-mesure', label: t('services_submenu.custom_travel') }
+    { 
+      label: t('services_submenu.national_destinations'), 
+      hasSubmenu: true,
+      submenu: [
+        { href: '/aventure-desert-dakhla', label: t('national_submenu.aventure_desert_dakhla') },
+        { href: '/road-trip-atlantique', label: t('national_submenu.road_trip_atlantique') },
+        { href: '/entre-mer-montagne', label: t('national_submenu.entre_mer_montagne') },
+        { href: '/agadir-atlantique', label: t('national_submenu.agadir_atlantique') },
+        { href: '/le-nord', label: t('national_submenu.le_nord') },
+        { href: '/escapade-sablotherapie-sahara', label: t('national_submenu.escapade_sablotherapie_sahara') }
+      ]
+    },
+    { 
+      label: t('services_submenu.international_destinations'), 
+      hasSubmenu: true,
+      submenu: [
+        { href: '/dubai', label: t('international_submenu.dubai') },
+        { href: '/egypte', label: t('international_submenu.egypt') },
+        { href: '/istanbul', label: t('international_submenu.istanbul') }
+      ]
+    }
   ];
 
   return (
@@ -23,7 +56,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300">
+              <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-gray-300 transition-colors duration-300 font-countryside">
                 {tCommon('site_name')}
               </h1>
               <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-gray-400 font-medium hidden sm:inline"></span>
@@ -32,7 +65,7 @@ export default function Header() {
 
           {/* Navigation Desktop */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link href="/" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
+            <Link href="/" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded font-countryside">
               {t('menu.home')}
             </Link>
             
@@ -42,7 +75,7 @@ export default function Header() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded flex items-center">
+              <button className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded flex items-center font-countryside">
                 {t('menu.services')}
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -51,24 +84,46 @@ export default function Header() {
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {servicesLinks.map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium"
-                    >
-                      {label}
-                    </Link>
+                  {servicesLinks.map((item, index) => (
+                    item.hasSubmenu ? (
+                      <div key={index} className="relative group">
+                        <div className="px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium cursor-pointer flex items-center justify-between font-countryside">
+                          {item.label}
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                        <div className="absolute left-full top-0 ml-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                          {item.submenu?.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium font-countryside"
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : item.href ? (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200 font-medium font-countryside"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : null
                   ))}
                 </div>
               )}
             </div>
             
 
-            <a href="#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
+            <a href="#about" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded font-countryside">
               {t('menu.about')}
             </a>
-            <Link href="/contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded">
+            <Link href="/contact" className="text-white hover:text-gray-300 font-medium transition-colors duration-300 px-2 py-1 rounded font-countryside">
               {t('menu.contact')}
             </Link>
           </nav>
@@ -86,7 +141,7 @@ export default function Header() {
               rel="noopener noreferrer"
             >
               <span className="text-base">💬</span>
-              <span className="hidden sm:inline">WhatsApp</span>
+              <span className="hidden sm:inline font-countryside">WhatsApp</span>
             </a>
 
             {/* Menu Mobile */}
@@ -107,7 +162,7 @@ export default function Header() {
             <nav className="py-4 space-y-1 px-4">
               <Link
                 href="/"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded font-countryside"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.home')}
@@ -116,7 +171,7 @@ export default function Header() {
               {/* Services Mobile Submenu */}
               <div>
                 <button 
-                  className="w-full text-left text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded flex items-center justify-between"
+                  className="w-full text-left text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded flex items-center justify-between font-countryside"
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                 >
                   {t('menu.services')}
@@ -127,15 +182,35 @@ export default function Header() {
                 
                 {isServicesOpen && (
                   <div className="ml-4 mt-1 space-y-1">
-                    {servicesLinks.map(({ href, label }) => (
-                      <Link
-                        key={href}
-                        href={href}
-                        className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 py-2 px-2 rounded text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {label}
-                      </Link>
+                    {servicesLinks.map((item, index) => (
+                      item.hasSubmenu ? (
+                        <div key={index}>
+                          <div className="text-gray-300 font-medium py-2 px-2 text-sm font-countryside">
+                            {item.label}
+                          </div>
+                          <div className="ml-4 space-y-1">
+                            {item.submenu?.map((subItem) => (
+                              <Link
+                                key={subItem.href}
+                                href={subItem.href}
+                                className="block text-gray-400 hover:text-white font-medium transition-colors duration-300 py-2 px-2 rounded text-xs font-countryside"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : item.href ? (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block text-gray-300 hover:text-white font-medium transition-colors duration-300 py-2 px-2 rounded text-sm font-countryside"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ) : null
                     ))}
                   </div>
                 )}
@@ -144,14 +219,14 @@ export default function Header() {
 
               <a
                 href="#about"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded font-countryside"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.about')}
               </a>
               <Link
                 href="/contact"
-                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded"
+                className="block text-white hover:text-gray-300 font-medium transition-colors duration-300 py-3 px-2 rounded font-countryside"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('menu.contact')}

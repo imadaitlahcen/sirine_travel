@@ -11,10 +11,11 @@ interface TravelOffer {
   date: string;
   duration: string;
   rating: number;
+  route: string;
 }
 
 const VoyageMaroc: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'home']);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
@@ -22,56 +23,62 @@ const VoyageMaroc: React.FC = () => {
     {
       id: 1,
       image: '/destinations/morocco-desert.jpg',
-      title: 'Aventure Désert de Dakhla',
-      locations: 'Dakhla - Lagune - Dunes dorées - Bivouac',
+      title: t('morocco.offers.dakhla.title', { ns: 'home' }),
+      locations: t('morocco.offers.dakhla.locations', { ns: 'home' }),
       date: '15/08/2025',
-      duration: '8 jours / 7 nuits',
-      rating: 4.9
+      duration: t('morocco.offers.dakhla.duration', { ns: 'home' }),
+      rating: 4.9,
+      route: '/aventure-desert-dakhla'
     },
     {
       id: 2,
       image: '/destinations/Aghroud-Agadir-webp_format.webp',
-      title: 'Road Trip Atlantique',
-      locations: 'Agadir - Taghazout - Sidi Ifni - Essaouira',
+      title: t('morocco.offers.road_trip.title', { ns: 'home' }),
+      locations: t('morocco.offers.road_trip.locations', { ns: 'home' }),
       date: '22/09/2025',
-      duration: '6 jours / 5 nuits',
-      rating: 4.8
+      duration: t('morocco.offers.road_trip.duration', { ns: 'home' }),
+      rating: 4.8,
+      route: '/road-trip-atlantique'
     },
     {
       id: 3,
       image: '/destinations/Carablanca-Nador-webp_format.webp',
-      title: 'Entre Mer Et Montagne',
-      locations: 'Nador - Al Hoceima - Jebha - Chefchaouen',
+      title: t('morocco.offers.mer_montagne.title', { ns: 'home' }),
+      locations: t('morocco.offers.mer_montagne.locations', { ns: 'home' }),
       date: '10/10/2025',
-      duration: '5 jours / 4 nuits',
-      rating: 4.7
+      duration: t('morocco.offers.mer_montagne.duration', { ns: 'home' }),
+      rating: 4.7,
+      route: '/entre-mer-montagne'
     },
     {
       id: 4,
       image: '/destinations/Surf-Taghazout-image_webp.webp',
-      title: 'Agadir Atlantique : Surf, Soleil & Douceur Berbére',
-      locations: 'Taghazout - Aghroud - Timlaline - Imsouane',
+      title: t('morocco.offers.agadir.title', { ns: 'home' }),
+      locations: t('morocco.offers.agadir.locations', { ns: 'home' }),
       date: '05/11/2025',
-      duration: '7 jours / 6 nuits',
-      rating: 4.6
+      duration: t('morocco.offers.agadir.duration', { ns: 'home' }),
+      rating: 4.6,
+      route: '/agadir-atlantique'
     },
     {
       id: 5,
       image: '/destinations/bain-de-sable-webp_format.webp',
-      title: 'Escapade Sablothérapie Au Coeur Du Sahara',
-      locations: 'Merzouga - Ouarzazate',
+      title: t('morocco.offers.sablotherapie.title', { ns: 'home' }),
+      locations: t('morocco.offers.sablotherapie.locations', { ns: 'home' }),
       date: '18/12/2025',
-      duration: '4 jours / 3 nuits',
-      rating: 4.8
+      duration: t('morocco.offers.sablotherapie.duration', { ns: 'home' }),
+      rating: 4.8,
+      route: '/escapade-sablotherapie-sahara'
     },
     {
       id: 6,
       image: '/destinations/Jebha-Playa-Sghira-webp_format.webp',
-      title: 'Le Nord',
-      locations: 'Martil - Tetouan - Fnideq',
+      title: t('morocco.offers.nord.title', { ns: 'home' }),
+      locations: t('morocco.offers.nord.locations', { ns: 'home' }),
       date: '25/01/2026',
-      duration: '9 jours / 8 nuits',
-      rating: 4.5
+      duration: t('morocco.offers.nord.duration', { ns: 'home' }),
+      rating: 4.5,
+      route: '/le-nord'
     }
   ];
 
@@ -123,17 +130,17 @@ const VoyageMaroc: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="maroc-terre-lumiere" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-serif cursor-pointer hover:text-blue-600 transition-colors duration-300"
           >
-            MAROC, Terre de Lumière
+            {t('morocco.title', { ns: 'home' })}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Vivez avec nous la magie du maroc
+            {t('morocco.subtitle', { ns: 'home' })}
           </p>
         </div>
 
@@ -167,6 +174,7 @@ const VoyageMaroc: React.FC = () => {
               <div
                 key={offer.id}
                 className="flex-none w-80 h-[480px] bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer border border-gray-100 flex flex-col"
+                onClick={() => router.push(offer.route)}
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden rounded-t-2xl flex-shrink-0">
@@ -188,26 +196,7 @@ const VoyageMaroc: React.FC = () => {
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
                   {/* Title */}
-                  <h3 
-                    className={`text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-200 font-serif ${
-                      offer.title === 'Entre Mer Et Montagne' || offer.title === 'Aventure Désert de Dakhla' || offer.title === 'Road Trip Atlantique' || offer.title === 'Agadir Atlantique : Surf, Soleil & Douceur Berbére' || offer.title === 'Escapade Sablothérapie Au Coeur Du Sahara' || offer.title === 'Le Nord' ? 'cursor-pointer hover:text-blue-600' : ''
-                    }`}
-                    onClick={() => {
-                      if (offer.title === 'Entre Mer Et Montagne') {
-                        router.push('/entre-mer-montagne');
-                      } else if (offer.title === 'Aventure Désert de Dakhla') {
-                        router.push('/aventure-desert-dakhla');
-                      } else if (offer.title === 'Road Trip Atlantique') {
-                        router.push('/road-trip-atlantique');
-                      } else if (offer.title === 'Agadir Atlantique : Surf, Soleil & Douceur Berbére') {
-                        router.push('/agadir-atlantique');
-                      } else if (offer.title === 'Escapade Sablothérapie Au Coeur Du Sahara') {
-                        router.push('/escapade-sablotherapie-sahara');
-                      } else if (offer.title === 'Le Nord') {
-                        router.push('/le-nord');
-                      }
-                    }}
-                  >
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors duration-200 font-serif">
                     {offer.title}
                   </h3>
 
@@ -234,8 +223,14 @@ const VoyageMaroc: React.FC = () => {
                         ({offer.rating})
                       </span>
                     </div>
-                    <button className="bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                      Découvrir
+                    <button 
+                       className="bg-black text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                       onClick={(e) => {
+                         e.stopPropagation();
+                         router.push(offer.route);
+                       }}
+                     >
+                      {t('buttons.discover', { ns: 'common' })}
                     </button>
                   </div>
                 </div>

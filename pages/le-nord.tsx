@@ -37,12 +37,17 @@ export default function LeNordPage() {
   const { errors, validateSingleField, validateForm, getFieldError } = useFormValidation(validationRules);
 
   const images = [
-    '/destinations/Jebha-Playa-Sghira-webp_format.webp',
-    '/destinations/tetouan-medina.jpg',
-    '/destinations/martil-beach.jpg',
-    '/destinations/fnideq-coast.jpg',
-    '/destinations/chefchaouen-blue.jpg',
-    '/destinations/rif-mountains.jpg'
+    '/destinations/le-nord/chefchaouen-maroc.jpg',
+    '/destinations/le-nord/Akchour.jpg',
+    '/destinations/le-nord/Badis-Al-hoceima.jpg',
+    '/destinations/le-nord/Chefchaouen-Centre-ville.jpg',
+    '/destinations/le-nord/Jebha.jpg',
+    '/destinations/le-nord/Matadero-Al-Hoceima.jpg',
+    '/destinations/le-nord/Nador-Maroc.jpg',
+    '/destinations/le-nord/Quemado-Al-Hoceima.jpg',
+    '/destinations/le-nord/nkor.jpg',
+    '/destinations/le-nord/Carablanca-Nador.jpeg',
+    '/destinations/le-nord/NAador.jpg'
   ];
 
   const scrollToReservation = () => {
@@ -120,7 +125,7 @@ export default function LeNordPage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/destinations/Jebha-Playa-Sghira-webp_format.webp"
+            src="/destinations/le-nord/chefchaouen-maroc.jpg"
             alt="Le Nord du Maroc"
             fill
             className="object-cover"
@@ -183,13 +188,13 @@ export default function LeNordPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/destinations/tetouan-medina.jpg"
-                alt="Médina de Tétouan"
+                src="/destinations/le-nord/Jebha.jpg"
+                alt="Côte méditerranéenne du Nord du Maroc"
                 fill
                 className="object-cover"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = '/destinations/default-morocco.jpg';
+                  target.src = '/destinations/le-nord/chefchaouen-maroc.jpg';
                 }}
               />
             </div>

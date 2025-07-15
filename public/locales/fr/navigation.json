@@ -8,9 +8,21 @@
   },
   "services_submenu": {
     "omra_hajj": "Omra & Hajj",
-    "luxury_hotels": "Hôtels de Luxe",
-    "business_travel": "Voyages d'Affaires",
-    "custom_travel": "Voyages Sur-Mesure"
+    "national_destinations": "Destinations Nationales",
+    "international_destinations": "Destinations Internationales"
+  },
+  "national_submenu": {
+    "aventure_desert_dakhla": "Aventure Désert de Dakhla",
+    "road_trip_atlantique": "Road Trip Atlantique",
+    "entre_mer_montagne": "Entre Mer Et Montagne",
+    "agadir_atlantique": "Agadir Atlantique",
+    "le_nord": "Le Nord",
+    "escapade_sablotherapie_sahara": "Escapade Sablothérapie Sahara"
+  },
+  "international_submenu": {
+    "dubai": "Dubai",
+    "egypt": "Égypte",
+    "istanbul": "Istanbul"
   },
   "language_selector": {
     "french": "Français",

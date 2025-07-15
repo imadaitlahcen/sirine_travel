@@ -12,7 +12,7 @@ import LoadingButton from '../components/LoadingButton';
 import { useFormValidation, commonValidationRules } from '../hooks/useFormValidation';
 
 export default function RoadTripAtlantiquePage() {
-  const { t } = useTranslation(['common', 'navigation']);
+  const { t } = useTranslation(['common', 'navigation', 'road-trip-atlantique']);
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
@@ -42,27 +42,27 @@ export default function RoadTripAtlantiquePage() {
     getFieldError
   } = useFormValidation(validationRules);
 
-  // Gallery images
+  // Gallery images - Using local images from road trip atlantique folder
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-      alt: 'Route côtière atlantique au coucher du soleil'
+      url: '/destinations/road-trip-atlantique/essaouira-port-in-morocco-shot-after-sunset-at-blue-hour-ruslan-kalnitsky.jpg',
+      alt: 'Port d\'Essaouira au coucher du soleil'
     },
     {
-      url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Phare sur la côte atlantique'
+      url: '/destinations/road-trip-atlantique/taghazout_Beach.jpeg',
+      alt: 'Plage de Taghazout sur la côte atlantique'
     },
     {
-      url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Village côtier pittoresque'
+      url: '/destinations/road-trip-atlantique/legzira-beach.jpg',
+      alt: 'Plage de Legzira avec ses arches naturelles'
     },
     {
-      url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Plage sauvage de l\'Atlantique'
+      url: '/destinations/road-trip-atlantique/Imsouane.jpg',
+      alt: 'Village côtier d\'Imsouane'
     },
     {
-      url: 'https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      alt: 'Falaises et océan Atlantique'
+      url: '/destinations/road-trip-atlantique/Tamri.jpg',
+      alt: 'Côte sauvage de Tamri'
     }
   ];
 
@@ -147,8 +147,8 @@ export default function RoadTripAtlantiquePage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <Image
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-          alt="Route côtière atlantique au coucher du soleil"
+          src="/destinations/road-trip-atlantique/essaouira-port-in-morocco-shot-after-sunset-at-blue-hour-ruslan-kalnitsky.jpg"
+          alt="Port d'Essaouira au coucher du soleil"
           fill
           className="object-cover"
           priority
@@ -207,8 +207,8 @@ export default function RoadTripAtlantiquePage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Phare sur la côte atlantique"
+                src="/destinations/road-trip-atlantique/taghazout_Beach.jpeg"
+                alt="Plage de Taghazout sur la côte atlantique"
                 fill
                 className="object-cover"
               />
@@ -233,17 +233,17 @@ export default function RoadTripAtlantiquePage() {
             {[
               {
                 name: 'Casablanca - El Jadida',
-                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/road-trip-atlantique/Sous-Massa.png',
                 description: 'Départ de la métropole économique vers la cité portugaise historique'
               },
               {
                 name: 'Oualidia - Safi',
-                image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/road-trip-atlantique/Yoga-Taghazout.jpg',
                 description: 'Lagune paradisiaque et ville des potiers, entre nature et artisanat'
               },
               {
                 name: 'Essaouira - Agadir',
-                image: 'https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                image: '/destinations/road-trip-atlantique/essaouira-port-in-morocco-shot-after-sunset-at-blue-hour-ruslan-kalnitsky.jpg',
                 description: 'Perle de l\'Atlantique et station balnéaire moderne'
               }
             ].map((stop, index) => (
@@ -490,7 +490,7 @@ export default function RoadTripAtlantiquePage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'fr', ['common', 'navigation'])),
+      ...(await serverSideTranslations(locale || 'fr', ['common', 'navigation', 'road-trip-atlantique'])),
     },
   };
 };

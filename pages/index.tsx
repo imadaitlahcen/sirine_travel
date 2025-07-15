@@ -8,6 +8,7 @@ import VoyageMaroc from '../components/VoyageMaroc';
 import TrendingDestinations from '../components/TrendingDestinations';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import DestinationToggle from '../components/DestinationToggle';
 
 export default function Home() {
   const { t } = useTranslation('common');
@@ -24,10 +25,10 @@ export default function Home() {
       <div className="min-h-screen bg-white">
         <main>
           <Hero />
-            <AboutSection />
-            <VoyageMaroc />
-            <TrendingDestinations />
-            <Contact />
+          <AboutSection />
+          <VoyageMaroc />
+          <TrendingDestinations />
+          <Contact />
         </main>
         <Footer />
 

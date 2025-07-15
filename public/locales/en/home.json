@@ -1,13 +1,50 @@
 {
   "hero": {
     "title": "Sirine Travel",
-    "cta_primary": "Discover our destinations",
-    "cta_secondary": "Contact us"
+    "cta_primary": "International destinations",
+    "cta_secondary": "National destinations",
+    "cta_contact": "Contact us"
   },
 
   "destinations": {
     "title": "Exceptional Destinations",
     "subtitle": "Discover our most sought-after destinations"
+  },
+  "morocco": {
+    "title": "MOROCCO, Land of Light",
+    "subtitle": "Experience the magic of Morocco with us",
+    "offers": {
+      "dakhla": {
+        "title": "Dakhla Desert Adventure",
+        "locations": "Dakhla - Lagoon - Golden Dunes - Bivouac",
+        "duration": "8 days / 7 nights"
+      },
+      "road_trip": {
+        "title": "Atlantic Road Trip",
+        "locations": "Agadir - Taghazout - Sidi Ifni - Essaouira",
+        "duration": "6 days / 5 nights"
+      },
+      "mer_montagne": {
+        "title": "Between Sea and Mountains",
+        "locations": "Nador - Al Hoceima - Jebha - Chefchaouen",
+        "duration": "5 days / 4 nights"
+      },
+      "agadir": {
+        "title": "Agadir Atlantic: Surf, Sun & Berber Sweetness",
+        "locations": "Taghazout - Aghroud - Timlaline - Imsouane",
+        "duration": "7 days / 6 nights"
+      },
+      "sablotherapie": {
+        "title": "Sand Therapy Escape in the Heart of the Sahara",
+        "locations": "Merzouga - Ouarzazate",
+        "duration": "4 days / 3 nights"
+      },
+      "nord": {
+        "title": "The North",
+        "locations": "Martil - Tetouan - Fnideq",
+        "duration": "9 days / 8 nights"
+      }
+    }
   },
   "trending": {
     "title": "Trending Now",

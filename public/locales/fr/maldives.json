@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "title": "L'Éden Tropical des Maldives",
+    "description1": "Les Maldives vous offrent l'expérience ultime du paradis tropical. Cet archipel de 1 200 îles coralliennes baignées par l'océan Indien propose des eaux turquoise d'une pureté exceptionnelle et des plages de sable blanc immaculé.",
+    "description2": "Séjournez dans des resorts de luxe sur pilotis, explorez les fonds marins extraordinaires, et laissez-vous bercer par la sérénité absolue de ce sanctuaire naturel. Chaque moment aux Maldives est une invitation au rêve et à la détente.",
+    "stats": {
+      "islands": "Îles coralliennes",
+      "duration": "Jours de séjour"
+    }
+  },
+  "resorts": {
+    "title": "Resorts d'Exception",
+    "subtitle": "Découvrez nos sélections de resorts de luxe pour un séjour inoubliable",
+    "types": {
+      "overwater_villas": {
+        "name": "Villas sur Pilotis",
+        "description": "Hébergement de luxe au-dessus des eaux cristallines"
+      },
+      "private_beaches": {
+        "name": "Plages Privées",
+        "description": "Sable blanc immaculé et intimité absolue"
+      },
+      "spa_wellness": {
+        "name": "Spa & Wellness",
+        "description": "Soins relaxants face à l'océan Indien"
+      }
+    }
+  },
+  "activities": {
+    "title": "Activités Paradisiaques",
+    "list": {
+      "diving": {
+        "title": "Plongée & Snorkeling",
+        "description": "Explorez les récifs coralliens exceptionnels"
+      },
+      "island_hopping": {
+        "title": "Excursions Îles",
+        "description": "Découverte des atolls et bancs de sable"
+      },
+      "marine_life": {
+        "title": "Vie Marine",
+        "description": "Observation des raies manta et requins-baleines"
+      },
+      "sunsets": {
+        "title": "Couchers de Soleil",
+        "description": "Moments magiques sur l'océan Indien"
+      }
+    }
+  },
+  "packages": {
+    "title": "Forfaits Maldives",
+    "recommended": "Recommandé",
+    "discovery": {
+      "title": "Séjour Découverte",
+      "price": "35,000 MAD",
+      "duration": "5 jours / 4 nuits",
+      "features": [
+        "Resort 4 étoiles",
+        "Pension complète",
+        "Transferts inclus",
+        "Excursion plongée"
+      ]
+    },
+    "prestige": {
+      "title": "Séjour Prestige",
+      "price": "58,000 MAD",
+      "duration": "7 jours / 6 nuits",
+      "features": [
+        "Resort 5 étoiles",
+        "Villa sur pilotis",
+        "Tout inclus",
+        "Spa & activités",
+        "Excursions privées"
+      ]
+    },
+    "luxury": {
+      "title": "Séjour Luxe",
+      "price": "92,000 MAD",
+      "duration": "10 jours / 9 nuits",
+      "features": [
+        "Resort 5 étoiles Deluxe",
+        "Suite présidentielle",
+        "Butler privé",
+        "Yacht privé",
+        "Expériences sur mesure"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Prêt pour votre Évasion aux Maldives ?",
+    "subtitle": "Laissez-nous créer votre séjour de rêve dans ce paradis tropical",
+    "contact_button": "Nous contacter",
+    "home_button": "Retour à l'accueil",
+    "book_button": "Réserver"
+  }
+}

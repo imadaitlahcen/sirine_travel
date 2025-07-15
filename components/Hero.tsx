@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next';
+import DestinationToggle from './DestinationToggle';
 
 export default function Hero() {
   const { t } = useTranslation('home');
@@ -40,18 +41,11 @@ export default function Hero() {
             <div className="w-24 h-1 bg-gradient-to-r from-white/50 to-white/20 mx-auto rounded-full"></div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button 
-              onClick={() => {
-                const element = document.getElementById('tendances-moment');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
-            >
-              {t('hero.cta_primary')}
-            </button>
+          <DestinationToggle 
+            defaultSelected="national"
+          />
+          
+          <div className="flex justify-center mt-6">
             <button 
               onClick={() => {
                 const element = document.getElementById('contact');
@@ -59,9 +53,9 @@ export default function Hero() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="border-2 border-white/80 text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-lg"
+              className="border-2 border-white/80 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-lg font-countryside"
             >
-              {t('hero.cta_secondary')}
+              {t('hero.cta_contact')}
             </button>
           </div>
         </div>

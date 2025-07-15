@@ -284,8 +284,16 @@ body {
 }
 
 /* Arabic font support */
+[dir="rtl"], .font-arabic {
+  font-family: var(--font-arabic), 'Noto Sans Arabic', 'Cairo', 'Amiri', system-ui, sans-serif;
+}
+
+/* Improve Arabic text rendering */
 [dir="rtl"] {
-  font-family: 'Noto Sans Arabic', 'Cairo', 'Amiri', system-ui, sans-serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Spacing adjustments for RTL */
@@ -371,6 +379,25 @@ body {
 [dir="rtl"] .absolute.left-0 {
   left: auto;
   right: 0;
+}
+
+/* Button and form improvements for RTL */
+[dir="rtl"] .justify-between {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Language selector improvements */
+[dir="rtl"] .language-selector {
+  direction: ltr;
+}
+
+/* Ensure proper text direction for mixed content */
+[dir="rtl"] .mixed-content {
+  unicode-bidi: embed;
 }
 
 @theme inline {
